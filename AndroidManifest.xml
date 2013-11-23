@@ -25,7 +25,7 @@
         
         <activity
             android:name="edu.berkeley.cs160.qUp.MyQActivity"
-            android:label="@string/myQ" >
+            android:label="@string/MyQ" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
