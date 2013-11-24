@@ -8,6 +8,9 @@
         android:minSdkVersion="8"
         android:targetSdkVersion="17" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />    
+    
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -25,7 +28,7 @@
         
         <activity
             android:name="edu.berkeley.cs160.qUp.MyQActivity"
-            android:label="@string/myQ" >
+            android:label="@string/MyQ" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

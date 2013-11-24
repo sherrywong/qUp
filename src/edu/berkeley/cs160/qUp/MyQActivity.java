@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.widget.TextView;
 
+import com.parse.Parse;
+import com.parse.ParseAnalytics;
 
 public class MyQActivity extends Activity {
 
@@ -16,6 +18,10 @@ public class MyQActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.my_q);
+        
+        //TODO Get id and client key
+        //Parse.initialize(this,  id, clientKey);
+        ParseAnalytics.trackAppOpened(getIntent());
         
         /*
          * Initialize the UI elements
