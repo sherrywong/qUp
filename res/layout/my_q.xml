@@ -29,7 +29,7 @@
             android:id="@+id/app_reservation"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:text="Reser" />
+            android:text="Reset" />
 
         <Button
             android:id="@+id/app_map"

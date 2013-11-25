@@ -14,6 +14,11 @@ public class MainActivity extends Activity {
     Button loginBtn;    
     EditText username,password;
 
+    public void cleanUpWritingToTag() {
+
+        //TODO: Write this method
+    }
+
     /*
      * Private Listener Class
      * onClick() will go to the MyQActivity class
