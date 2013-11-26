@@ -38,8 +38,6 @@ public class TagInHandler extends Activity {
         
         setContentView(R.layout.handler);
 
-        setContentView(R.layout.handler);
-
         // initialize NFC
         nfcAdapter = NfcAdapter.getDefaultAdapter(this);
         nfcPendingIntent = PendingIntent.getActivity(this, 0, new Intent(this, this.getClass()).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP), 0);
