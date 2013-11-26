@@ -35,7 +35,7 @@ public class TagInHandler extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        
+
         setContentView(R.layout.handler);
 
         setContentView(R.layout.handler);

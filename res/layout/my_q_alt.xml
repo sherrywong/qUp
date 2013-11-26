@@ -3,7 +3,7 @@
     android:id="@+id/RelativeLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_vertical" >
+    android:gravity="center_vertical">
 
     <!-- Horizontal divider to apps -->
 
@@ -23,7 +23,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_marginBottom="14dp"
-        android:gravity="center_horizontal" >
+        android:gravity="center_horizontal">
 
         <Button
             android:id="@+id/app_tag"
@@ -46,7 +46,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="90dp"
         android:gravity="center_horizontal"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/business_name_0"
