@@ -22,9 +22,11 @@ public final class R {
     }
     public static final class drawable {
         public static final int btn_qup_tag_in_off=0x7f020000;
-        public static final int btn_qup_tag_in_on=0x7f020001;
-        public static final int check=0x7f020002;
-        public static final int ic_launcher=0x7f020003;
+        public static final int btn_qup_tag_in_off_curr=0x7f020001;
+        public static final int btn_qup_tag_in_on=0x7f020002;
+        public static final int btn_qup_tag_in_on_curr=0x7f020003;
+        public static final int check=0x7f020004;
+        public static final int ic_launcher=0x7f020005;
     }
     public static final class id {
         public static final int RelativeLayout1=0x7f08000b;
@@ -32,7 +34,7 @@ public final class R {
         public static final int action_settings=0x7f080019;
         public static final int app_layout=0x7f08000d;
         public static final int app_map=0x7f08000f;
-        public static final int app_reservation=0x7f08000e;
+        public static final int app_tag=0x7f08000e;
         public static final int business_layout_0=0x7f080010;
         public static final int business_layout_1=0x7f080013;
         public static final int business_layout_2=0x7f080016;

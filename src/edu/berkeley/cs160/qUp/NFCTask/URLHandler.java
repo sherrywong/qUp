@@ -17,6 +17,9 @@ import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 
+import com.parse.Parse;
+import com.parse.ParseAnalytics;
+
 import java.util.Date;
 
 import edu.berkeley.cs160.qUp.R;
@@ -33,6 +36,11 @@ public class URLHandler extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
+        //Initialize the Parse library
+        Parse.initialize(this, "gQiGNtNHGVLvJd9lyH9s0AOpBuRPwgPJPCb5g7fQ", "jg9f4X7ij8r2COoUy2qOsmEb9EADrG0R6kRqWxQy"); 
+        ParseAnalytics.trackAppOpened(getIntent());
+        
         setContentView(R.layout.handler);
 
         setContentView(R.layout.handler);

@@ -2,8 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/tagin_layout"
     android:layout_width="match_parent"
-    android:layout_height="fill_parent"
-    android:background="#313131">
+    android:layout_height="fill_parent">
 
     <ImageButton
         android:id="@+id/toggle"
@@ -24,9 +23,8 @@
         android:id="@+id/title"
         android:layout_gravity="center_horizontal|top"
         android:textAlignment="textStart"
-        android:textColor="#a3a3a3"
+        android:textColor="#ffffff"
         android:typeface="normal"
-        android:shadowColor="#000000"
         android:background="@android:drawable/screen_background_dark_transparent"
         android:focusable="false"
         android:focusableInTouchMode="false"
