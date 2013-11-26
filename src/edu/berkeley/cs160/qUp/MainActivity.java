@@ -9,6 +9,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.parse.Parse;
+import com.parse.ParseAnalytics;
+import com.parse.ParseException;
+import com.parse.ParseUser;
+import com.parse.SignUpCallback;
+
 public class MainActivity extends Activity {
 
     Button loginBtn;    
@@ -26,6 +32,7 @@ public class MainActivity extends Activity {
     private class ButtonListener implements Button.OnClickListener {
 
         Context context;
+        
         //Constructor
         public ButtonListener(Context context) {
             this.context = context;
@@ -33,8 +40,17 @@ public class MainActivity extends Activity {
         
         @Override
         public void onClick(View arg0) {
-            Intent intent = new Intent(context, MyQActivity.class);
-            startActivity(intent);            
+        	//Log the user ins
+        	ParseUser currentUser = ParseUser.getCurrentUser();
+        	if (currentUser != null) {
+                Intent intent = new Intent(context, MyQActivity.class);
+                startActivity(intent);    
+        	} else {
+        		//Unsuccessful login
+        		//Either sign-up or try again
+                Intent intent = new Intent(context, SignUp.class);
+                startActivity(intent);    
+        	}        
         }
         
     }
@@ -52,6 +68,10 @@ public class MainActivity extends Activity {
         
         username = (EditText) findViewById(R.id.usernameEditText);
         password = (EditText) findViewById(R.id.passwordEditText);
+        
+        //Initialize the Parse library
+        Parse.initialize(this, "gQiGNtNHGVLvJd9lyH9s0AOpBuRPwgPJPCb5g7fQ", "jg9f4X7ij8r2COoUy2qOsmEb9EADrG0R6kRqWxQy"); 
+        ParseAnalytics.trackAppOpened(getIntent());
     }
 
     @Override

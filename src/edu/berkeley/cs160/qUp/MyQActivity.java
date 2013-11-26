@@ -1,6 +1,7 @@
 package edu.berkeley.cs160.qUp;
 
-import edu.berkeley.cs160.qUp.NFCTask.*;
+import com.parse.ParseObject;
+
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -9,9 +10,7 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
-//import com.parse.Parse;
-//import com.parse.ParseAnalytics;
+import edu.berkeley.cs160.qUp.NFCTask.URLHandler;
 
 public class MyQActivity extends Activity {
 

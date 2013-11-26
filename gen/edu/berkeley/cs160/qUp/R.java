@@ -31,7 +31,7 @@ public final class R {
     public static final class id {
         public static final int RelativeLayout1=0x7f08000b;
         public static final int View1=0x7f08000c;
-        public static final int action_settings=0x7f080019;
+        public static final int action_settings=0x7f08001b;
         public static final int app_layout=0x7f08000d;
         public static final int app_map=0x7f08000f;
         public static final int app_tag=0x7f08000e;
@@ -46,9 +46,11 @@ public final class R {
         public static final int business_time_2=0x7f080018;
         public static final int header=0x7f080001;
         public static final int loginButton=0x7f080007;
+        public static final int passwordConfirmLayout=0x7f080019;
         public static final int passwordEditText=0x7f080006;
         public static final int passwordLayout=0x7f080004;
         public static final int passwordTextView=0x7f080005;
+        public static final int signupButton=0x7f08001a;
         public static final int tagin_layout=0x7f080008;
         public static final int title=0x7f08000a;
         public static final int toggle=0x7f080009;
@@ -60,6 +62,7 @@ public final class R {
         public static final int activity_main=0x7f030000;
         public static final int handler=0x7f030001;
         public static final int my_q=0x7f030002;
+        public static final int signup=0x7f030003;
     }
     public static final class menu {
         public static final int main=0x7f070000;
