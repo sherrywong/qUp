@@ -34,7 +34,7 @@ public class MyQActivity extends Activity {
         
         @Override
         public void onClick(View arg0) {
-            Intent intent = new Intent(context, URLHandler.class);
+            Intent intent = new Intent(context, TagInHandler.class);
             startActivity(intent);            
         }
         
