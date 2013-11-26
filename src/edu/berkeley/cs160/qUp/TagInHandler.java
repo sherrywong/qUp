@@ -1,6 +1,6 @@
 /***
  * Note that this Implementation is based upon the aforementioned Commons*/
-package edu.berkeley.cs160.qUp.NFCTask;
+package edu.berkeley.cs160.qUp;
 
 import android.app.Activity;
 import android.app.PendingIntent;
@@ -19,20 +19,23 @@ import com.parse.ParseQuery;
 
 import java.util.Date;
 
-import edu.berkeley.cs160.qUp.R;
-
-public class URLHandler extends Activity {
+public class TagInHandler extends Activity {
 
     private static final int MESSAGE_SENT = 1;
+    public static final String BIZ = "Business";
+    public static final String TIMES = "Time Remaining";
+    public static String DEST_URL = "Url:";
     private String intentTagID;
 
-    private static final String TAG = URLHandler.class.getName();
+    private static final String TAG = TagInHandler.class.getName();
     protected NfcAdapter nfcAdapter;
     protected PendingIntent nfcPendingIntent;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        
         setContentView(R.layout.handler);
 
         setContentView(R.layout.handler);

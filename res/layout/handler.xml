@@ -2,8 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/tagin_layout"
     android:layout_width="match_parent"
-    android:layout_height="fill_parent"
-    android:background="#ffffff">
+    android:layout_height="fill_parent">
 
     <ImageButton
         android:id="@+id/toggle"
@@ -19,28 +18,21 @@
 
     <TextView
         android:layout_width="fill_parent"
-        android:layout_height="61dp"
-        android:text="Welcome to"
+        android:layout_height="wrap_content"
+        android:text="Touch the Phone to a qUp Node to Tag in:"
         android:id="@+id/title"
         android:layout_gravity="center_horizontal|top"
         android:textAlignment="textStart"
         android:textColor="#ffffff"
         android:typeface="normal"
-        android:shadowColor="#000000"
-        android:background="#3399ff"
+        android:background="@android:drawable/screen_background_dark_transparent"
         android:focusable="false"
         android:focusableInTouchMode="false"
         android:singleLine="true"
         android:textIsSelectable="true"
         android:ellipsize="end"
         android:layout_marginTop="24dp"
-        android:textSize="12pt" />
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="86dp"
-        android:layout_gravity="center_horizontal|top"></LinearLayout>
+        android:textSize="9pt" />
 
 </FrameLayout>
 
