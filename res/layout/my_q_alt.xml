@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical" >
+
+    <!-- Horizontal divider to apps -->
+
+    <View
+        android:id="@+id/View1"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/app_layout"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="14dp"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:id="@+id/app_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="14dp"
+        android:gravity="center_horizontal" >
+
+        <Button
+            android:id="@+id/app_tag"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="Tag-In" />
+
+        <Button
+            android:id="@+id/app_map"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="Find" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/business_layout_0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="90dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/business_name_0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next Business"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#3399ff"
+            android:textSize="40dp" />
+
+        <TextView
+            android:id="@+id/business_time_0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textSize="30dp" />
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/business_layout_0"
+        android:choiceMode="singleChoice"
+        android:layout_alignParentStart="true"
+        android:smoothScrollbar="true"
+        android:entries="@id/business_name_1"
+        android:layout_above="@+id/app_layout" />
+
+</RelativeLayout>

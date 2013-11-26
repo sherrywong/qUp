@@ -1,6 +1,6 @@
 /***
  * Note that this Implementation is based upon the aforementioned Commons*/
-package edu.berkeley.cs160.qUp.NFCTask;
+package edu.berkeley.cs160.qUp;
 
 import android.app.Activity;
 import android.app.PendingIntent;
@@ -17,29 +17,24 @@ import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 
-import com.parse.Parse;
-import com.parse.ParseAnalytics;
-
 import java.util.Date;
 
-import edu.berkeley.cs160.qUp.R;
-
-public class URLHandler extends Activity {
+public class TagInHandler extends Activity {
 
     private static final int MESSAGE_SENT = 1;
+    public static final String BIZ = "Business";
+    public static final String TIMES = "Time Remaining";
+    public static String DEST_URL = "Url:";
     private String intentTagID;
 
-    private static final String TAG = URLHandler.class.getName();
+    private static final String TAG = TagInHandler.class.getName();
     protected NfcAdapter nfcAdapter;
     protected PendingIntent nfcPendingIntent;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        
-        //Initialize the Parse library
-        Parse.initialize(this, "gQiGNtNHGVLvJd9lyH9s0AOpBuRPwgPJPCb5g7fQ", "jg9f4X7ij8r2COoUy2qOsmEb9EADrG0R6kRqWxQy"); 
-        ParseAnalytics.trackAppOpened(getIntent());
+
         
         setContentView(R.layout.handler);
 
