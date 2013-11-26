@@ -1,5 +1,8 @@
 package edu.berkeley.cs160.qUp;
 
+import org.json.JSONObject;
+
+
 import edu.berkeley.cs160.qUp.NFCTask.*;
 import android.app.Activity;
 import android.content.Context;
@@ -10,8 +13,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-//import com.parse.Parse;
-//import com.parse.ParseAnalytics;
+import com.parse.GetCallback;
+import com.parse.Parse;
+import com.parse.ParseAnalytics;
+import com.parse.ParseException;
+import com.parse.ParseObject;
+import com.parse.ParseQuery;
 
 public class MyQActivity extends Activity {
 
@@ -59,10 +66,12 @@ public class MyQActivity extends Activity {
         business_time_0 = (TextView) findViewById(R.id.business_time_0);
         business_time_1 = (TextView) findViewById(R.id.business_time_1);
         business_time_2 = (TextView) findViewById(R.id.business_time_2);
-
+        
+        fillValues();
+        
         tagBtn = (Button) findViewById(R.id.app_tag);
         tagBtn.setOnClickListener((android.view.View.OnClickListener) new ButtonListener(this));
-
+        
     }
 
     @Override
@@ -71,5 +80,27 @@ public class MyQActivity extends Activity {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
+
     
+    /*
+     * This will fill in the values for the top 3 businesses
+     * TODO right now, we're assuming that it's serial and !distrubted network of many users
+     */
+    private void fillValues() {
+    	ParseQuery<ParseObject> pQuery = new ParseQuery<ParseObject>("user");
+    	pQuery.getFirstInBackground(new GetCallback<ParseObject>() {
+
+		@Override
+		public void done(ParseObject object, ParseException e) {
+            if (object == null) {
+            	System.out.println("hello");
+            }
+            else {
+                //add logic to pass data to storage here
+            	JSONObject queue = object.getJSONObject("queue");
+            	//System.out.println(queue.toString());
+            }
+		}
+    	});
+    }
 }
