@@ -67,7 +67,26 @@ public class MyQActivity extends Activity {
         business_time_1 = (TextView) findViewById(R.id.business_time_1);
         business_time_2 = (TextView) findViewById(R.id.business_time_2);
 
-        fillValues();
+        /*
+         * Fill in the values based on the previous intent
+         */
+        Intent intent = getIntent();
+    	//business_name_0.setText(intent.getStringExtra(MainActivity.BUSINESS_NAME_0));
+    	//business_name_1.setText(intent.getStringExtra(MainActivity.BUSINESS_NAME_1));
+    	//business_name_2.setText(intent.getStringExtra(MainActivity.BUSINESS_NAME_2));
+
+    	//business_time_0.setText(intent.getStringExtra(MainActivity.BUSINESS_TIME_0));
+    	//business_time_1.setText(intent.getStringExtra(MainActivity.BUSINESS_TIME_1));
+    	//business_time_2.setText(intent.getStringExtra(MainActivity.BUSINESS_TIME_2));
+        
+    	business_name_0.setText(MainActivity.BUSINESS_NAME_0);
+    	business_name_1.setText(MainActivity.BUSINESS_NAME_1);
+    	business_name_2.setText(MainActivity.BUSINESS_NAME_2);
+
+    	business_time_0.setText(MainActivity.BUSINESS_TIME_0);
+    	business_time_1.setText(MainActivity.BUSINESS_TIME_1);
+    	business_time_2.setText(MainActivity.BUSINESS_TIME_2);
+
 
         tagBtn = (Button) findViewById(R.id.app_tag);
         tagBtn.setOnClickListener((android.view.View.OnClickListener) new ButtonListener(this));
@@ -79,28 +98,5 @@ public class MyQActivity extends Activity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
-    }
-
-
-    /*
-     * This will fill in the values for the top 3 businesses
-     * TODO right now, we're assuming that it's serial and !distrubted network of many users
-     */
-    private void fillValues() {
-        ParseQuery<ParseObject> pQuery = new ParseQuery<ParseObject>("user");
-        pQuery.getFirstInBackground(new GetCallback<ParseObject>() {
-
-            @Override
-            public void done(ParseObject object, ParseException e) {
-                if (object == null) {
-                    System.out.println("hello");
-                }
-                else {
-                    //add logic to pass data to storage here
-                    JSONObject queue = object.getJSONObject("queue");
-                    //System.out.println(queue.toString());
-                }
-            }
-        });
     }
 }
