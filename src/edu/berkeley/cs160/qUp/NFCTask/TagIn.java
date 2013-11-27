@@ -10,11 +10,8 @@ import android.os.Handler;
 import android.util.Log;
 import android.view.WindowManager;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 
 import org.json.JSONObject;
-
-import java.util.List;
 
 import edu.berkeley.cs160.qUp.R;
 
@@ -37,7 +34,7 @@ public class TagIn extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.handler);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-        nfc = NfcAdapter.getDefaultAdapter(this);
+        nfcAdapter = NfcAdapter.getDefaultAdapter(this);
 
         String business = getIntent().getStringExtra("businessName");
         if (business == null) business = "Unknown Business";
@@ -79,12 +76,9 @@ public class TagIn extends Activity {
      */
     private void nfcDidConnect(Tag tag) {
         String id = getNfcId(tag);
-        TextView tv = (TextView) this.findViewById(R.id.text);
-        tv.setText(id);
 
         if (lastNfcId == null) {
             // proceed to fetching the print jobs if no current processing job
-            ("Fetching print jobs...", R.drawable.big_progress);
 
             lastNfcId = id;
             setNfcEnabled(false);
@@ -105,27 +99,15 @@ public class TagIn extends Activity {
             if (!fetchResponse.getBoolean("success")) {
                 // prompt to register if there is a key supplied
                 if (fetchResponse.has("key")) {
-                    registerWithKey(fetchResponse.getString("key"));
                     return;
                 }
                 throw new RuntimeException(fetchResponse.getString("message"));
             }
 
-            List<Job> jobs = Utils.toList(fetchResponse.getJSONArray("jobs"), Job.class);
-            adapter.clear();
-            adapter.addAll(jobs);
-
-            if (jobs.isEmpty()) {
-                throw new RuntimeException("No file to print");
-            }
-
-            jobs.get(0).status = Job.Status.IN_PROGRESS;
-            new PrintTask().execute(jobs.get(0));
 
         } catch (Exception e) {
             e.printStackTrace();
             done();
-            showListMessage(e.getMessage(), R.drawable.warning);
         }
     }
 
@@ -171,9 +153,6 @@ public class TagIn extends Activity {
     private Runnable reset = new Runnable() {
         @Override
         public void run() {
-            TextView nfcid = (TextView) findViewById(R.id.text);
-            nfcid.setText("");
-            showListMessage("Tap your NFC tag on the back", R.drawable.nfc);
             lastNfcId = null;
             try {
                 setNfcEnabled(true);

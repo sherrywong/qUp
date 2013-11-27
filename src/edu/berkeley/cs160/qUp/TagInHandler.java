@@ -1,128 +1,123 @@
-/***
- * Note that this Implementation is based upon the aforementioned Commons*/
 package edu.berkeley.cs160.qUp;
 
+
 import android.app.Activity;
-import android.app.PendingIntent;
-import android.content.Context;
 import android.content.Intent;
+import android.nfc.NdefMessage;
 import android.nfc.NfcAdapter;
 import android.os.Bundle;
-import android.os.Vibrator;
-import android.util.Log;
-import android.widget.TextView;
+import android.view.View;
+import android.widget.Button;
 
-import com.parse.GetCallback;
-import com.parse.ParseException;
-import com.parse.ParseObject;
-import com.parse.ParseQuery;
-
-import java.util.Date;
+import org.ndeftools.Message;
+import org.ndeftools.Record;
 
 public class TagInHandler extends Activity {
-
-    private static final int MESSAGE_SENT = 1;
-    public static final String BIZ = "Business";
-    public static final String TIMES = "Time Remaining";
-    public static String DEST_URL = "Url:";
-    private String intentTagID;
+    String business_name_0, business_time_0;
+    String business_name_1, business_time_1;
+    String business_name_2, business_time_2;
 
     private static final String TAG = TagInHandler.class.getName();
-    protected NfcAdapter nfcAdapter;
-    protected PendingIntent nfcPendingIntent;
+
+
+    class TagDescription {
+
+        public String title;
+
+        public NdefMessage[] msgs;
+
+        public TagDescription(String title, Record record) {
+            this.title = title;
+            Message message = new Message();
+            message.add(record);
+            try {
+                msgs = new NdefMessage[]{message.getNdefMessage()};
+            } catch (final Exception e) {
+                throw new RuntimeException("Failed to create tag description", e);
+            }
+        }
+
+        @Override
+        public String toString() {
+            return title;
+        }
+
+    }
+
+
+    TagDescription mTagDescription0;
+    TagDescription mTagDescription1;
+    TagDescription mTagDescription2;
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-
+    public void onCreate(Bundle savedState) {
+        super.onCreate(savedState);
         setContentView(R.layout.handler);
 
-        setContentView(R.layout.handler);
 
-        // initialize NFC
-        nfcAdapter = NfcAdapter.getDefaultAdapter(this);
-        nfcPendingIntent = PendingIntent.getActivity(this, 0, new Intent(this, this.getClass()).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP), 0);
-
-//        TODO: Remove the following before release. Only for testing.
-        if (getIntent().hasExtra(NfcAdapter.EXTRA_TAG)) {
-            TextView textView = (TextView) findViewById(R.id.title);
-            textView.setText("Hello NFC tag from home screen!");
-        }
-
-        printTagId(getIntent());
-    }
-    public ParseObject targetBiz = new ParseObject("TargetBiz");
-    @Override
-    public void onNewIntent(Intent intent) {
-        Log.d(TAG, "onNewIntent");
-        setIntent(intent);
-
-        if (NfcAdapter.ACTION_TAG_DISCOVERED.equals(intent.getAction())) {
-            Log.d(TAG, "A tag was scanned!");
-            TextView textView = (TextView) findViewById(R.id.title);
+        mTagDescription0 = new TagDescription("Tagged in For PurpleKow", MockNdefMessages.PURPLE_KOW);
+        mTagDescription1 = new TagDescription("Tagged in for SLiver", MockNdefMessages.SLIVER);
+        mTagDescription2 = new TagDescription("Tagged in For Cheeseboard", MockNdefMessages.CHEESEBOARD);
 
 
-            ParseQuery query = new ParseQuery("OwnerID");
-            query.getInBackground(intentTagID, new GetCallback(){
+        final Button button = (Button) findViewById(R.id.toggle);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(), MyQActivity.class);
 
 
-                public void done(ParseObject biz, ParseException e){
-                    if (e == null)
-                    {
-                        Log.d(TAG, "It Works!");
-                        targetBiz = biz;
-                        String owner = targetBiz.getString("owner");
-                        String waitTime = targetBiz.getString("WaitTIme");
-                        Date updatedAt = targetBiz.getUpdatedAt();
-                        Date createdAt = targetBiz.getCreatedAt();
-                        //TODO: Update Waiting Time and Button State.
-                    }
-                    else{
-                        Log.e(TAG, "There's been an error!");
-                        //TODO: Error handling.
-                    }
-                }
-            });
+                intent.putExtra(business_name_1, "Cheeseboard");
+                intent.putExtra(business_name_2, "Sliver");
 
-            textView.setText("Hello ");
+                intent.putExtra(business_time_0, "00:14");
+                intent.putExtra(business_time_1, "00:10");
+                intent.putExtra(business_time_2, "00:08");
 
-            vibrate(); // signal found messages :-)
 
-            printTagId(getIntent());
-        }
+                intent.putExtra(NfcAdapter.EXTRA_NDEF_MESSAGES, mTagDescription0.msgs);
 
-    }
+                startActivity(intent);
+            }
+        });
 
-    /**
-     * Converts the byte array to HEX string.
-     *
-     * @param buffer the buffer.
-     * @return the HEX string.
-     */
-    public String toHexString(byte[] buffer) {
-        StringBuilder sb = new StringBuilder();
-        for (byte b : buffer)
-            sb.append(String.format("%02x ", b & 0xff));
-        return sb.toString().toUpperCase();
-    }
-
-    protected void printTagId(Intent intent) {
-        if (intent.hasExtra(NfcAdapter.EXTRA_ID)) {
-            byte[] byteArrayExtra = intent.getByteArrayExtra(NfcAdapter.EXTRA_ID);
-            intentTagID = toHexString(byteArrayExtra);
-            Log.d(TAG, "Tag id is " + intentTagID);
-
-        }
-    }
-
-    private void vibrate() {
-        Log.d(TAG, "vibrate");
-
-        Vibrator vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-        vibe.vibrate(500);
     }
 
 
 }
+
+
+//    public ParseObject targetBiz = new ParseObject("TargetBiz");
+//
+//
+//
+//        if (NfcAdapter.ACTION_TAG_DISCOVERED.equals(intent.getAction())) {
+//            Log.d(TAG, "A tag was scanned!");
+//            TextView textView = (TextView) findViewById(R.id.title);
+//
+//
+//            ParseQuery query = new ParseQuery("OwnerID");
+//            query.getInBackground(intentTagID, new GetCallback(){
+//
+//
+//                public void done(ParseObject biz, ParseException e){
+//                    if (e == null)
+//                    {
+//                        Log.d(TAG, "It Works!");
+//                        targetBiz = biz;
+//                        String owner = targetBiz.getString("owner");
+//                        String waitTime = targetBiz.getString("WaitTime");
+//                        Date updatedAt = targetBiz.getUpdatedAt();
+//                        Date createdAt = targetBiz.getCreatedAt();
+//                        //TODO: Update Waiting Time and Button State.
+//                    }
+//                    else{
+//                        Log.e(TAG, "There's been an error!");
+//                        //TODO: Error handling.
+//                    }
+//                }
+//            });
+//    }
+
+
+
 

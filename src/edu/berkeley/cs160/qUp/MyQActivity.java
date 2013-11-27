@@ -1,30 +1,24 @@
 package edu.berkeley.cs160.qUp;
 
-        import org.json.JSONObject;
-
-
-        import edu.berkeley.cs160.qUp.NFCTask.*;
-        import android.app.Activity;
-        import android.content.Context;
-        import android.content.Intent;
-        import android.os.Bundle;
-        import android.view.Menu;
-        import android.view.View;
-        import android.widget.Button;
-        import android.widget.TextView;
-
-        import com.parse.GetCallback;
-        import com.parse.Parse;
-        import com.parse.ParseAnalytics;
-        import com.parse.ParseException;
-        import com.parse.ParseObject;
-        import com.parse.ParseQuery;
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 public class MyQActivity extends Activity {
+    String getBusiness_name_0, getBusiness_time_0;
+    String getBusiness_name_1, getBusiness_time_1;
+    String getBusiness_name_2, getBusiness_time_2;
 
     TextView business_name_0, business_time_0;
     TextView business_name_1, business_time_1;
     TextView business_name_2, business_time_2;
+
+
     Button tagBtn;
 
     /*
@@ -52,6 +46,11 @@ public class MyQActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.my_q);
 
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            getBusiness_name_0 = extras.getString("biz_name_1");
+
+        }
         //TODO Get id and client key
         //Parse.initialize(this,  id, clientKey);
         //ParseAnalytics.trackAppOpened(getIntent());
@@ -92,6 +91,7 @@ public class MyQActivity extends Activity {
         tagBtn.setOnClickListener((android.view.View.OnClickListener) new ButtonListener(this));
 
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
