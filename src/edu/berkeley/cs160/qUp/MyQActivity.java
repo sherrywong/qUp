@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MyQActivity extends Activity {
     String getBusiness_name_0, getBusiness_time_0;
@@ -46,11 +47,7 @@ public class MyQActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.my_q);
 
-        Bundle extras = getIntent().getExtras();
-        if (extras != null) {
-            getBusiness_name_0 = extras.getString("biz_name_1");
 
-        }
         //TODO Get id and client key
         //Parse.initialize(this,  id, clientKey);
         //ParseAnalytics.trackAppOpened(getIntent());
@@ -86,6 +83,17 @@ public class MyQActivity extends Activity {
     	business_time_1.setText(MainActivity.BUSINESS_TIME_1);
     	business_time_2.setText(MainActivity.BUSINESS_TIME_2);
 
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+
+//            getBusiness_name_0 = extras.getString(MainActivity.BUSINESS_NAME_0);
+            Toast.makeText(getBaseContext(), "Times Updated!", Toast.LENGTH_LONG).show();
+
+            business_time_0.setText(extras.getString(MainActivity.BUSINESS_TIME_0));
+            business_time_1.setText(extras.getString(MainActivity.BUSINESS_TIME_1));
+            business_time_2.setText(extras.getString(MainActivity.BUSINESS_TIME_2));
+
+        }
 
         tagBtn = (Button) findViewById(R.id.app_tag);
         tagBtn.setOnClickListener((android.view.View.OnClickListener) new ButtonListener(this));

@@ -7,7 +7,7 @@ import android.nfc.NdefMessage;
 import android.nfc.NfcAdapter;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 
 import org.ndeftools.Message;
 import org.ndeftools.Record;
@@ -56,22 +56,19 @@ public class TagInHandler extends Activity {
 
 
         mTagDescription0 = new TagDescription("Tagged in For PurpleKow", MockNdefMessages.PURPLE_KOW);
-        mTagDescription1 = new TagDescription("Tagged in for SLiver", MockNdefMessages.SLIVER);
-        mTagDescription2 = new TagDescription("Tagged in For Cheeseboard", MockNdefMessages.CHEESEBOARD);
+//        mTagDescription1 = new TagDescription("Tagged in for SLiver", MockNdefMessages.SLIVER);
+//        mTagDescription2 = new TagDescription("Tagged in For Cheeseboard", MockNdefMessages.CHEESEBOARD);
 
 
-        final Button button = (Button) findViewById(R.id.toggle);
+        final ImageButton button = (ImageButton) findViewById(R.id.toggle);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(getBaseContext(), MyQActivity.class);
 
 
-                intent.putExtra(business_name_1, "Cheeseboard");
-                intent.putExtra(business_name_2, "Sliver");
-
-                intent.putExtra(business_time_0, "00:14");
-                intent.putExtra(business_time_1, "00:10");
-                intent.putExtra(business_time_2, "00:08");
+                intent.putExtra(MainActivity.BUSINESS_TIME_0, "14 Minutes");
+                intent.putExtra(MainActivity.BUSINESS_TIME_1, "10");
+                intent.putExtra(MainActivity.BUSINESS_TIME_2, "00:08");
 
 
                 intent.putExtra(NfcAdapter.EXTRA_NDEF_MESSAGES, mTagDescription0.msgs);

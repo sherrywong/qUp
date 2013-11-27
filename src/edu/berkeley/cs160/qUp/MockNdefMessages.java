@@ -28,12 +28,12 @@ public class MockNdefMessages {
     /**
      * A plain text tag in english.
      */
-    public static final TextRecord CHEESEBOARD = new TextRecord("Cheeseboard", Locale.ENGLISH);
+    public static final TextRecord CHEESEBOARD = new TextRecord(MainActivity.BUSINESS_NAME_0, Locale.ENGLISH);
     public static final TextRecord CHEESEBOARD_TIME = new TextRecord("00:20", Locale.ENGLISH);
     public static final TextRecord SLIVER_TIME = new TextRecord("00:14", Locale.ENGLISH);
-    public static final TextRecord PURPLE_KOW = new TextRecord("Purple Kow", Locale.ENGLISH);
+    public static final TextRecord PURPLE_KOW = new TextRecord(MainActivity.BUSINESS_NAME_1, Locale.ENGLISH);
     public static final TextRecord PURPLE_KOW_TIME = new TextRecord("00:08", Locale.ENGLISH);
-    public static final TextRecord SLIVER = new TextRecord("Sliver", Locale.ENGLISH);
+    public static final TextRecord SLIVER = new TextRecord(MainActivity.BUSINESS_NAME_2, Locale.ENGLISH);
 
 
 }
