@@ -1,37 +1,53 @@
 package edu.berkeley.cs160.qUp;
 
 import android.app.Application;
+import android.content.Context;
+import android.content.res.Configuration;
 import android.util.Log;
 
-import com.parse.Parse;
-import com.parse.ParseACL;
-
 /**
+ * Part of the qUp codebase.
  * Created by sidneyfeygin on 11/25/13.
  */
-public class qUpApplication extends Application {
+public class QUpApplication extends Application {
 
-    private static String tag = "qUpApplication";
+    public static Context s_applicationContext = null;
+    private static String TAG = "QUpApplication";
 
-    private static String PARSE_APPLICATION_ID = "gQiGNtNHGVLvJd9lyH9s0AOpBuRPwgPJPCb5g7fQ";
-    private static String PARSE_CLIENT_KEY = "jg9f4X7ij8r2COoUy2qOsmEb9EADrG0R6kRqWxQy";
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        Log.d(TAG, "configuration changed!");
 
+    }
+
+    /**
+     * User to make Context globally aware.
+     */
     @Override
     public void onCreate() {
         super.onCreate();
+        s_applicationContext = getApplicationContext();
+        Log.d(TAG, "In onCreate");
+    }
 
-        Log.d(tag, "initializing qUp with keys");
-        //initialize with splash screen
-        Parse.initialize(this, PARSE_APPLICATION_ID, PARSE_CLIENT_KEY);
+    @Override
+    public void onTerminate() {
+        super.onTerminate();
+        Log.d(TAG, "In on Terminate");
+    }
 
-        //This creates an anonymous user
-        ParseACL defaultACL = new ParseACL();
-        defaultACL.setPublicReadAccess(true);
+    @Override
+    public void onLowMemory() {
+        super.onLowMemory();
+        Log.d(TAG, "In onLowMemory");
 
+    }
 
-        ParseACL.setDefaultACL(defaultACL, true);
+    public void registerQueueUpdateListener(BusinessListActivity businessListActivity) {
+    }
 
-        Log.d(tag, "initializing app complete");
+    public void checkForUpdates() {
 
     }
 }

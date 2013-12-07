@@ -54,7 +54,7 @@
             android:layout_height="wrap_content"
             android:text="Next Business"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#3399ff"
+            android:textColor="#3594f4"
             android:textSize="40dp" />
 
         <TextView

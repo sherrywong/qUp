@@ -8,7 +8,7 @@ import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.Toast;
 
-import edu.berkeley.cs160.qUp.MainActivity;
+import edu.berkeley.cs160.qUp.BusinessListActivity;
 import edu.berkeley.cs160.qUp.R;
 
 class WriteTagTask extends AsyncTask<Void, Void, Void> {
@@ -16,12 +16,12 @@ class WriteTagTask extends AsyncTask<Void, Void, Void> {
     * It will exsist here for now for testing
     *
     */
-    MainActivity host = null;
+    BusinessListActivity host = null;
     NdefMessage msg = null;
     Tag tag = null;
     String text = null;
 
-    WriteTagTask(MainActivity host, NdefMessage msg, Tag tag) {
+    WriteTagTask(BusinessListActivity host, NdefMessage msg, Tag tag) {
         this.host = host;
         this.msg = msg;
         this.tag = tag;

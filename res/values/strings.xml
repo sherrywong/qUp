@@ -17,4 +17,9 @@
     <string name="tag_is_read_only">Tag is read only</string>
     <string name="tag_refused_to_format">Tag refused to format!</string>
     <string name="general_exception">General NDEF Exception</string>
+    <string name="business_name">Shortest Wait Time For</string>
+    <string name="business_subtype_title">\"Business Subtype\"</string>
+    <string name="password">Password:</string>
+    <string name="tag_in_text">Tag in!</string>
+    <string name="back_to_map_text">Back to Map</string>
 </resources>
