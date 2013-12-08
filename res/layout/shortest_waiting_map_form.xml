@@ -98,7 +98,7 @@
         android:textSize="28sp" />
 
     <Button
-        android:id="@+id/loginButton"
+        android:id="@+id/searchButton"
         android:layout_width="200dip"
         android:layout_height="wrap_content"
         android:layout_below="@+id/radiusLayout"

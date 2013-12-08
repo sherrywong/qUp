@@ -17,4 +17,13 @@
     <string name="tag_is_read_only">Tag is read only</string>
     <string name="tag_refused_to_format">Tag refused to format!</string>
     <string name="general_exception">General NDEF Exception</string>
+
+	<string-array name="duration_array">
+	    <item>Minutes</item>
+	    <item>Hours</item>
+	    <item>Days</item>
+	    <item>Weeks</item>
+	    <item>Months</item>
+	    <item>Years</item>
+	</string-array>
 </resources>
