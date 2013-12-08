@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/RelativeLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".MainActivity"
     android:gravity="center_vertical">
 
     <!-- Horizontal divider to apps -->
@@ -24,7 +24,6 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@android:color/primary_text_light"
             android:textSize="35dp"
-            android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_gravity="center_horizontal|top"
             android:singleLine="true"
@@ -34,7 +33,7 @@
             android:id="@+id/business_time_0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="00:00"
+            android:text="@string/dummy_time"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textSize="30dp"
             android:layout_alignEnd="@+id/business_name_0"
@@ -47,17 +46,12 @@
             android:layout_height="wrap_content"
             android:text="@string/business_subtype_title"
             android:id="@+id/textView"
-            android:layout_below="@+id/business_name_0"
-            android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:autoLink="web"
-            android:autoText="false"
-            android:editable="true"
             android:layout_gravity="left|bottom"
             android:layout_marginLeft="24sp"
             style="@android:style/TextAppearance.DeviceDefault.Widget.ActionBar.Title"
             android:layout_marginBottom="15sp"
-            android:capitalize="sentences"
             android:textColor="#3399ff"
             android:textSize="10pt"
             android:textIsSelectable="true"
@@ -159,24 +153,6 @@
 
     </LinearLayout>
 
-    <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/listView"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/business_layout_0"
-        android:choiceMode="singleChoice"
-        android:layout_alignParentStart="true"
-        android:smoothScrollbar="true"
-        android:entries="@id/business_name_1"
-        android:layout_above="@+id/View1"
-        android:layout_alignParentEnd="true"
-        tools:listitem="@android:layout/simple_expandable_list_item_2"
-        android:background="@android:drawable/list_selector_background"
-        android:stackFromBottom="false"
-        android:textFilterEnabled="false"
-        android:layoutMode="opticalBounds" />
-
     <ProgressBar
         android:id="@+id/loader"
         android:layout_width="wrap_content"
@@ -185,6 +161,13 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:background="@android:color/background_light"
-        style="@android:style/Animation.Activity" />
+        />
+
+    <edu.berkeley.cs160.qUp.animlv.AnimatedListView
+        android:id="@+id/queue_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" />
+
 
 </RelativeLayout>

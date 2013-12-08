@@ -15,8 +15,6 @@ public class Queue implements Comparable<Queue> {
 
     public Business business;
     public int id;
-    @SerializedName("resource_uri")
-    public String resourceURI;
     @SerializedName("time_entered_in_queue")
     public Date timeEnteredInQueue;
     public User user;
@@ -24,11 +22,10 @@ public class Queue implements Comparable<Queue> {
     public Queue() {
     }
 
-    public Queue(Business business, int id, String resourceURI, Date timeEnteredInQueue, User user) {
+    public Queue(Business business, int id, Date timeEnteredInQueue, User user) {
 
         this.business = business;
         this.id = id;
-        this.resourceURI = resourceURI;
         this.timeEnteredInQueue = timeEnteredInQueue;
         this.user = user;
     }
@@ -49,13 +46,6 @@ public class Queue implements Comparable<Queue> {
         this.id = id;
     }
 
-    public String getResourceURI() {
-        return resourceURI;
-    }
-
-    public void setResourceURI(String resourceURI) {
-        this.resourceURI = resourceURI;
-    }
 
     public Date getTimeEnteredInQueue() {
         return timeEnteredInQueue;
@@ -72,7 +62,9 @@ public class Queue implements Comparable<Queue> {
     public void setUser(User user) {
         this.user = user;
     }
-
+    public void setUserString(String user) {
+        this.user = new User(user);
+    }
     public String getUserString() {
 
 
@@ -96,6 +88,7 @@ public class Queue implements Comparable<Queue> {
     public int compareTo(Queue another) {
         return another.getTimeEnteredInQueue().compareTo(timeEnteredInQueue);
     }
+
 
 
 }

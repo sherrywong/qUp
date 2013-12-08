@@ -6,6 +6,7 @@ package edu.berkeley.cs160.qUp;
  */
 
 import java.util.ArrayList;
+import java.util.List;
 
 import edu.berkeley.cs160.qUp.Model.Queue;
 
@@ -19,6 +20,6 @@ public interface QueueListUpdateListener {
      *
      * @param queues An array list of queues
      */
-    void onQueueListLoaded(ArrayList<Queue> queues);
+    void onQueueListLoaded(List<Queue> queues);
 
 }

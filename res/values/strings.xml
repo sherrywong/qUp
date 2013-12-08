@@ -22,4 +22,5 @@
     <string name="password">Password:</string>
     <string name="tag_in_text">Tag in!</string>
     <string name="back_to_map_text">Back to Map</string>
+    <string name="dummy_time">00:00</string>
 </resources>
