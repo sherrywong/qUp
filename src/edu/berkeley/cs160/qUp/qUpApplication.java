@@ -8,9 +8,9 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
-import java.util.List;
 
 import edu.berkeley.cs160.qUp.netio.QueueListResponse;
+import edu.berkeley.cs160.qUp.netio.QueueListUpdateListener;
 import edu.berkeley.cs160.qUp.netio.database.QueueORM;
 import edu.berkeley.cs160.qUp.netio.RESTController;
 import edu.berkeley.cs160.qUp.Model.Queue;

@@ -1,4 +1,4 @@
-package edu.berkeley.cs160.qUp.NFCTask;
+package edu.berkeley.cs160.qUp.NFCTask.nfcUtils;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * Created by sidneyfeygin on 11/25/13.
  */
-public class Utils {
+public class NFCUtils {
 
     /**
      * Turns a JSONArray into a list of a specified class. Assumes that the class specified have

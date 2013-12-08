@@ -1,4 +1,4 @@
-package edu.berkeley.cs160.qUp;
+package edu.berkeley.cs160.qUp.NFCTask;
 
 
 import android.annotation.TargetApi;
@@ -20,6 +20,7 @@ import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import edu.berkeley.cs160.qUp.R;
 import org.ndeftools.Message;
 import org.ndeftools.Record;
 import org.ndeftools.externaltype.AndroidApplicationRecord;

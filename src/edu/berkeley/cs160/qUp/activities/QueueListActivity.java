@@ -1,4 +1,4 @@
-package edu.berkeley.cs160.qUp;
+package edu.berkeley.cs160.qUp.activities;
 
 //~--- non-JDK imports --------------------------------------------------------
 
@@ -19,9 +19,12 @@ import android.widget.TextView;
 import java.util.List;
 
 import edu.berkeley.cs160.qUp.Model.Queue;
+import edu.berkeley.cs160.qUp.QUpApplication;
+import edu.berkeley.cs160.qUp.R;
 import edu.berkeley.cs160.qUp.animlv.AnimatedListView;
 import edu.berkeley.cs160.qUp.animlv.AnimatedListViewAdapter;
 import edu.berkeley.cs160.qUp.animlv.AnimatedListViewObjectMapper;
+import edu.berkeley.cs160.qUp.netio.QueueListUpdateListener;
 
 //~--- JDK imports ------------------------------------------------------------
 

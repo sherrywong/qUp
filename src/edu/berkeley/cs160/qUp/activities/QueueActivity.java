@@ -1,4 +1,4 @@
-package edu.berkeley.cs160.qUp;
+package edu.berkeley.cs160.qUp.activities;
 
 /**
  * Part of the qUp codebase.

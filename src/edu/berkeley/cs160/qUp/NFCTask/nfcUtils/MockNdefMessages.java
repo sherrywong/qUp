@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package edu.berkeley.cs160.qUp;
+package edu.berkeley.cs160.qUp.NFCTask.nfcUtils;
 
 /**
  * This class provides a list of fake NFC Ndef format Tags.

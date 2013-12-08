@@ -1,4 +1,4 @@
-package edu.berkeley.cs160.qUp;
+package edu.berkeley.cs160.qUp.netio;
 
 /**
  * Part of the qUp codebase.

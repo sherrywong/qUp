@@ -8,7 +8,7 @@ import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.Toast;
 
-import edu.berkeley.cs160.qUp.QueueListActivity;
+import edu.berkeley.cs160.qUp.activities.QueueListActivity;
 import edu.berkeley.cs160.qUp.R;
 
 class WriteTagTask extends AsyncTask<Void, Void, Void> {
