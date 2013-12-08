@@ -2,13 +2,13 @@ package edu.berkeley.cs160.qUp;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TextView;
 
 public class BusinessActivityForm extends Activity {
 	
@@ -23,21 +23,16 @@ public class BusinessActivityForm extends Activity {
     private class ButtonListener implements Button.OnClickListener {
 
         Context context;
-        String type; //Analytics or Offer qPon
         //Constructor
-        public ButtonListener(Context context, String type) {
+        public ButtonListener(Context context) {
             this.context = context;
-            this.type = type;
         }
 
         @Override
         public void onClick(View arg0) {
-        	if (type.equals("analytics")) {
-                //TODO: Start the Business Analytics intent        		
-        	}
-        	else if (type.equals("qpon")) {
-        		//TODO: Start the Offer qPon form intent
-        	}
+        	//TODO: Add toast confirmation
+        	Intent intent = new Intent(context,BusinessActivityMain.class);
+        	startActivity(intent);
         }
     }
     
@@ -54,6 +49,8 @@ public class BusinessActivityForm extends Activity {
     	durationValue = (EditText) findViewById(R.id.durationValue);
     	sendBtn       = (Button)   findViewById(R.id.sendButton);
     
+    	sendBtn.setOnClickListener(new ButtonListener(this));
+    	
     	//Set the possible duration values
     	ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
     			R.array.duration_array,android.R.layout.simple_spinner_item);
@@ -78,17 +75,17 @@ public class BusinessActivityForm extends Activity {
     }
     
     public String getFormTitle() {
-    	//TODO: Give warning when bad args
+    	//TODO: Give warning about bad args
     	return this.title.getText().toString();
     }
     
     public String getDescription() {
-    	//TODO: Give warning when bad args
+    	//TODO: Give warning about bad args
     	return this.description.getText().toString();
     }
     
     public String getStartDate() {
-    	//TODO: Give warning when bad args
+    	//TODO: Give warning about bad args
     	//TODO: implement me
     	return null;
     }
