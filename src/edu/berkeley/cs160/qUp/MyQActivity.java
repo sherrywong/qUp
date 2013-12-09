@@ -75,13 +75,13 @@ public class MyQActivity extends Activity {
     	//business_time_1.setText(intent.getStringExtra(MainActivity.BUSINESS_TIME_1));
     	//business_time_2.setText(intent.getStringExtra(MainActivity.BUSINESS_TIME_2));
         
-    	business_name_0.setText(MainActivity.BUSINESS_NAME_0);
-    	business_name_1.setText(MainActivity.BUSINESS_NAME_1);
-    	business_name_2.setText(MainActivity.BUSINESS_NAME_2);
-
-    	business_time_0.setText(MainActivity.BUSINESS_TIME_0);
-    	business_time_1.setText(MainActivity.BUSINESS_TIME_1);
-    	business_time_2.setText(MainActivity.BUSINESS_TIME_2);
+//    	business_name_0.setText(Busin.BUSINESS_NAME_0);
+//    	business_name_1.setText(MainActivity.BUSINESS_NAME_1);
+//    	business_name_2.setText(MainActivity.BUSINESS_NAME_2);
+//
+//    	business_time_0.setText(MainActivity.BUSINESS_TIME_0);
+//    	business_time_1.setText(MainActivity.BUSINESS_TIME_1);
+//    	business_time_2.setText(MainActivity.BUSINESS_TIME_2);
 
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
@@ -89,9 +89,9 @@ public class MyQActivity extends Activity {
 //            getBusiness_name_0 = extras.getString(MainActivity.BUSINESS_NAME_0);
             Toast.makeText(getBaseContext(), "Times Updated!", Toast.LENGTH_LONG).show();
 
-            business_time_0.setText(extras.getString(MainActivity.BUSINESS_TIME_0));
-            business_time_1.setText(extras.getString(MainActivity.BUSINESS_TIME_1));
-            business_time_2.setText(extras.getString(MainActivity.BUSINESS_TIME_2));
+//            business_time_0.setText(extras.getString(MainActivity.BUSINESS_TIME_0));
+//            business_time_1.setText(extras.getString(MainActivity.BUSINESS_TIME_1));
+//            business_time_2.setText(extras.getString(MainActivity.BUSINESS_TIME_2));
 
         }
 

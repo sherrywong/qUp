@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
+import edu.berkeley.cs160.qUp.NFCTask.nfcUtils.MockNdefMessages;
 import org.ndeftools.Message;
 import org.ndeftools.Record;
 
@@ -55,7 +56,7 @@ public class TagInHandler extends Activity {
         setContentView(R.layout.handler);
 
 
-        mTagDescription0 = new TagDescription("Tagged in For PurpleKow", MockNdefMessages.PURPLE_KOW);
+//        mTagDescription0 = new TagDescription("Tagged in For PurpleKow", "Purple Kow");
 //        mTagDescription1 = new TagDescription("Tagged in for SLiver", MockNdefMessages.SLIVER);
 //        mTagDescription2 = new TagDescription("Tagged in For Cheeseboard", MockNdefMessages.CHEESEBOARD);
 
@@ -66,9 +67,9 @@ public class TagInHandler extends Activity {
                 Intent intent = new Intent(getBaseContext(), MyQActivity.class);
 
 
-                intent.putExtra(MainActivity.BUSINESS_TIME_0, "14 Minutes");
-                intent.putExtra(MainActivity.BUSINESS_TIME_1, "10");
-                intent.putExtra(MainActivity.BUSINESS_TIME_2, "00:08");
+//                intent.putExtra(MainActivity.BUSINESS_TIME_0, "14 Minutes");
+//                intent.putExtra(MainActivity.BUSINESS_TIME_1, "10");
+//                intent.putExtra(MainActivity.BUSINESS_TIME_2, "00:08");
 
 
                 intent.putExtra(NfcAdapter.EXTRA_NDEF_MESSAGES, mTagDescription0.msgs);

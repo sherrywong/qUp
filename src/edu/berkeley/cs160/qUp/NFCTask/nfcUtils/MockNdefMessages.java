@@ -15,6 +15,11 @@
  */
 package edu.berkeley.cs160.qUp.NFCTask.nfcUtils;
 
+import edu.berkeley.cs160.qUp.activities.QueueListActivity;
+import org.ndeftools.wellknown.TextRecord;
+
+import java.util.Locale;
+
 /**
  * This class provides a list of fake NFC Ndef format Tags.
  */
@@ -25,10 +30,10 @@ public class MockNdefMessages {
      * A plain text tag in english.
      */
 //    public static final TextRecord CHEESEBOARD = new TextRecord(QueueListActivity.BUSINESS_NAME_0, Locale.ENGLISH);
-//    public static final TextRecord CHEESEBOARD_TIME = new TextRecord("5 Minutes", Locale.ENGLISH);
-//    public static final TextRecord SLIVER_TIME = new TextRecord("45 Minutes", Locale.ENGLISH);
+    public static final TextRecord CHEESEBOARD_TIME = new TextRecord("5 Minutes", Locale.ENGLISH);
+    public static final TextRecord SLIVER_TIME = new TextRecord("45 Minutes", Locale.ENGLISH);
 //    public static final TextRecord PURPLE_KOW = new TextRecord(QueueListActivity.BUSINESS_NAME_1, Locale.ENGLISH);
-//    public static final TextRecord PURPLE_KOW_TIME = new TextRecord("Twenty Five Minutes", Locale.ENGLISH);
+    public static final TextRecord PURPLE_KOW_TIME = new TextRecord("Twenty Five Minutes", Locale.ENGLISH);
 //    public static final TextRecord SLIVER = new TextRecord(QueueListActivity.BUSINESS_NAME_2, Locale.ENGLISH);
 
 
