@@ -6,6 +6,7 @@
     android:orientation="vertical" >
 
     <!-- Horizontal seperator -->
+
     <View
         android:id="@+id/View1"
         android:layout_width="fill_parent"
@@ -22,36 +23,49 @@
         android:layout_above="@+id/length"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="35dp"
+        android:layout_marginLeft="10dp"
         android:text="Current qLength"
         android:textColor="#3399ff"
         android:textSize="30sp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="56dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/analytics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="#006633"
+            android:text="Offer qPon"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/qpon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#0066FF"
+            android:text="Analytics"
+            android:textColor="#ffffff" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/length"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/View1"
+        android:layout_above="@+id/linearLayout1"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="139dp"
+        android:layout_marginBottom="80dp"
         android:text="14"
         android:textSize="34sp" />
-
-    <Button
-        android:id="@+id/qpon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/analytics"
-        android:layout_alignBottom="@+id/analytics"
-        android:layout_alignLeft="@+id/title"
-        android:text="Analytics" />
-
-    <Button
-        android:id="@+id/analytics"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/title"
-        android:layout_alignTop="@+id/View1"
-        android:layout_marginTop="18dp"
-        android:text="offer qPon" />
 
 </RelativeLayout>
