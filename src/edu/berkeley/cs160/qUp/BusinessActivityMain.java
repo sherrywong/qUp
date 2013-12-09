@@ -38,7 +38,7 @@ public class BusinessActivityMain extends Activity {
                 //TODO: Start the Business Analytics intent        		
         	}
         	else if (type.equals("qpon")) {
-                Intent intent = new Intent(context, ReservationSearch.class);
+                Intent intent = new Intent(context, BusinessActivityForm.class);
                 startActivity(intent);
         	}
         }
