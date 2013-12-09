@@ -41,7 +41,7 @@
         android:orientation="vertical" >
 
         <Button
-            android:id="@+id/analytics"
+            android:id="@+id/qpon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
@@ -50,7 +50,7 @@
             android:textColor="#ffffff" />
 
         <Button
-            android:id="@+id/qpon"
+            android:id="@+id/analytics"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#0066FF"
