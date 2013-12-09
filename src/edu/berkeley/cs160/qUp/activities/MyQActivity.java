@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -22,7 +23,7 @@ public class MyQActivity extends Activity {
 
 
     Button tagBtn;
-
+    Button reserveBtn;
     /*
      * Private Listener Class
      * onClick() will go to the URLHandler class
@@ -30,15 +31,23 @@ public class MyQActivity extends Activity {
     private class ButtonListener implements Button.OnClickListener {
 
         Context context;
+        String type;
         //Constructor
-        public ButtonListener(Context context) {
+        public ButtonListener(Context context, String type) {
             this.context = context;
+            this.type = type;
         }
 
         @Override
         public void onClick(View arg0) {
-            Intent intent = new Intent(context, TagInHandler.class);
-            startActivity(intent);
+        	if (this.type.equals("tag")) {
+                Intent intent = new Intent(context, TagInHandler.class);
+                startActivity(intent);        		
+        	}
+        	else if (this.type.equals("reserve")) {
+                Intent intent = new Intent(context, ReservationSearch.class);
+                startActivity(intent);
+        	}
         }
 
     }
@@ -97,8 +106,10 @@ public class MyQActivity extends Activity {
         }
 
         tagBtn = (Button) findViewById(R.id.app_tag);
-        tagBtn.setOnClickListener((android.view.View.OnClickListener) new ButtonListener(this));
+        tagBtn.setOnClickListener((android.view.View.OnClickListener) new ButtonListener(this,"tag"));
 
+        reserveBtn = (Button) findViewById(R.id.app_reservation);
+        reserveBtn.setOnClickListener(new ButtonListener(this,"reserve"));
     }
 
 
@@ -108,4 +119,20 @@ public class MyQActivity extends Activity {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+    	switch (item.getItemId()) {
+    	case R.id.personal:
+            Intent intent = new Intent(this, MyQActivity.class);
+            startActivity(intent);
+    		return true;
+    	case R.id.business:
+            intent = new Intent(this, BusinessActivityMain.class);
+            startActivity(intent);
+            return true;
+    	default:
+            return super.onOptionsItemSelected(item);
+      }
+    }
+
 }

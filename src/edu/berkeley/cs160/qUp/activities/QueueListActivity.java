@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -140,13 +141,29 @@ public class QueueListActivity extends Activity implements QueueListUpdateListen
         runOnUiThread(reloadQueueList);
     }
 
+    /*
+	 * Menu
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
-
         return true;
+    }
+   
+    public boolean onOptionsItemSelected(MenuItem item) {
+    	switch (item.getItemId()) {
+    	case R.id.personal:
+            Intent intent = new Intent(this, MyQActivity.class);
+            startActivity(intent);
+    		return true;
+    	case R.id.business:
+            intent = new Intent(this, BusinessActivityMain.class);
+            startActivity(intent);
+            return true;
+    	default:
+            return super.onOptionsItemSelected(item);
+      }
     }
 
     public void cleanUpWritingToTag() {
