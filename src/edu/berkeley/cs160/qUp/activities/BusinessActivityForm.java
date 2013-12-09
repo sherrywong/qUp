@@ -1,4 +1,4 @@
-package edu.berkeley.cs160.qUp;
+package edu.berkeley.cs160.qUp.activities;
 
 import android.app.Activity;
 import android.content.Context;
@@ -11,6 +11,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import edu.berkeley.cs160.qUp.R;
+import edu.berkeley.cs160.qUp.activities.BusinessActivityMain;
+import edu.berkeley.cs160.qUp.activities.MyQActivity;
 
 public class BusinessActivityForm extends Activity {
 	

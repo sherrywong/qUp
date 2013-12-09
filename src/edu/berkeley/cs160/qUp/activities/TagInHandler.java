@@ -1,4 +1,4 @@
-package edu.berkeley.cs160.qUp;
+package edu.berkeley.cs160.qUp.activities;
 
 
 import android.app.Activity;
@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-import edu.berkeley.cs160.qUp.NFCTask.nfcUtils.MockNdefMessages;
+import edu.berkeley.cs160.qUp.R;
 import org.ndeftools.Message;
 import org.ndeftools.Record;
 

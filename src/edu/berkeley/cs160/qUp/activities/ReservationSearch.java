@@ -1,4 +1,4 @@
-package edu.berkeley.cs160.qUp;
+package edu.berkeley.cs160.qUp.activities;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
+import edu.berkeley.cs160.qUp.R;
+import edu.berkeley.cs160.qUp.activities.BusinessActivityMain;
 
 public class ReservationSearch extends Activity {
 	

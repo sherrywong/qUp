@@ -1,4 +1,4 @@
-package edu.berkeley.cs160.qUp;
+package edu.berkeley.cs160.qUp.activities;
 
 import android.app.Activity;
 import android.content.Context;
@@ -9,6 +9,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import edu.berkeley.cs160.qUp.R;
+import edu.berkeley.cs160.qUp.activities.BusinessActivityMain;
+import edu.berkeley.cs160.qUp.activities.MyQActivity;
 
 public class ReservationForm extends Activity {
 	
