@@ -29,6 +29,11 @@
 
 
         <activity
+                android:name=".activities.BusinessActivityForm"
+                android:label="@string/app_name"
+                ></activity>
+
+        <activity
             android:name=".activities.MyQActivity"
             android:label="@string/app_name">
 
