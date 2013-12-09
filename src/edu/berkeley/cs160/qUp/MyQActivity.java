@@ -12,6 +12,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MyQActivity extends Activity {
+	
+	protected final String tag = "tag";
+	protected final String reserve = "reserve";
+	
     String getBusiness_name_0, getBusiness_time_0;
     String getBusiness_name_1, getBusiness_time_1;
     String getBusiness_name_2, getBusiness_time_2;
@@ -21,7 +25,7 @@ public class MyQActivity extends Activity {
     TextView business_name_2, business_time_2;
 
 
-    Button tagBtn;
+    Button tagBtn, reserveBtn;
 
     /*
      * Private Listener Class
@@ -30,15 +34,23 @@ public class MyQActivity extends Activity {
     private class ButtonListener implements Button.OnClickListener {
 
         Context context;
+        String type;
         //Constructor
-        public ButtonListener(Context context) {
+        public ButtonListener(Context context, String type) {
             this.context = context;
+            this.type = type;
         }
 
         @Override
         public void onClick(View arg0) {
-            Intent intent = new Intent(context, TagInHandler.class);
-            startActivity(intent);
+        	if (type.equals("tag")) {
+        		Intent intent = new Intent(context, TagInHandler.class);
+        		startActivity(intent);
+        	}
+        	else if (type.equals("reserve")) {
+        		Intent intent = new Intent(context, ReservationSearch.class);
+        		startActivity(intent);        		
+        	}
         }
 
     }
@@ -89,8 +101,10 @@ public class MyQActivity extends Activity {
         }
 
         tagBtn = (Button) findViewById(R.id.app_tag);
-        tagBtn.setOnClickListener((android.view.View.OnClickListener) new ButtonListener(this));
+        tagBtn.setOnClickListener((android.view.View.OnClickListener) new ButtonListener(this,tag));
 
+        reserveBtn = (Button) findViewById(R.id.reserveButton);
+        reserveBtn.setOnClickListener(new ButtonListener(this,reserve));
     }
 
 

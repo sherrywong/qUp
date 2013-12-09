@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -97,5 +99,29 @@ public class BusinessActivityForm extends Activity {
     public String getDurationUnits() {
     	return this.durationUnits.getSelectedItem().toString();
     }
+    
+    /*
+	 * Menu
+     */
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+   
+    public boolean onOptionsItemSelected(MenuItem item) {
+    	switch (item.getItemId()) {
+    	case R.id.personal:
+    		//We are here
+    		return true;
+    	case R.id.business:
+            Intent intent = new Intent(this, BusinessActivityMain.class);
+            startActivity(intent);
+            return true;
+    	default:
+            return super.onOptionsItemSelected(item);
+      }
+    }    
 }
 

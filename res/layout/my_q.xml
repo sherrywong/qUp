@@ -31,17 +31,17 @@
             android:layout_height="80dp"
             android:text="Tag-In" />
 
-        <Button
+        <!-- <Button
             android:id="@+id/app_map"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:text="Find" />
+            android:text="Find" /> -->
 
         <Button
             android:id="@+id/app_reservation"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:text="Reservation" />
+            android:text="Reserve" />
         
     </LinearLayout>
 
