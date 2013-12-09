@@ -64,12 +64,12 @@ public final class R {
         public static final int confirmPasswordEditText=0x7f06002a;
         public static final int confirmPasswordTextView=0x7f060029;
         public static final int date=0x7f060044;
+        public static final int dateFrom=0x7f060021;
         public static final int datePicker=0x7f06000b;
+        public static final int dateTo=0x7f060020;
         public static final int description=0x7f060007;
         public static final int descriptionText=0x7f060008;
         public static final int duration=0x7f06000d;
-        public static final int durationUnits=0x7f060021;
-        public static final int durationValue=0x7f060020;
         public static final int editText=0x7f06004c;
         public static final int endEditText=0x7f060032;
         public static final int endLayout=0x7f060030;

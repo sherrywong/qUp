@@ -1,6 +1,11 @@
 package edu.berkeley.cs160.qUp.activities;
 
+import java.util.Calendar;
+
 import android.app.Activity;
+import android.app.DatePickerDialog;
+import android.app.Dialog;
+import android.app.DialogFragment;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,58 +14,94 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import edu.berkeley.cs160.qUp.R;
-import edu.berkeley.cs160.qUp.activities.BusinessActivityMain;
-import edu.berkeley.cs160.qUp.activities.MyQActivity;
 
 public class BusinessActivityForm extends Activity {
 	
-	Spinner location, durationUnits;
-	EditText title, description, durationValue;	
-	Button sendBtn;	
+	Spinner location;
+	EditText title, description;	
+	Button sendBtn, dateFrom, dateTo;	
 	//TODO: Hook up the date picker
     
+	
+	/*
+	 * Date picker class
+	 * From android developer Picker tutorial
+	 */
+	public static class DatePickerFragment extends DialogFragment
+    implements DatePickerDialog.OnDateSetListener {
+
+		@Override
+		public Dialog onCreateDialog(Bundle savedInstanceState) {
+			// Use the current date as the default date in the picker
+			final Calendar c = Calendar.getInstance();
+			int year = c.get(Calendar.YEAR);
+			int month = c.get(Calendar.MONTH);
+			int day = c.get(Calendar.DAY_OF_MONTH);
+
+			// Create a new instance of DatePickerDialog and return it
+			return new DatePickerDialog(getActivity(), this, year, month, day);
+		}
+
+		public void onDateSet(DatePicker view, int year, int month, int day) {
+			// Do something with the date chosen by the user
+		}
+	}
+
 	/*
      * Private Listener Class
      */
     private class ButtonListener implements Button.OnClickListener {
 
         Context context;
+        String type;
         //Constructor
-        public ButtonListener(Context context) {
+        public ButtonListener(Context context,String type) {
             this.context = context;
+            this.type = type;
         }
 
         @Override
         public void onClick(View arg0) {
         	//TODO: Add toast confirmation
-        	Intent intent = new Intent(context,BusinessActivityMain.class);
-        	startActivity(intent);
+        	if (this.type.equals("send")) {
+        		Intent intent = new Intent(context,BusinessActivityMain.class);
+        		startActivity(intent);
+        	}
+        	else if (this.type.equals("dateFrom")) {
+        		showDatePickerDialog(arg0);
+        		//TODO: display the chosen date
+        	}
+        	else if (this.type.equals("dateTo")) {
+        		showDatePickerDialog(arg0);        		
+        		//TODO: display the chosen date
+        	}
+        }
+        
+        public void showDatePickerDialog(View v) {
+            DialogFragment newFragment = new DatePickerFragment();
+            newFragment.show(getFragmentManager(), "datePicker");
         }
     }
-    
-	
+    	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
     	super.onCreate(savedInstanceState);
     	setContentView(R.layout.business_activity_form);
  
     	location      = (Spinner)  findViewById(R.id.locationSpinner);
-    	durationUnits = (Spinner)  findViewById(R.id.durationUnits);
     	title         = (EditText) findViewById(R.id.titleText);
     	description   = (EditText) findViewById(R.id.descriptionText);
-    	durationValue = (EditText) findViewById(R.id.durationValue);
     	sendBtn       = (Button)   findViewById(R.id.sendButton);
-    
-    	sendBtn.setOnClickListener(new ButtonListener(this));
+    	dateFrom      = (Button)   findViewById(R.id.dateFrom);
+    	dateTo        = (Button)   findViewById(R.id.dateTo);
     	
-    	//Set the possible duration values
-    	ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-    			R.array.duration_array,android.R.layout.simple_spinner_item);
-    	adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-    	durationUnits.setAdapter(adapter);
+    	sendBtn.setOnClickListener(new ButtonListener(this,"send"));
+    	dateFrom.setOnClickListener(new ButtonListener(this,"dateFrom"));
+    	dateTo.setOnClickListener(new ButtonListener(this,"dateTo"));
     }
     
     /*
@@ -95,13 +136,6 @@ public class BusinessActivityForm extends Activity {
     	return null;
     }
     
-    public String getDurationValue() {
-    	return this.durationValue.getText().toString();
-    }
-    
-    public String getDurationUnits() {
-    	return this.durationUnits.getSelectedItem().toString();
-    }
     
     /*
 	 * Menu
