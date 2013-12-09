@@ -35,7 +35,7 @@ public final class R {
         public static final int RelativeLayout1=0x7f050001;
         public static final int View1=0x7f050013;
         public static final int action_settings=0x7f050042;
-        public static final int analytics=0x7f050015;
+        public static final int analytics=0x7f050016;
         public static final int app_layout=0x7f050021;
         public static final int app_map=0x7f05002c;
         public static final int app_reservation=0x7f05002b;
@@ -79,7 +79,7 @@ public final class R {
         public static final int passwordLayout=0x7f05001d;
         public static final int passwordTextView=0x7f05001e;
         public static final int personal=0x7f050044;
-        public static final int qpon=0x7f050016;
+        public static final int qpon=0x7f050015;
         public static final int radiusLayout=0x7f05003b;
         public static final int reservation=0x7f05002f;
         public static final int reserveButton=0x7f050033;

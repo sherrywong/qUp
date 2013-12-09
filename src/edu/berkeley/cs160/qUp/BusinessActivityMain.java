@@ -81,10 +81,11 @@ public class BusinessActivityMain extends Activity {
     public boolean onOptionsItemSelected(MenuItem item) {
     	switch (item.getItemId()) {
     	case R.id.personal:
-    		//We are here
+            Intent intent = new Intent(this, MyQActivity.class);
+            startActivity(intent);
     		return true;
     	case R.id.business:
-            Intent intent = new Intent(this, BusinessActivityMain.class);
+            intent = new Intent(this, BusinessActivityMain.class);
             startActivity(intent);
             return true;
     	default:
