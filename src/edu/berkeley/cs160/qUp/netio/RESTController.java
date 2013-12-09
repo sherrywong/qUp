@@ -3,7 +3,6 @@ package edu.berkeley.cs160.qUp.netio;
 import android.os.AsyncTask;
 import android.util.Base64;
 import android.util.Log;
-
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.StatusLine;
@@ -29,7 +28,7 @@ import java.util.Map;
 
 public class RESTController {
 
-    public static final String REST_URL = "http://cs160-qup.herokuapp.com/api/v1/queues/";
+    public static final String QUEUE_URL = "http://cs160-qup.herokuapp.com/api/v1/queues/";
     public static final String TAG = "ParsingActivity";
 
     /**
@@ -47,6 +46,23 @@ public class RESTController {
         restPerformer.execute(getPackedParameters("", params, response));
     }
 
+    /**
+     * Fetches a list of Queue from the remote server.
+     *
+     * @param response
+     */
+    public static void retrieveUserList(UserListResponse response, long[] UserIds) {
+        Log.i(TAG, "Loading USER List...");
+
+        Map<String, Object> params = new HashMap<String, Object>();
+        params.put("knownUserIds", Arrays.toString(UserIds));
+
+        RESTPerformer restPerformer = new RESTPerformer();
+
+        restPerformer.execute(getPackedParameters("", params, response));
+    }
+
+
 
     /**
      * Bundles any additional parameters you want to pass to the server with the authentication parameters.
@@ -58,7 +74,7 @@ public class RESTController {
         if (!serverURL.startsWith("/")) {
             serverURL = "" + serverURL;
         }
-        packedParams.put(RESTPerformer.SERVER_URL, REST_URL + serverURL);
+        packedParams.put(RESTPerformer.SERVER_URL, QUEUE_URL + serverURL);
 
         if (additionalParams != null) {
             packedParams.putAll(additionalParams);
@@ -71,9 +87,11 @@ public class RESTController {
     private static class RESTPerformer extends AsyncTask<HashMap<String, Object>, Void, String> {
 
         private static final String TAG = "RESTPerformer";
-
         public static final String CALLBACK_CLASS = "CallbackClass";
         public static final String SERVER_URL = "ServerURL";
+        private static final String POST_REQUEST = "PostRequest";
+        public static final String USERNAME = "Username";
+        public static final String PASSWORD = "Password";
 
         /**
          * Takes and InputStream and reads it's contents into a String.
@@ -136,19 +154,24 @@ public class RESTController {
                 callback.fail(ex);
                 return null;
             }
-            Log.i(TAG, "Requesting: " + builder.toString());
-
+            HttpResponse response;
             try {
-                //POST the parameters to the server, and retrieve the response
+                String un = (String) params[0].get(USERNAME);
+                String pass = (String) params[0].get(PASSWORD);
+                Log.i(TAG, "Requesting: " + builder.toString());
                 HttpClient client = new DefaultHttpClient();
-//                HttpPost post = new HttpPost(serverURL);
-//                String authorizationString = "Basic " + Base64.encodeToString(("sanchit" + ":" + "root").getBytes(), Base64.DEFAULT);
-//                post.setHeader("Authorization", authorizationString);
+                if (params[0].containsKey(POST_REQUEST)) {
+                    HttpPost request = new HttpPost(serverURL);
+                    String authorizationString = "Basic " + Base64.encodeToString((un + ":" + pass).getBytes(), Base64.DEFAULT);
+                    response = client.execute(request);
+                    request.setHeader("Authorization", authorizationString);
+                    request.setEntity(mpEntity);
 
-                HttpGet post = new HttpGet(serverURL);
-//                post.setEntity(mpEntity);
+                } else {
+                    HttpGet request = new HttpGet(serverURL);
+                    response = client.execute(request);
+                }
 
-                HttpResponse response = client.execute(post);
                 StatusLine statusLine = response.getStatusLine();
                 if (statusLine.getStatusCode() == 200) {
                     HttpEntity entity = response.getEntity();

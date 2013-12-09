@@ -51,7 +51,6 @@ public class QueueORM {
                     COLUMN_BUSINESS + " " + COLUMN_BUSINESS_TYPE + COMMA_SEP +
                     COLUMN_PREVIEW + " " + COLUMN_PREVIEW_TYPE + COMMA_SEP +
                     COLUMN_USER + " " + COLUMN_USER_TYPE + COMMA_SEP +
-                    COMMA_SEP +
                     COLUMN_TIME_ENTERED_QUEUE + " " + COLUMN_TIME_ENTERED_IN_QUEUE_TYPE +
                     ")";
     /**

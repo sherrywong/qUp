@@ -29,6 +29,9 @@
     <string name="mode">Mode</string>
     <string name="personal">Personal</string>
     <string name="business">Business</string>
+    <string name="username_text_view">Username:</string>
+    <string name="username_edit_text">Please enter your qUp e-mail address</string>
+    <string name="avg_wait_time">Average wait time:</string>
 
 
     <string-array name="duration_array">

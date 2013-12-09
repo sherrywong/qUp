@@ -54,7 +54,7 @@ public class QueueListActivity extends Activity implements QueueListUpdateListen
             Queue queue = (Queue) object;
 
             TextView queueItemBusiness = (TextView) view.findViewById(R.id.queue_item_business_name);
-            queueItemBusiness.setText(queue.getUserString());
+            queueItemBusiness.setText(queue.getBusiness().getName());
 
             TextView queueItemSubCat = (TextView) view.findViewById(R.id.queue_item_category);
             queueItemSubCat.setText(queue.getBusiness().getOrganizationType());

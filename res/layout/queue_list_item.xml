@@ -6,40 +6,60 @@
     android:layout_height="match_parent"
     android:paddingLeft="10dp"
     android:paddingRight="10dp">
-    <LinearLayout
+    <RelativeLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="3dp"
+        android:layout_height="78dp"
         android:layout_marginBottom="3dp"
-        android:padding="10dp"
         android:background="@drawable/queue_list_item_background">
         <TextView
             android:id="@+id/queue_item_business_name"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:maxLines="999"
             android:textColor="#ff000000"
             android:textStyle="bold"
-            android:textSize="16sp"/>
+            android:textSize="16sp" android:layout_gravity="bottom" android:layout_alignParentLeft="true"
+            android:layout_marginLeft="8sp" android:layout_alignParentTop="true"
+            android:layout_alignBaseline="@+id/queue_item_category"/>
+        <TextView
+                android:id="@+id/average_wait_time_tv"
+                android:text="@string/avg_wait_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="999"
+                android:textColor="@android:color/secondary_text_light"
+                android:textSize="14sp" android:layout_gravity="right"
+                android:layout_alignTop="@+id/linearLayout" android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20sp" android:layout_marginTop="2sp"/>
         <TextView
             android:id="@+id/queue_item_category"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#ff313131"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentRight="true" android:layout_alignParentTop="true"
+            android:layout_marginRight="20sp" android:layout_marginTop="12sp" android:textStyle="italic"/>
+        <TextView
+            android:id="@+id/queue_avg_wait_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
             android:textSize="12sp"
-            android:textColor="#ff313131"/>
+            android:textColor="@android:color/secondary_text_light" android:layout_alignParentLeft="false"
+            android:layout_alignParentTop="false" android:layout_alignParentEnd="false"
+            android:layout_alignParentRight="true" android:layout_below="@+id/average_wait_time_tv"
+            android:layout_alignTop="@+id/average_wait_time_tv" android:layout_marginTop="2sp"
+            android:layout_marginRight="20sp" android:layout_alignBaseline="@+id/average_wait_time_tv"
+            android:textStyle="bold"/>
 
         <LinearLayout
+                android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="#3399ff"
-            android:layout_marginTop="3dp"
-            android:layout_marginBottom="3dp"/>
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="36sp" android:id="@+id/linearLayout"/>
 
-        <TextView
-            android:id="@+id/queue_avg_wait_time"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#ff313131"/>
-    </LinearLayout>
+    </RelativeLayout>
 </LinearLayout>

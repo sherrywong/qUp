@@ -21,10 +21,12 @@
             android:id="@+id/usernameTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Username:"
+            android:text="@string/username_text_view"
             android:textSize="20dp" />
 
         <EditText
+            android:hint="@string/username_edit_text"
+            android:inputType="textEmailAddress"
             android:id="@+id/usernameEditText"
             android:layout_width="137dp"
             android:layout_height="wrap_content"

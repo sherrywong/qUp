@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="business_name_1" type="id">Business Name</item>
+    <item name="passwordEditText" type="id">Password</item>
 </resources>
