@@ -18,6 +18,12 @@
     <string name="tag_refused_to_format">Tag refused to format!</string>
     <string name="general_exception">General NDEF Exception</string>
 
+    <!-- Menu Iteems -->
+    <string name="mode">Mode</string>
+    <string name="personal">Personal</string>
+    <string name="business">Business</string>
+    
+    
 	<string-array name="duration_array">
 	    <item>Minutes</item>
 	    <item>Hours</item>

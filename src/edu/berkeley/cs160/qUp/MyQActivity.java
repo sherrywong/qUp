@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -67,13 +68,6 @@ public class MyQActivity extends Activity {
          * Fill in the values based on the previous intent
          */
         Intent intent = getIntent();
-    	//business_name_0.setText(intent.getStringExtra(MainActivity.BUSINESS_NAME_0));
-    	//business_name_1.setText(intent.getStringExtra(MainActivity.BUSINESS_NAME_1));
-    	//business_name_2.setText(intent.getStringExtra(MainActivity.BUSINESS_NAME_2));
-
-    	//business_time_0.setText(intent.getStringExtra(MainActivity.BUSINESS_TIME_0));
-    	//business_time_1.setText(intent.getStringExtra(MainActivity.BUSINESS_TIME_1));
-    	//business_time_2.setText(intent.getStringExtra(MainActivity.BUSINESS_TIME_2));
         
     	business_name_0.setText(MainActivity.BUSINESS_NAME_0);
     	business_name_1.setText(MainActivity.BUSINESS_NAME_1);
@@ -86,7 +80,6 @@ public class MyQActivity extends Activity {
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
 
-//            getBusiness_name_0 = extras.getString(MainActivity.BUSINESS_NAME_0);
             Toast.makeText(getBaseContext(), "Times Updated!", Toast.LENGTH_LONG).show();
 
             business_time_0.setText(extras.getString(MainActivity.BUSINESS_TIME_0));
@@ -106,5 +99,20 @@ public class MyQActivity extends Activity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
+    }
+    
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+    	switch (item.getItemId()) {
+    	case R.id.personal:
+    		//We are here
+    		return true;
+    	case R.id.business:
+            Intent intent = new Intent(this, BusinessActivityMain.class);
+            startActivity(intent);
+            return true;
+    	default:
+            return super.onOptionsItemSelected(item);
+      }
     }
 }

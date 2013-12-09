@@ -40,6 +40,7 @@ public final class R {
         public static final int app_map=0x7f050023;
         public static final int app_reservation=0x7f050024;
         public static final int app_tag=0x7f050022;
+        public static final int business=0x7f050045;
         public static final int businessName=0x7f050034;
         public static final int business_layout_0=0x7f050025;
         public static final int business_layout_1=0x7f050028;
@@ -71,11 +72,13 @@ public final class R {
         public static final int locationSpinner=0x7f050011;
         public static final int locationTextView=0x7f050010;
         public static final int loginButton=0x7f050020;
+        public static final int mode=0x7f050043;
         public static final int name=0x7f05002e;
         public static final int passwordConfirmLayout=0x7f050040;
         public static final int passwordEditText=0x7f05001f;
         public static final int passwordLayout=0x7f05001d;
         public static final int passwordTextView=0x7f05001e;
+        public static final int personal=0x7f050044;
         public static final int qpon=0x7f050015;
         public static final int radiusLayout=0x7f05003b;
         public static final int reservation=0x7f05002f;
@@ -119,12 +122,17 @@ public final class R {
         public static final int MyQ=0x7f060002;
         public static final int action_settings=0x7f060001;
         public static final int app_name=0x7f060000;
+        public static final int business=0x7f060011;
         public static final int general_exception=0x7f06000e;
         public static final int handle_view_name=0x7f060003;
         public static final int message_is_too_big_for_tag=0x7f060008;
+        /**  Menu Iteems 
+         */
+        public static final int mode=0x7f06000f;
         public static final int nfcAvailableDisabled=0x7f060006;
         public static final int nfcAvailableEnabled=0x7f060005;
         public static final int noNfcMessage=0x7f060007;
+        public static final int personal=0x7f060010;
         public static final int success=0x7f060009;
         public static final int tag_does_not_support_ndef=0x7f06000b;
         public static final int tag_in=0x7f060004;
