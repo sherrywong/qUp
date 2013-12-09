@@ -19,7 +19,7 @@ import edu.berkeley.cs160.qUp.Model.Queue;
  * Part of the qUp codebase.
  * Created by sidneyfeygin on 11/25/13.
  */
-public class QUpApplication extends Application {
+public class qUpApplication extends Application {
 
     public static Context s_applicationContext = null;
 
@@ -113,7 +113,7 @@ public class QUpApplication extends Application {
             }
 
             for (Queue queue : queueList) {
-                QueueORM.insertQueue(QUpApplication.this, queue);
+                QueueORM.insertQueue(qUpApplication.this, queue);
             }
 
             mLastLoadedQueueList = new Date();

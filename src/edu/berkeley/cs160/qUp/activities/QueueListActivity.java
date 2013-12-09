@@ -19,7 +19,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import edu.berkeley.cs160.qUp.Model.Queue;
-import edu.berkeley.cs160.qUp.QUpApplication;
+import edu.berkeley.cs160.qUp.qUpApplication;
 import edu.berkeley.cs160.qUp.R;
 import edu.berkeley.cs160.qUp.animlv.AnimatedListView;
 import edu.berkeley.cs160.qUp.animlv.AnimatedListViewAdapter;
@@ -116,7 +116,7 @@ public class QueueListActivity extends Activity implements QueueListUpdateListen
 
         mProgressBar = (ProgressBar) findViewById(R.id.loader);
 
-        QUpApplication application = (QUpApplication) getApplication();
+        qUpApplication application = (qUpApplication) getApplication();
         application.registerQueueUpdateListener(this);
     }
 
@@ -125,7 +125,7 @@ public class QueueListActivity extends Activity implements QueueListUpdateListen
         super.onStart();
 
         // Check for any updated Queue Times
-        QUpApplication application = (QUpApplication) getApplication();
+        qUpApplication application = (qUpApplication) getApplication();
         application.checkForUpdates();
     }
 
