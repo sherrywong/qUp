@@ -25,7 +25,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="edu.berkeley.cs160.qUp.MyQActivity"
+            android:name=".activities.MyQActivity"
             android:label="@string/MyQ">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,7 +39,7 @@
             <data android:mimeType="text/*" />
         </activity>
         <activity
-            android:name="edu.berkeley.cs160.qUp.TagInHandler"
+            android:name=".activities.TagInHandler"
             android:label="@string/personal">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -48,7 +48,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="edu.berkeley.cs160.qUp.ShortestWaitingMap"
+            android:name=".activities.ShortestWaitingMap"
             android:label="@string/personal">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -57,7 +57,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="edu.berkeley.cs160.qUp.BusinessActivityMain"
+            android:name=".activities.BusinessActivityMain"
             android:label="@string/business">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -66,7 +66,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="edu.berkeley.cs160.qUp.BusinessActivityForm"
+            android:name=".activities.BusinessActivityForm"
             android:label="@string/business">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -75,7 +75,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="edu.berkeley.cs160.qUp.ReservationSearch"
+            android:name=".activities.ReservationSearch"
             android:label="@string/personal">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -84,7 +84,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="edu.berkeley.cs160.qUp.ReservationForm"
+            android:name=".activities.ReservationForm"
             android:label="@string/personal">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
