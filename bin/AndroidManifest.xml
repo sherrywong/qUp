@@ -15,7 +15,6 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
             android:name="edu.berkeley.cs160.qUp.MainActivity"
@@ -41,7 +40,7 @@
         </activity>
         <activity
             android:name="edu.berkeley.cs160.qUp.TagInHandler"
-            android:label="@string/app_name">
+            android:label="@string/personal">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -50,7 +49,7 @@
         </activity>
         <activity
             android:name="edu.berkeley.cs160.qUp.ShortestWaitingMap"
-            android:label="@string/app_name">
+            android:label="@string/personal">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -59,7 +58,7 @@
         </activity>
         <activity
             android:name="edu.berkeley.cs160.qUp.BusinessActivityMain"
-            android:label="@string/app_name">
+            android:label="@string/business">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -68,7 +67,7 @@
         </activity>
         <activity
             android:name="edu.berkeley.cs160.qUp.BusinessActivityForm"
-            android:label="@string/app_name">
+            android:label="@string/business">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -77,7 +76,7 @@
         </activity>
         <activity
             android:name="edu.berkeley.cs160.qUp.ReservationSearch"
-            android:label="@string/app_name">
+            android:label="@string/personal">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -86,7 +85,7 @@
         </activity>
         <activity
             android:name="edu.berkeley.cs160.qUp.ReservationForm"
-            android:label="@string/app_name">
+            android:label="@string/personal">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

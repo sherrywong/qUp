@@ -12,8 +12,7 @@
             <group android:checkableBehavior="single">
                 <item android:id="@+id/personal"
                       android:showAsAction="ifRoom"
-                      android:title="@string/personal"
-                      android:checked="true">
+                      android:title="@string/personal">
                 </item>    
                 <item android:id="@+id/business" 
                       android:showAsAction="ifRoom"

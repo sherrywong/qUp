@@ -7,15 +7,6 @@
 
     <!-- Horizontal divider to apps -->
 
-    <View
-        android:id="@+id/View1"
-        android:layout_width="fill_parent"
-        android:layout_height="1dp"
-        android:layout_above="@+id/app_layout"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="14dp"
-        android:background="@android:color/darker_gray" />
-
     <LinearLayout
         android:id="@+id/app_layout"
         android:layout_width="match_parent"
@@ -23,25 +14,14 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_marginBottom="14dp"
-        android:gravity="center_horizontal">
-
-        <Button
-            android:id="@+id/app_tag"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:text="Tag-In" />
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
         <!-- <Button
             android:id="@+id/app_map"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:text="Find" /> -->
-
-        <Button
-            android:id="@+id/app_reservation"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:text="Reserve" />
         
     </LinearLayout>
 
@@ -128,6 +108,35 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textColor="#686868"
             android:textSize="15dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/app_layout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/app_tag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="#0066CC"
+            android:textColor="#ffffff"
+            android:text="Tag-In" />
+
+        <Button
+            android:id="@+id/app_reservation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FF9933"
+            android:text="Reserve"
+            android:textColor="#ffffff" />
+
     </LinearLayout>
 
 </RelativeLayout>

@@ -103,7 +103,7 @@ public class MyQActivity extends Activity {
         tagBtn = (Button) findViewById(R.id.app_tag);
         tagBtn.setOnClickListener((android.view.View.OnClickListener) new ButtonListener(this,tag));
 
-        reserveBtn = (Button) findViewById(R.id.reserveButton);
+        reserveBtn = (Button) findViewById(R.id.app_reservation);
         reserveBtn.setOnClickListener(new ButtonListener(this,reserve));
     }
 
