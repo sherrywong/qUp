@@ -24,7 +24,7 @@ import java.util.ArrayList;
 import edu.berkeley.cs160.qUp.R;
 import edu.berkeley.cs160.qUp.activities.QueueListActivity;
 import edu.berkeley.cs160.qUp.activities.business.BusinessActivityMain;
-import edu.berkeley.cs160.qUp.mapnavigator.Navigator;
+import edu.berkeley.cs160.qUp.activities.map.mapnavigator.Navigator;
 
 public class ShortestWaitingMap extends AbstractMapActivity implements
         ActionBar.OnNavigationListener, GoogleMap.OnInfoWindowClickListener {

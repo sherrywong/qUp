@@ -24,10 +24,8 @@ import android.content.pm.FeatureInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.widget.Toast;
-
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
-
 import edu.berkeley.cs160.qUp.R;
 
 public class AbstractMapActivity extends Activity {
