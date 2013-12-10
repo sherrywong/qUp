@@ -43,6 +43,7 @@
     <string name="normal">Normal</string>
     <string name="terrain">Terrain</string>
     <string name="sign_in_button">Submit</string>
+    <string name="icon">Icon</string>
 
 
     <string-array name="duration_array">

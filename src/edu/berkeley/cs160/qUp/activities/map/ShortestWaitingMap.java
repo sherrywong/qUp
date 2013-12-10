@@ -13,6 +13,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.model.LatLng;
@@ -40,7 +42,7 @@ public class ShortestWaitingMap extends AbstractMapActivity implements
     private GoogleMap map=null;
 
     private Double mLat, mLon;
-    private Navigator mNavigator;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,11 +51,12 @@ public class ShortestWaitingMap extends AbstractMapActivity implements
 
 
         if (readyToGo()) {
-            setContentView(R.layout.support_map_fragment);
+            setContentView(R.layout.nav_activity);
+            MapFragment mapFragment = (com.google.android.gms.maps.MapFragment) getFragmentManager().findFragmentById(R.id.map);
             Intent i = getIntent();
 
             //Loc defaults to center of Berkeley campus:
-            mLat = i.getDoubleExtra(QueueListActivity.LAT, -122.27);
+            mLat = i.getDoubleExtra(QueueListActivity.LAT, -122.28);
             mLon = i.getDoubleExtra(QueueListActivity.LON, 37.871);
 
 
@@ -61,22 +64,27 @@ public class ShortestWaitingMap extends AbstractMapActivity implements
             end = (EditText) findViewById(R.id.endEditText);
             searchBtn = (Button) findViewById(R.id.searchButton);
 
-            initListNav();
-            MapFragment mapFragment = (com.google.android.gms.maps.MapFragment) getFragmentManager().findFragmentById(R.id.map);
+             initListNav();
             map = mapFragment.getMap();
-//
-//
-//            if (savedInstanceState == null) {
-//                CameraUpdate center=
-//                        CameraUpdateFactory.newLatLng(new LatLng(mLat,
-//                               mLon));
-//                CameraUpdate zoom=CameraUpdateFactory.zoomTo(15);
-//
-//                map.moveCamera(center);
-//                map.animateCamera(zoom);
-//                map.setInfoWindowAdapter(new PopUpAdapter(getLayoutInflater()));
-//                map.setOnInfoWindowClickListener(this);
-//            }
+
+
+            if (savedInstanceState == null) {
+                CameraUpdate center=
+                        CameraUpdateFactory.newLatLng(new LatLng(mLat,
+                                mLon));
+                CameraUpdate zoom=CameraUpdateFactory.zoomTo(15);
+
+                map.moveCamera(center);
+                map.animateCamera(zoom);
+
+                addMarker(map, mLat, mLon,
+                        R.string.business_subtype_title, R.string.business_name);
+
+
+
+                map.setInfoWindowAdapter(new PopUpAdapter(getLayoutInflater()));
+                map.setOnInfoWindowClickListener(this);
+            }
 
         }
     }
@@ -89,9 +97,7 @@ public class ShortestWaitingMap extends AbstractMapActivity implements
         getMenuInflater().inflate(R.menu.main, menu);
 
 
-
-
-        return true;
+            return true;
     }
 
     private void initListNav() {
@@ -140,6 +146,10 @@ public class ShortestWaitingMap extends AbstractMapActivity implements
     @Override
     public void onInfoWindowClick(Marker marker) {
         Toast.makeText(this, marker.getTitle(), Toast.LENGTH_LONG).show();
+        LatLng iLoc= new LatLng(mLat,mLon);
+        LatLng fLoc = new LatLng(37.781, -122.281);
+        Navigator nav = new Navigator(map, iLoc, fLoc);
+        nav.findDirections(true, false);
 
     }
     private void addMarker(GoogleMap map, double lat, double lon,
@@ -148,6 +158,7 @@ public class ShortestWaitingMap extends AbstractMapActivity implements
                 .title(getString(title))
                 .snippet(getString(snippet)));
     }
+
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);
@@ -164,7 +175,12 @@ public class ShortestWaitingMap extends AbstractMapActivity implements
         return(true);
 
     }
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
 
+        getActionBar().setSelectedNavigationItem(savedInstanceState.getInt(STATE_NAV));
+    }
     /*
      * Private Listener Class
      * onClick() will go to the URLHandler class
@@ -180,9 +196,7 @@ public class ShortestWaitingMap extends AbstractMapActivity implements
 
         @Override
         public void onClick(View arg0) {
-//
-//            nav = new Navigator(map, start, end);
-//            nav.findDirections(true, false);
+
         }
 
     }

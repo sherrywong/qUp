@@ -17,54 +17,55 @@
         android:id="@+id/reserveButton"
         android:layout_width="200dip"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/linearLayout2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
         android:background="#3399ff"
         android:text="Reserve"
-        android:textColor="#ffffff" />
+        android:textColor="#ffffff" android:layout_below="@+id/space2"
+        android:layout_alignRight="@+id/linearLayout1" android:layout_alignLeft="@+id/name"/>
 
+    <Space
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="false" android:id="@+id/space" android:layout_below="@+id/linearLayout1"/>
     <LinearLayout
         android:id="@+id/linearLayout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/reservation"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="18dp" >
+        android:layout_below="@+id/space3"
+        android:layout_alignLeft="@+id/linearLayout2" android:layout_alignRight="@+id/name">
 
         <TextView
             android:id="@+id/date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Date:"
-            android:textSize="28sp" />
-
+            android:textSize="28sp" android:layout_alignTop="@+id/linearLayout1"
+            android:layout_alignLeft="@+id/linearLayout2" android:layout_gravity="center_vertical"
+            android:layout_weight="14.94"/>
         <Button
             android:id="@+id/datePicker"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="showDatePickerDialog"
-            android:text="Select Date" />
+            android:text="Select Date" android:layout_weight="44.65"
+            android:gravity="center" android:textStyle="italic"/>
     </LinearLayout>
-
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/linearLayout1"
-        android:layout_centerHorizontal="true" >
+        android:layout_below="@+id/space" android:layout_centerHorizontal="true">
 
         <TextView
             android:id="@+id/time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Time:"
-            android:textSize="28sp" />
+            android:textSize="28sp" android:layout_marginRight="15dp" android:layout_gravity="center_vertical"/>
 
         <TimePicker
             android:id="@+id/timePicker"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content" android:layout_weight="45"/>
     </LinearLayout>
 
     <TextView
@@ -76,5 +77,12 @@
         android:layout_marginTop="17dp"
         android:text="Sliver Pizzeria"
         android:textSize="42sp" />
+    <Space android:layout_width="match_parent" android:layout_height="48dp"
+           android:id="@+id/space2"
+           android:layout_below="@+id/linearLayout2" android:layout_alignParentLeft="true"/>
+    <Space android:layout_width="match_parent" android:layout_height="48sp"
+           android:id="@+id/space3"
+           android:layout_below="@+id/reservation" android:layout_alignLeft="@+id/linearLayout1"
+           android:layout_alignRight="@+id/linearLayout2"/>
 
 </RelativeLayout>

@@ -11,7 +11,7 @@
             android:layout_gravity="center_vertical"
             android:padding="2dip"
             android:src="@drawable/ic_launcher"
-            android:contentDescription="@string/get_dir_popup"/>
+      />
 
     <LinearLayout
             android:layout_width="match_parent"
@@ -19,7 +19,7 @@
             android:orientation="vertical">
 
         <TextView
-                android:id="@+id/title"
+                android:id="@+id/popup_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="25sp"

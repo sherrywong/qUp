@@ -19,6 +19,7 @@ import android.widget.TextView;
 import edu.berkeley.cs160.qUp.Model.Queue;
 import edu.berkeley.cs160.qUp.R;
 import edu.berkeley.cs160.qUp.activities.business.BusinessActivityMain;
+import edu.berkeley.cs160.qUp.activities.map.ShortestWaitingMap;
 import edu.berkeley.cs160.qUp.animlv.AnimatedListView;
 import edu.berkeley.cs160.qUp.animlv.AnimatedListViewAdapter;
 import edu.berkeley.cs160.qUp.animlv.AnimatedListViewObjectMapper;
@@ -73,18 +74,18 @@ public class QueueListActivity extends Activity implements QueueListUpdateListen
         @Override
         public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
             Queue selectedQueue = queueList.get(position);
-            Intent toQueueActivity = new Intent(QueueListActivity.this, QueueActivity.class);
+            Intent toQueueActivity = new Intent(QueueListActivity.this, ShortestWaitingMap.class);
 
             toQueueActivity.putExtra("queueId", selectedQueue.getId());
-            startActivity(toQueueActivity);
+//            startActivity(toQueueActivity);
 
-//            Double lat = selectedQueue.getBusiness().getLat();
-//            Double lon = selectedQueue.getBusiness().getLon();
-//
-//            Intent i = new Intent(QueueListActivity.this, ShortestWaitingMap.class);
-//            i.putExtra("lat", lat);
-//            i.putExtra("lon", lon);
-//            startActivity(i);
+            Double lat = selectedQueue.getBusiness().getLat();
+            Double lon = selectedQueue.getBusiness().getLon();
+
+            Intent i = new Intent(QueueListActivity.this, ShortestWaitingMap.class);
+            i.putExtra("lat", lat);
+            i.putExtra("lon", lon);
+            startActivity(i);
 
             overridePendingTransition(R.anim.start_right_to_left, R.anim.start_left_to_right);
         }
