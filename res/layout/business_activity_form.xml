@@ -17,7 +17,7 @@
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="86dp"
             android:text="Title:"
             android:textSize="24sp" />
 
@@ -34,7 +34,6 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/linearLayout2"
-        android:layout_marginTop="22dp"
         android:orientation="vertical" >
 
         <TextView
@@ -48,11 +47,10 @@
         <EditText
             android:id="@+id/descriptionText"
             android:layout_width="match_parent"
-            android:layout_height="64dp"
-            android:inputType="textMultiLine" >
+            android:layout_height="81dp"
+            android:ems="10"
+            android:inputType="textMultiLine" />
 
-            <requestFocus />
-        </EditText>
     </LinearLayout>
 
     <LinearLayout
@@ -71,10 +69,12 @@
             android:text="Start Date:"
             android:textSize="24sp" />
 
-        <DatePicker
-            android:id="@+id/datePicker"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        <Button 
+            android:id="@+id/dateTo"
+            android:text="Select Date"
+	    	android:layout_width="wrap_content" 
+    		android:layout_height="wrap_content"
+    		android:onClick="showDatePickerDialog" />
     </LinearLayout>
 
     <LinearLayout
@@ -90,24 +90,17 @@
             android:id="@+id/duration"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Duration:"
-            android:layout_marginLeft="10dp"
+            android:text="End Date:"
+            android:layout_marginLeft="20dp"
             android:textSize="24sp" />
 
-        <EditText
-            android:id="@+id/durationValue"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="numberDecimal" />
-
-        <Spinner
-            android:id="@+id/durationUnits"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
+        <Button 
+        	android:id="@+id/dateFrom"
+        	android:text="Select Date"
+	    	android:layout_width="wrap_content" 
+    		android:layout_height="wrap_content"
+    		android:onClick="showDatePickerDialog" />
+        
     </LinearLayout>
 
     <LinearLayout
@@ -124,7 +117,7 @@
             android:id="@+id/locationTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="40dp"
             android:layout_weight="0.05"
             android:text="Location:"
             android:textSize="24sp" />
@@ -140,9 +133,9 @@
         android:id="@+id/sendButton"
         android:layout_width="200dip"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/linearLayout4"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="27dp"
+        android:layout_marginTop="14dp"
         android:background="#3399ff"
         android:text="Send qPon"
         android:textColor="#ffffff" />
