@@ -9,9 +9,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-import edu.berkeley.cs160.qUp.R;
 import org.ndeftools.Message;
 import org.ndeftools.Record;
+
+import edu.berkeley.cs160.qUp.R;
 
 public class TagInHandler extends Activity {
     String business_name_0, business_time_0;

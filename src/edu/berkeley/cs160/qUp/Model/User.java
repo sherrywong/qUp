@@ -1,16 +1,16 @@
 package edu.berkeley.cs160.qUp.Model;
 
-import com.google.gson.GsonBuilder;
 import com.google.gson.annotations.SerializedName;
 
-import java.util.ArrayList;
 import java.util.Date;
 
 /**
  * Part of the qUp codebase.
  * Created by sidneyfeygin on 12/5/13.
  */
+
 public class User {
+
     public String email;
     @SerializedName("first_name")
     public String firstName;

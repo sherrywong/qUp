@@ -8,8 +8,8 @@ import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.Toast;
 
-import edu.berkeley.cs160.qUp.activities.QueueListActivity;
 import edu.berkeley.cs160.qUp.R;
+import edu.berkeley.cs160.qUp.activities.QueueListActivity;
 
 class WriteTagTask extends AsyncTask<Void, Void, Void> {
     /*The Purpose of this task is to write custom NFC codes. It should only be available to Business owners.

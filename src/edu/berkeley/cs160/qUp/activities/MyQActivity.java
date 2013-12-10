@@ -10,7 +10,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import edu.berkeley.cs160.qUp.R;
+import edu.berkeley.cs160.qUp.activities.business.BusinessActivityMain;
+import edu.berkeley.cs160.qUp.activities.premium.ReservationSearch;
 
 public class MyQActivity extends Activity {
     String getBusiness_name_0, getBusiness_time_0;

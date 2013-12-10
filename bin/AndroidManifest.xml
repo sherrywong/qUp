@@ -27,32 +27,24 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".activities.QueueActivity"
-            android:label="@string/app_name">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         
         <activity
-                android:name=".activities.BusinessActivityForm"
+                android:name=".activities.business.BusinessActivityForm"
                 android:label="@string/business">
         </activity>
 
         <activity
-                android:name=".activities.BusinessActivityMain"
+                android:name=".activities.business.BusinessActivityMain"
                 android:label="@string/business">
         </activity>
         
         <activity
-                android:name=".activities.ReservationForm"
+                android:name=".activities.premium.ReservationForm"
                 android:label="@string/personal">
         </activity>
         
         <activity
-                android:name=".activities.ReservationSearch"
+                android:name=".activities.premium.ReservationSearch"
                 android:label="@string/personal">
         </activity>
                

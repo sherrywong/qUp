@@ -1,4 +1,4 @@
-package edu.berkeley.cs160.qUp.activities;
+package edu.berkeley.cs160.qUp.activities.premium;
 
 import android.app.Activity;
 import android.content.Context;
@@ -9,15 +9,17 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
 import edu.berkeley.cs160.qUp.R;
+import edu.berkeley.cs160.qUp.activities.MyQActivity;
+import edu.berkeley.cs160.qUp.activities.business.BusinessActivityMain;
 
-public class BusinessActivityMain extends Activity {
-
-	protected static final String analyitcs = "analytics";
-	protected static final String qpon = "qpon";
+public class ReservationForm extends Activity {
 	
-	TextView length;
-	Button analyticsBtn, qPonBtn;
+	TextView name;
+	//TODO: Get the time and stuff
+	//TODO: Get the date and stuff
+	Button reserveBtn;
 		
     /*
      * Private Listener Class
@@ -25,22 +27,16 @@ public class BusinessActivityMain extends Activity {
     private class ButtonListener implements Button.OnClickListener {
 
         Context context;
-        String type; //Analytics or Offer qPon
         //Constructor
-        public ButtonListener(Context context, String type) {
+        public ButtonListener(Context context) {
             this.context = context;
-            this.type = type;
         }
 
         @Override
         public void onClick(View arg0) {
-        	if (type.equals("analytics")) {
-                //TODO: Start the Business Analytics intent        		
-        	}
-        	else if (type.equals("qpon")) {
-                Intent intent = new Intent(context, BusinessActivityForm.class);
-                startActivity(intent);
-        	}
+        	//TODO: add confirmation
+        	Intent intent = new Intent(context, MyQActivity.class);
+        	startActivity(intent);
         }
     }
     
@@ -48,26 +44,37 @@ public class BusinessActivityMain extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
     	super.onCreate(savedInstanceState);
-    	setContentView(R.layout.business_activity_main);
- 
-    	length       = (TextView) findViewById(R.id.length);
-    	analyticsBtn = (Button) findViewById(R.id.analytics);
-    	qPonBtn      = (Button) findViewById(R.id.qpon);	
+    	setContentView(R.layout.reservation_form);
     	
-    	 //Set up the listeners for Analytics, offer qPon buttons
-    	analyticsBtn.setOnClickListener(new ButtonListener(this, analyitcs));
-    	qPonBtn.setOnClickListener(new ButtonListener(this,qpon));
+    	name = (TextView) findViewById(R.id.name);
+    	//TODO: get date and time values
+    	reserveBtn = (Button) findViewById(R.id.reserveButton);
+    
+    	reserveBtn.setOnClickListener(new ButtonListener(this));
     }
     
+
     /*
-     * Once we get the data, we need to sent the length
-     * for the owner to view.
+     * Getters and Setters for outsiders
      */
-    public void setLength(int newLength) {
-    	length.setText(newLength + "");
+    public void setName(String businessName) {
+    	name.setText(businessName);
     }
     
-   
+    public String getName() {
+    	return name.getText().toString();
+    }
+    
+    public String getDate() {
+    	//TODO: implement me
+    	return null;
+    }
+    
+    public String getTime() {
+    	//TODO: implement me
+    	return null;
+    }
+    
     /*
 	 * Menu
      */
@@ -92,4 +99,5 @@ public class BusinessActivityMain extends Activity {
             return super.onOptionsItemSelected(item);
       }
     }
+
 }

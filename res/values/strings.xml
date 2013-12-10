@@ -32,6 +32,17 @@
     <string name="username_text_view">Username:</string>
     <string name="username_edit_text">Please enter your qUp e-mail address</string>
     <string name="avg_wait_time">Average wait time:</string>
+    <string name="search">Search Again</string>
+    <string name="my_location">Get My Location</string>
+    <string name="no_location_available">No Location Available Yet</string>
+    <string name="get_dir_popup">Get Directions to Here</string>
+    <string name="no_maps">Google Maps V2 not available!</string>
+
+    <string name="satellite">Satellite</string>
+    <string name="hybrid">Hybrid</string>
+    <string name="normal">Normal</string>
+    <string name="terrain">Terrain</string>
+    <string name="sign_in_button">Submit</string>
 
 
     <string-array name="duration_array">

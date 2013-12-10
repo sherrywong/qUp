@@ -1,4 +1,4 @@
-package edu.berkeley.cs160.qUp.activities;
+package edu.berkeley.cs160.qUp.activities.business;
 
 import java.util.Calendar;
 
@@ -18,6 +18,8 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import edu.berkeley.cs160.qUp.R;
+import edu.berkeley.cs160.qUp.activities.MyQActivity;
+import edu.berkeley.cs160.qUp.activities.business.BusinessActivityMain;
 
 public class BusinessActivityForm extends Activity {
 	

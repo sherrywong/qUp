@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="business_name_1" type="id">Business Name</item>
-    <item name="passwordEditText" type="id">Password</item>
+
+    <item name="main_frame_layout" type="id">main_frame_layout</item><item name="passwordEditText" type="id">password</item>
 </resources>

@@ -5,7 +5,6 @@ package edu.berkeley.cs160.qUp.netio;
  * Lifted from Github: kylewbanks.com-AndroidApp
  */
 
-import java.util.ArrayList;
 import java.util.List;
 
 import edu.berkeley.cs160.qUp.Model.Queue;

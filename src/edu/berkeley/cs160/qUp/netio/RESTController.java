@@ -3,12 +3,12 @@ package edu.berkeley.cs160.qUp.netio;
 import android.os.AsyncTask;
 import android.util.Base64;
 import android.util.Log;
+
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.StatusLine;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.mime.MultipartEntity;
 import org.apache.http.entity.mime.content.StringBody;
 import org.apache.http.impl.client.DefaultHttpClient;
@@ -28,7 +28,9 @@ import java.util.Map;
 
 public class RESTController {
 
-    public static final String QUEUE_URL = "http://cs160-qup.herokuapp.com/api/v1/queues/";
+    public static final String QUEUE_EP_URL = "http://cs160-qup.herokuapp.com/api/v1/queues";
+    public static final String USER_EP_URL = "http://cs160-qup.herokuapp.com/api/v1/users";
+
     public static final String TAG = "ParsingActivity";
 
     /**
@@ -51,15 +53,17 @@ public class RESTController {
      *
      * @param response
      */
-    public static void retrieveUserList(UserListResponse response, long[] UserIds) {
+    public static void retrieveUserList(UserListResponse response, String username, String password, String serverUrl) {
+
         Log.i(TAG, "Loading USER List...");
 
         Map<String, Object> params = new HashMap<String, Object>();
-        params.put("knownUserIds", Arrays.toString(UserIds));
+        params.put("Username", username);
+        params.put("Password", password);
 
         RESTPerformer restPerformer = new RESTPerformer();
 
-        restPerformer.execute(getPackedParameters("", params, response));
+        restPerformer.execute(getPackedParameters(serverUrl, params, response));
     }
 
 
@@ -74,7 +78,7 @@ public class RESTController {
         if (!serverURL.startsWith("/")) {
             serverURL = "" + serverURL;
         }
-        packedParams.put(RESTPerformer.SERVER_URL, QUEUE_URL + serverURL);
+        packedParams.put(RESTPerformer.SERVER_URL, QUEUE_EP_URL + serverURL);
 
         if (additionalParams != null) {
             packedParams.putAll(additionalParams);
@@ -156,19 +160,20 @@ public class RESTController {
             }
             HttpResponse response;
             try {
-                String un = (String) params[0].get(USERNAME);
-                String pass = (String) params[0].get(PASSWORD);
+
                 Log.i(TAG, "Requesting: " + builder.toString());
                 HttpClient client = new DefaultHttpClient();
-                if (params[0].containsKey(POST_REQUEST)) {
-                    HttpPost request = new HttpPost(serverURL);
+                if (params[0].containsKey(USERNAME)) {
+                    String un = (String) params[0].get(USERNAME);
+                    String pass = (String) params[0].get(PASSWORD);
+                    HttpGet request = new HttpGet(USER_EP_URL);
                     String authorizationString = "Basic " + Base64.encodeToString((un + ":" + pass).getBytes(), Base64.DEFAULT);
+                    request.setHeader("Authorization", authorizationString.replace("\n", ""));
                     response = client.execute(request);
-                    request.setHeader("Authorization", authorizationString);
-                    request.setEntity(mpEntity);
+
 
                 } else {
-                    HttpGet request = new HttpGet(serverURL);
+                    HttpGet request = new HttpGet(QUEUE_EP_URL);
                     response = client.execute(request);
                 }
 

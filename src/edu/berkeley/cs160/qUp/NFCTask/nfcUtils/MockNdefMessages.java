@@ -15,7 +15,6 @@
  */
 package edu.berkeley.cs160.qUp.NFCTask.nfcUtils;
 
-import edu.berkeley.cs160.qUp.activities.QueueListActivity;
 import org.ndeftools.wellknown.TextRecord;
 
 import java.util.Locale;

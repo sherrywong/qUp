@@ -16,22 +16,24 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-
-import java.util.List;
-
 import edu.berkeley.cs160.qUp.Model.Queue;
-import edu.berkeley.cs160.qUp.qUpApplication;
 import edu.berkeley.cs160.qUp.R;
+import edu.berkeley.cs160.qUp.activities.business.BusinessActivityMain;
 import edu.berkeley.cs160.qUp.animlv.AnimatedListView;
 import edu.berkeley.cs160.qUp.animlv.AnimatedListViewAdapter;
 import edu.berkeley.cs160.qUp.animlv.AnimatedListViewObjectMapper;
 import edu.berkeley.cs160.qUp.netio.QueueListUpdateListener;
+import edu.berkeley.cs160.qUp.qUpApplication;
+
+import java.util.List;
 
 //~--- JDK imports ------------------------------------------------------------
 
 public class QueueListActivity extends Activity implements QueueListUpdateListener {
+    public static final String LAT = "lat";
+    public static final String LON = "lon";
     private static final String TAG = "QueueListActivity";
-
+    public Intent intent;
     /**
      * Triggered when the queue list is updated in order to update the UI
      */
@@ -45,7 +47,6 @@ public class QueueListActivity extends Activity implements QueueListUpdateListen
             mProgressBar.setVisibility(View.GONE);
         }
     };
-
     /**
      * Called to bind a Post object to a View for the AnimatedListView
      */
@@ -65,7 +66,6 @@ public class QueueListActivity extends Activity implements QueueListUpdateListen
 
         }
     };
-
     /**
      * Triggered when a Queue is selected from the ListView
      */
@@ -78,10 +78,17 @@ public class QueueListActivity extends Activity implements QueueListUpdateListen
             toQueueActivity.putExtra("queueId", selectedQueue.getId());
             startActivity(toQueueActivity);
 
-//          overridePendingTransition(R.anim.start_right_to_left, R.anim.start_left_to_right);
+//            Double lat = selectedQueue.getBusiness().getLat();
+//            Double lon = selectedQueue.getBusiness().getLon();
+//
+//            Intent i = new Intent(QueueListActivity.this, ShortestWaitingMap.class);
+//            i.putExtra("lat", lat);
+//            i.putExtra("lon", lon);
+//            startActivity(i);
+
+            overridePendingTransition(R.anim.start_right_to_left, R.anim.start_left_to_right);
         }
     };
-    public Intent intent;
     private AnimatedListView queueListView;
     private List<Queue> queueList;
     private ProgressBar mProgressBar;
@@ -142,7 +149,7 @@ public class QueueListActivity extends Activity implements QueueListUpdateListen
     }
 
     /*
-	 * Menu
+     * Menu
      */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -150,20 +157,20 @@ public class QueueListActivity extends Activity implements QueueListUpdateListen
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
-   
+
     public boolean onOptionsItemSelected(MenuItem item) {
-    	switch (item.getItemId()) {
-    	case R.id.personal:
-            Intent intent = new Intent(this, MyQActivity.class);
-            startActivity(intent);
-    		return true;
-    	case R.id.business:
-            intent = new Intent(this, BusinessActivityMain.class);
-            startActivity(intent);
-            return true;
-    	default:
-            return super.onOptionsItemSelected(item);
-      }
+        switch (item.getItemId()) {
+            case R.id.personal:
+                Intent intent = new Intent(this, MyQActivity.class);
+                startActivity(intent);
+                return true;
+            case R.id.business:
+                intent = new Intent(this, BusinessActivityMain.class);
+                startActivity(intent);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     public void cleanUpWritingToTag() {

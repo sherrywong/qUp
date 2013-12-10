@@ -7,25 +7,25 @@
         android:id="@+id/startLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
         android:layout_below="@+id/title"
         android:layout_marginTop="20dp"
         android:gravity="center_horizontal"
-        android:orientation="horizontal" >
+        android:orientation="horizontal" android:layout_alignRight="@+id/endLayout"
+        android:layout_alignLeft="@+id/endLayout">
 
         <TextView
             android:id="@+id/startTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Start:"
-            android:textSize="24sp" />
+            android:textSize="24sp" android:layout_weight="0.12"/>
 
         <EditText
             android:id="@+id/startEditText"
             android:layout_width="162dp"
             android:layout_height="wrap_content"
-            android:ems="10" >
+            android:ems="10" android:inputType="textPostalAddress"
+            android:layout_weight="1">
 
             <requestFocus />
         </EditText>
@@ -36,46 +36,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/title"
-        android:layout_alignParentRight="true"
         android:layout_below="@+id/title"
         android:layout_marginTop="64dp"
         android:gravity="center_horizontal"
-        android:orientation="horizontal" >
+        android:orientation="horizontal" android:layout_alignRight="@+id/title">
 
         <TextView
             android:id="@+id/endTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="End:"
-            android:textSize="24sp" />
+            android:textSize="24sp" android:gravity="left" android:layout_weight="0.13"/>
 
         <EditText
             android:id="@+id/endEditText"
             android:layout_width="162dp"
             android:layout_height="wrap_content"
-            android:ems="10" />
+            android:ems="10" android:inputType="textPostalAddress"
+            android:layout_weight="1"/>
     </LinearLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/radiusLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/textView1"
-        android:gravity="center_horizontal" >
+        android:layout_alignRight="@+id/textView1">
 
-        <Spinner
-            android:id="@+id/value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-        <Spinner
-            android:id="@+id/unit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-    </LinearLayout>
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/textView1"
@@ -85,8 +74,20 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="57dp"
         android:text="Stay within:"
-        android:textSize="28sp" />
+        android:textSize="28sp" android:layout_marginBottom="25sp"/>
 
+    <Spinner
+        android:id="@+id/value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="false"
+        android:layout_below="@+id/unit" android:layout_alignParentLeft="true"/>
+    <Spinner
+        android:id="@+id/unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignTop="@+id/radiusLayout" android:layout_centerHorizontal="true"/>
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
@@ -95,18 +96,16 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="33dp"
         android:text="Where are you headed?"
-        android:textSize="28sp" />
+        android:textSize="32sp" />
 
     <Button
         android:id="@+id/searchButton"
         android:layout_width="200dip"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/radiusLayout"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="38dp"
         android:background="#3399ff"
         android:text="Search"
-        android:textColor="#ffffff" />
+        android:textColor="#ffffff"
+        android:layout_below="@+id/value" android:layout_centerHorizontal="true" android:layout_marginTop="25sp"/>
     
 
 </RelativeLayout>
