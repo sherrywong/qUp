@@ -122,8 +122,6 @@ public final class R {
         public static final int usernameLayout=0x7f060024;
         public static final int usernameTextView=0x7f060026;
         public static final int value=0x7f060035;
-		public static final int dateFrom = 0;
-		public static final int dateTo = 0;
 		public static int passwordEditText;
     }
     public static final class layout {
