@@ -3,32 +3,59 @@
     android:id="@+id/RelativeLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     android:orientation="vertical" >
 
     <!-- Horizontal seperator -->
 
-    <TextView
-        android:id="@+id/title"
+    <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/length"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="35dp"
-        android:layout_marginLeft="10dp"
-        android:text="Current qLength"
-        android:textColor="#3399ff"
-        android:textSize="30sp" />
+        android:layout_marginTop="51dp"
+        android:background="@drawable/queue_list_item_background"
+        android:orientation="vertical"
+        android:padding="20dp" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Current qLength"
+            android:textColor="#3399ff"
+            android:textSize="30sp" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:layout_weight="0.02"
+            android:background="#3399ff"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/length"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="14"
+            android:textSize="34sp" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginBottom="56dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_alignLeft="@+id/linearLayout2"
+        android:layout_alignRight="@+id/linearLayout2"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_marginTop="40dp"
         android:orientation="vertical" >
 
         <Button
@@ -48,15 +75,5 @@
             android:text="Analytics"
             android:textColor="#ffffff" />
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/length"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/linearLayout1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="102dp"
-        android:text="14"
-        android:textSize="34sp" />
 
 </RelativeLayout>
