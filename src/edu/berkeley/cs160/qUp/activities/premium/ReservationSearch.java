@@ -47,6 +47,4 @@ public class ReservationSearch extends Activity {
             return super.onOptionsItemSelected(item);
       }
     }
-
-
 }

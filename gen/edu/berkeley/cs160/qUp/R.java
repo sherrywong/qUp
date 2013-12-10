@@ -17,9 +17,233 @@ public final class R {
         public static final int up_from_bottom=0x7f040005;
     }
     public static final class array {
-        public static final int duration_array=0x7f080000;
+        public static final int duration_array=0x7f0a0000;
     }
     public static final class attr {
+        /** 
+    The size of the ad. It must be one of BANNER, FULL_BANNER, LEADERBOARD,
+    MEDIUM_RECTANGLE, SMART_BANNER, WIDE_SKYSCRAPER, or
+    &lt;width&gt;x&lt;height&gt;.
+    
+         <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int adSize=0x7f010000;
+        /**  The ad unit ID. 
+         <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int adUnitId=0x7f010001;
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+         */
+        public static final int bottomLabelHeight=0x7f010018;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int cameraBearing=0x7f010003;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int cameraTargetLat=0x7f010004;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int cameraTargetLng=0x7f010005;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int cameraTilt=0x7f010006;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int cameraZoom=0x7f010007;
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+         */
+        public static final int gridLineColor=0x7f010011;
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+         */
+        public static final int gridLineWidth=0x7f010012;
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be an integer value, such as "<code>100</code>".
+         */
+        public static final int gridLinesHorizontal=0x7f010013;
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be an integer value, such as "<code>100</code>".
+         */
+        public static final int gridLinesVertical=0x7f010014;
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+         */
+        public static final int leftLabelWidth=0x7f010015;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>none</code></td><td>0</td><td></td></tr>
+<tr><td><code>normal</code></td><td>1</td><td></td></tr>
+<tr><td><code>satellite</code></td><td>2</td><td></td></tr>
+<tr><td><code>terrain</code></td><td>3</td><td></td></tr>
+<tr><td><code>hybrid</code></td><td>4</td><td></td></tr>
+</table>
+         */
+        public static final int mapType=0x7f010002;
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+         */
+        public static final int rightLabelWidth=0x7f010017;
+        /** <p>Must be one or more (separated by '|') of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>normal</code></td><td>0</td><td></td></tr>
+<tr><td><code>bold</code></td><td>1</td><td></td></tr>
+<tr><td><code>italic</code></td><td>2</td><td></td></tr>
+<tr><td><code>black</code></td><td>8</td><td></td></tr>
+<tr><td><code>condensed</code></td><td>16</td><td></td></tr>
+<tr><td><code>light</code></td><td>32</td><td></td></tr>
+<tr><td><code>medium</code></td><td>64</td><td></td></tr>
+<tr><td><code>thin</code></td><td>128</td><td></td></tr>
+</table>
+         */
+        public static final int textStyle=0x7f010010;
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+         */
+        public static final int topLabelHeight=0x7f010016;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int uiCompass=0x7f010008;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int uiRotateGestures=0x7f010009;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int uiScrollGestures=0x7f01000a;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int uiTiltGestures=0x7f01000b;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int uiZoomControls=0x7f01000c;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int uiZoomGestures=0x7f01000d;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int useViewLifecycle=0x7f01000e;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int zOrderOnTop=0x7f01000f;
+    }
+    public static final class color {
+        public static final int common_action_bar_splitter=0x7f050009;
+        /**  Sign-in Button Colors 
+         */
+        public static final int common_signin_btn_dark_text_default=0x7f050000;
+        public static final int common_signin_btn_dark_text_disabled=0x7f050002;
+        public static final int common_signin_btn_dark_text_focused=0x7f050003;
+        public static final int common_signin_btn_dark_text_pressed=0x7f050001;
+        public static final int common_signin_btn_default_background=0x7f050008;
+        public static final int common_signin_btn_light_text_default=0x7f050004;
+        public static final int common_signin_btn_light_text_disabled=0x7f050006;
+        public static final int common_signin_btn_light_text_focused=0x7f050007;
+        public static final int common_signin_btn_light_text_pressed=0x7f050005;
+        public static final int common_signin_btn_text_dark=0x7f05000a;
+        public static final int common_signin_btn_text_light=0x7f05000b;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -28,103 +252,161 @@ public final class R {
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
          */
-        public static final int activity_horizontal_margin=0x7f050000;
-        public static final int activity_vertical_margin=0x7f050001;
+        public static final int activity_horizontal_margin=0x7f090000;
+        public static final int activity_vertical_margin=0x7f090001;
     }
     public static final class drawable {
-        public static final int btn_qup_tag_in_off=0x7f020000;
-        public static final int btn_qup_tag_in_off_curr=0x7f020001;
-        public static final int btn_qup_tag_in_on=0x7f020002;
-        public static final int btn_qup_tag_in_on_curr=0x7f020003;
-        public static final int check=0x7f020004;
-        public static final int ic_launcher=0x7f020005;
-        public static final int queue_list_item_background=0x7f020006;
+        public static final int background=0x7f020000;
+        public static final int btn_qup_tag_in_off=0x7f020001;
+        public static final int btn_qup_tag_in_off_curr=0x7f020002;
+        public static final int btn_qup_tag_in_on=0x7f020003;
+        public static final int btn_qup_tag_in_on_curr=0x7f020004;
+        public static final int check=0x7f020005;
+        public static final int common_signin_btn_icon_dark=0x7f020006;
+        public static final int common_signin_btn_icon_disabled_dark=0x7f020007;
+        public static final int common_signin_btn_icon_disabled_focus_dark=0x7f020008;
+        public static final int common_signin_btn_icon_disabled_focus_light=0x7f020009;
+        public static final int common_signin_btn_icon_disabled_light=0x7f02000a;
+        public static final int common_signin_btn_icon_focus_dark=0x7f02000b;
+        public static final int common_signin_btn_icon_focus_light=0x7f02000c;
+        public static final int common_signin_btn_icon_light=0x7f02000d;
+        public static final int common_signin_btn_icon_normal_dark=0x7f02000e;
+        public static final int common_signin_btn_icon_normal_light=0x7f02000f;
+        public static final int common_signin_btn_icon_pressed_dark=0x7f020010;
+        public static final int common_signin_btn_icon_pressed_light=0x7f020011;
+        public static final int common_signin_btn_text_dark=0x7f020012;
+        public static final int common_signin_btn_text_disabled_dark=0x7f020013;
+        public static final int common_signin_btn_text_disabled_focus_dark=0x7f020014;
+        public static final int common_signin_btn_text_disabled_focus_light=0x7f020015;
+        public static final int common_signin_btn_text_disabled_light=0x7f020016;
+        public static final int common_signin_btn_text_focus_dark=0x7f020017;
+        public static final int common_signin_btn_text_focus_light=0x7f020018;
+        public static final int common_signin_btn_text_light=0x7f020019;
+        public static final int common_signin_btn_text_normal_dark=0x7f02001a;
+        public static final int common_signin_btn_text_normal_light=0x7f02001b;
+        public static final int common_signin_btn_text_pressed_dark=0x7f02001c;
+        public static final int common_signin_btn_text_pressed_light=0x7f02001d;
+        public static final int ic_launcher=0x7f02001e;
+        public static final int ic_plusone_medium_off_client=0x7f02001f;
+        public static final int ic_plusone_small_off_client=0x7f020020;
+        public static final int ic_plusone_standard_off_client=0x7f020021;
+        public static final int ic_plusone_tall_off_client=0x7f020022;
+        public static final int logo=0x7f020023;
+        public static final int queue_list_item_background=0x7f020024;
     }
     public static final class id {
-        public static final int RelativeLayout1=0x7f060001;
-        public static final int View1=0x7f060011;
-        public static final int action_settings=0x7f06004d;
-        public static final int analytics=0x7f060014;
-        public static final int app_layout=0x7f060019;
-        public static final int app_map=0x7f06001c;
-        public static final int app_reservation=0x7f06003c;
-        public static final int app_tag=0x7f06001a;
-        public static final int business=0x7f060050;
-        public static final int businessName=0x7f060046;
-        public static final int business_layout_0=0x7f060015;
-        public static final int business_layout_1=0x7f060037;
-        public static final int business_layout_2=0x7f060039;
-        public static final int business_name_0=0x7f060016;
-        public static final int business_name_1=0x7f060000;
-        public static final int business_name_2=0x7f06003a;
-        public static final int business_time_0=0x7f060017;
-        public static final int business_time_1=0x7f060038;
-        public static final int business_time_2=0x7f06003b;
-        public static final int button=0x7f06002c;
-        public static final int confirmPasswordEditText=0x7f06002a;
-        public static final int confirmPasswordTextView=0x7f060029;
-        public static final int date=0x7f060044;
-        public static final int datePicker=0x7f06000b;
-        public static final int description=0x7f060007;
-        public static final int descriptionText=0x7f060008;
-        public static final int duration=0x7f06000d;
-        public static final int durationUnits=0x7f060021;
-        public static final int durationValue=0x7f060020;
-        public static final int editText=0x7f06004c;
-        public static final int endEditText=0x7f060032;
-        public static final int endLayout=0x7f060030;
-        public static final int endTextView=0x7f060031;
-        public static final int header=0x7f060025;
-        public static final int length=0x7f060012;
-        public static final int linearLayout1=0x7f060003;
-        public static final int linearLayout2=0x7f060002;
-        public static final int linearLayout3=0x7f060006;
-        public static final int linearLayout4=0x7f06000c;
-        public static final int linearLayout5=0x7f060009;
-        public static final int loader=0x7f06001e;
-        public static final int locationSpinner=0x7f06000f;
-        public static final int locationTextView=0x7f06000e;
-        public static final int loginButton=0x7f06002b;
-        public static final int mode=0x7f06004e;
-        public static final int name=0x7f060040;
-        public static final int passwordConfirmLayout=0x7f060048;
-        public static final int passwordLayout=0x7f060028;
-        public static final int passwordTextView=0x7f06004b;
-        public static final int personal=0x7f06004f;
-        public static final int qpon=0x7f060013;
-        public static final int queue_avg_wait_time=0x7f06003f;
-        public static final int queue_item_business_name=0x7f06003d;
-        public static final int queue_item_category=0x7f06003e;
-        public static final int queue_list=0x7f06001f;
-        public static final int radiusLayout=0x7f060033;
-        public static final int relativeLayout=0x7f06004a;
-        public static final int reservation=0x7f060041;
-        public static final int reserveButton=0x7f060045;
-        public static final int searchButton=0x7f060047;
-        public static final int sendButton=0x7f060010;
-        public static final int signupButton=0x7f060049;
-        public static final int startDate=0x7f06000a;
-        public static final int startEditText=0x7f06002f;
-        public static final int startLayout=0x7f06002d;
-        public static final int startTextView=0x7f06002e;
-        public static final int tagin_layout=0x7f060022;
-        public static final int textView=0x7f060018;
-        public static final int textView1=0x7f060034;
-        public static final int textView2=0x7f06001d;
-        public static final int textView3=0x7f06001b;
-        public static final int time=0x7f060042;
-        public static final int timePicker=0x7f060043;
-        public static final int title=0x7f060004;
-        public static final int titleText=0x7f060005;
-        public static final int toggle=0x7f060023;
-        public static final int unit=0x7f060036;
-        public static final int usernameEditText=0x7f060027;
-        public static final int usernameLayout=0x7f060024;
-        public static final int usernameTextView=0x7f060026;
-        public static final int value=0x7f060035;
-                public static final int dateFrom = 0;
-                public static final int dateTo = 0;
-                public static int passwordEditText;
+        public static final int RelativeLayout1=0x7f06000f;
+        public static final int View1=0x7f06001f;
+        public static final int action_settings=0x7f060069;
+        public static final int analytics=0x7f060022;
+        public static final int app_layout=0x7f060028;
+        public static final int app_map=0x7f06002b;
+        public static final int app_reservation=0x7f06004c;
+        public static final int app_tag=0x7f060029;
+        public static final int average_wait_time_tv=0x7f060056;
+        public static final int black=0x7f060007;
+        public static final int bold=0x7f060005;
+        public static final int business=0x7f06006c;
+        public static final int businessName=0x7f060061;
+        public static final int business_charting=0x7f060032;
+        public static final int business_layout_0=0x7f060023;
+        public static final int business_layout_1=0x7f060049;
+        public static final int business_layout_2=0x7f060048;
+        public static final int business_name_0=0x7f060025;
+        public static final int business_name_1=0x7f06000c;
+        public static final int business_name_2=0x7f06004a;
+        public static final int business_time_0=0x7f060026;
+        public static final int business_time_1=0x7f06004d;
+        public static final int business_time_2=0x7f06004b;
+        public static final int button=0x7f06003d;
+        public static final int condensed=0x7f060008;
+        public static final int confirmPasswordEditText=0x7f060067;
+        public static final int confirmPasswordTextView=0x7f060038;
+        public static final int date=0x7f06005e;
+        public static final int dateFrom=0x7f060030;
+        public static final int datePicker=0x7f060019;
+        public static final int dateTo=0x7f06002f;
+        public static final int description=0x7f060015;
+        public static final int descriptionText=0x7f060016;
+        public static final int duration=0x7f06001b;
+        public static final int editText=0x7f060068;
+        public static final int endEditText=0x7f060043;
+        public static final int endLayout=0x7f060041;
+        public static final int endTextView=0x7f060042;
+        public static final int frameLayout=0x7f060024;
+        public static final int header=0x7f060039;
+        public static final int hybrid=0x7f060004;
+        public static final int icon=0x7f060051;
+        public static final int italic=0x7f060006;
+        public static final int legal=0x7f060035;
+        public static final int length=0x7f060020;
+        public static final int light=0x7f060009;
+        public static final int linearLayout=0x7f060031;
+        public static final int linearLayout1=0x7f060011;
+        public static final int linearLayout2=0x7f060010;
+        public static final int linearLayout3=0x7f060014;
+        public static final int linearLayout4=0x7f06001a;
+        public static final int linearLayout5=0x7f060017;
+        public static final int loader=0x7f06002d;
+        public static final int locationSpinner=0x7f06001d;
+        public static final int locationTextView=0x7f06001c;
+        public static final int loginButton=0x7f06003c;
+        public static final int main_frame_layout=0x7f06000d;
+        public static final int map=0x7f06004e;
+        public static final int medium=0x7f06000a;
+        public static final int mode=0x7f06006a;
+        public static final int myLocResultTextView=0x7f060050;
+        public static final int myLocTextButton=0x7f06004f;
+        public static final int name=0x7f060059;
+        public static final int none=0x7f060000;
+        public static final int normal=0x7f060001;
+        public static final int passwordConfirmLayout=0x7f060063;
+        public static final int passwordEditText=0x7f06000e;
+        public static final int passwordLayout=0x7f060036;
+        public static final int passwordTextView=0x7f060066;
+        public static final int personal=0x7f06006b;
+        public static final int popup_title=0x7f060052;
+        public static final int qpon=0x7f060021;
+        public static final int queue_avg_wait_time=0x7f060057;
+        public static final int queue_item_business_name=0x7f060054;
+        public static final int queue_item_category=0x7f060055;
+        public static final int queue_list=0x7f06002e;
+        public static final int radiusLayout=0x7f060044;
+        public static final int relativeLayout=0x7f060065;
+        public static final int reservation=0x7f060058;
+        public static final int reserveButton=0x7f06005a;
+        public static final int satellite=0x7f060002;
+        public static final int searchButton=0x7f060062;
+        public static final int sendButton=0x7f06001e;
+        public static final int signupButton=0x7f060064;
+        public static final int snippet=0x7f060053;
+        public static final int space=0x7f06005c;
+        public static final int space2=0x7f06005b;
+        public static final int space3=0x7f06005d;
+        public static final int startDate=0x7f060018;
+        public static final int startEditText=0x7f060040;
+        public static final int startLayout=0x7f06003e;
+        public static final int startTextView=0x7f06003f;
+        public static final int tagin_layout=0x7f060033;
+        public static final int terrain=0x7f060003;
+        public static final int textView=0x7f060027;
+        public static final int textView1=0x7f060045;
+        public static final int textView2=0x7f06002c;
+        public static final int textView3=0x7f06002a;
+        public static final int thin=0x7f06000b;
+        public static final int time=0x7f06005f;
+        public static final int timePicker=0x7f060060;
+        public static final int title=0x7f060012;
+        public static final int titleText=0x7f060013;
+        public static final int toggle=0x7f060034;
+        public static final int unit=0x7f060047;
+        public static final int usernameEditText=0x7f06003b;
+        public static final int usernameLayout=0x7f060037;
+        public static final int usernameTextView=0x7f06003a;
+        public static final int value=0x7f060046;
+    }
+    public static final class integer {
+        public static final int google_play_services_version=0x7f080000;
     }
     public static final class layout {
         public static final int biz_activity_form=0x7f030000;
@@ -132,49 +414,164 @@ public final class R {
         public static final int biz_list=0x7f030002;
         public static final int business_activity_form=0x7f030003;
         public static final int business_activity_main=0x7f030004;
-        public static final int handler=0x7f030005;
-        public static final int header=0x7f030006;
-        public static final int json_test=0x7f030007;
-        public static final int main_activity=0x7f030008;
-        public static final int map_list_form=0x7f030009;
-        public static final int my_q=0x7f03000a;
-        public static final int queue_list_item=0x7f03000b;
-        public static final int reservation_form=0x7f03000c;
-        public static final int reservation_search=0x7f03000d;
-        public static final int shortest_line_form=0x7f03000e;
-        public static final int shortest_waiting_map_form=0x7f03000f;
-        public static final int signup=0x7f030010;
+        public static final int business_charting=0x7f030005;
+        public static final int handler=0x7f030006;
+        public static final int header=0x7f030007;
+        public static final int json_test=0x7f030008;
+        public static final int legal=0x7f030009;
+        public static final int main_activity=0x7f03000a;
+        public static final int map_list_form=0x7f03000b;
+        public static final int my_q=0x7f03000c;
+        public static final int nav_activity=0x7f03000d;
+        public static final int popup=0x7f03000e;
+        public static final int queue_list_item=0x7f03000f;
+        public static final int reservation_form=0x7f030010;
+        public static final int reservation_search=0x7f030011;
+        public static final int shortest_line_form=0x7f030012;
+        public static final int shortest_waiting_map_form=0x7f030013;
+        public static final int signup=0x7f030014;
+        public static final int support_map_fragment=0x7f030015;
     }
     public static final class menu {
-        public static final int main=0x7f0a0000;
+        public static final int business_main=0x7f0c0000;
+        public static final int main=0x7f0c0001;
     }
     public static final class string {
-        public static final int MyQ=0x7f070002;
-        public static final int action_settings=0x7f070001;
-        public static final int app_name=0x7f070000;
-        public static final int back_to_map_text=0x7f070012;
-        public static final int business=0x7f070017;
-        public static final int business_name=0x7f07000f;
-        public static final int business_subtype_title=0x7f070011;
-        public static final int dummy_time=0x7f070010;
-        public static final int general_exception=0x7f07000e;
-        public static final int handle_view_name=0x7f070003;
-        public static final int message_is_too_big_for_tag=0x7f070008;
+        public static final int MyQ=0x7f07001d;
+        public static final int action_settings=0x7f07001c;
+        public static final int app_name=0x7f07001b;
+        /**   Title for notification shown when GooglePlayServices needs to be
+        enabled for a application to work. [CHAR LIMIT=70] 
+         */
+        public static final int auth_client_needs_enabling_title=0x7f070015;
+        /**   Title for notification shown when GooglePlayServices needs to be
+        installed for a application to work. [CHAR LIMIT=70] 
+         */
+        public static final int auth_client_needs_installation_title=0x7f070016;
+        /**   Title for notification shown when GooglePlayServices needs to be
+        udpated for a application to work. [CHAR LIMIT=70] 
+         */
+        public static final int auth_client_needs_update_title=0x7f070017;
+        /**   Title for notification shown when GooglePlayServices is unavailable [CHAR LIMIT=42] 
+         */
+        public static final int auth_client_play_services_err_notification_msg=0x7f070018;
+        /**   Requested by string saying which app requested the notification. [CHAR LIMIT=42] 
+         */
+        public static final int auth_client_requested_by_msg=0x7f070019;
+        /**   Title for notification shown when a bad version of GooglePlayServices
+        has been installed and needs correction for an application to work.
+        [CHAR LIMIT=70] 
+         */
+        public static final int auth_client_using_bad_version_title=0x7f070014;
+        public static final int avg_wait_time=0x7f070035;
+        public static final int back_to_map_text=0x7f07002d;
+        public static final int business=0x7f070032;
+        public static final int business_name=0x7f07002a;
+        public static final int business_subtype_title=0x7f07002c;
+        /**  Button in confirmation dialog to enable Google Play services.  Clicking it
+        will direct user to application settings of Google Play services where they
+        can enable it [CHAR LIMIT=40] 
+         */
+        public static final int common_google_play_services_enable_button=0x7f070006;
+        /**  Message in confirmation dialog informing user they need to enable
+        Google Play services in application settings [CHAR LIMIT=NONE] 
+         */
+        public static final int common_google_play_services_enable_text=0x7f070005;
+        /**  Title of confirmation dialog informing user they need to enable
+        Google Play services in application settings [CHAR LIMIT=40] 
+         */
+        public static final int common_google_play_services_enable_title=0x7f070004;
+        /**  Button in confirmation dialog for installing Google Play services [CHAR LIMIT=40] 
+         */
+        public static final int common_google_play_services_install_button=0x7f070003;
+        /**  (For phones) Message in confirmation dialog informing user that
+        they need to install Google Play services (from Play Store) [CHAR LIMIT=NONE] 
+         */
+        public static final int common_google_play_services_install_text_phone=0x7f070001;
+        /**  (For tablets) Message in confirmation dialog informing user that
+        they need to install Google Play services (from Play Store) [CHAR LIMIT=NONE] 
+         */
+        public static final int common_google_play_services_install_text_tablet=0x7f070002;
+        /**  Title of confirmation dialog informing user that they need to install
+        Google Play services (from Play Store) [CHAR LIMIT=40] 
+         */
+        public static final int common_google_play_services_install_title=0x7f070000;
+        /**  Message in confirmation dialog informing the user that they provided an invalid account. [CHAR LIMIT=NONE] 
+         */
+        public static final int common_google_play_services_invalid_account_text=0x7f07000c;
+        /**  Title of confirmation dialog informing the user that they provided an invalid account. [CHAR LIMIT=40] 
+         */
+        public static final int common_google_play_services_invalid_account_title=0x7f07000b;
+        /**  Message in confirmation dialog informing the user that a network error occurred. [CHAR LIMIT=NONE] 
+         */
+        public static final int common_google_play_services_network_error_text=0x7f07000a;
+        /**  Title of confirmation dialog informing the user that a network error occurred. [CHAR LIMIT=40] 
+         */
+        public static final int common_google_play_services_network_error_title=0x7f070009;
+        /**  Message in confirmation dialog informing user there is an unknown issue in Google Play
+        services [CHAR LIMIT=NONE] 
+         */
+        public static final int common_google_play_services_unknown_issue=0x7f07000d;
+        /**  Message in confirmation dialog informing user that date on the device is not correct,
+    causing certificate checks to fail. [CHAR LIMIT=NONE] 
+         */
+        public static final int common_google_play_services_unsupported_date_text=0x7f070010;
+        /**  Message in confirmation dialog informing user that Google Play services is not supported on their device [CHAR LIMIT=NONE] 
+         */
+        public static final int common_google_play_services_unsupported_text=0x7f07000f;
+        /**  Title of confirmation dialog informing user that Google Play services is not supported on their device [CHAR LIMIT=40] 
+         */
+        public static final int common_google_play_services_unsupported_title=0x7f07000e;
+        /**  Button in confirmation dialog for updating Google Play services [CHAR LIMIT=40] 
+         */
+        public static final int common_google_play_services_update_button=0x7f070011;
+        /**  Message in confirmation dialog informing user that they need to update
+        Google Play services (from Play Store) [CHAR LIMIT=NONE] 
+         */
+        public static final int common_google_play_services_update_text=0x7f070008;
+        /**  Title of confirmation dialog informing user that they need to update
+        Google Play services (from Play Store) [CHAR LIMIT=40] 
+         */
+        public static final int common_google_play_services_update_title=0x7f070007;
+        /**  Sign-in button text [CHAR LIMIT=15] 
+         */
+        public static final int common_signin_button_text=0x7f070012;
+        /**  Long form sign-in button text [CHAR LIMIT=30] 
+         */
+        public static final int common_signin_button_text_long=0x7f070013;
+        public static final int dummy_time=0x7f07002b;
+        public static final int general_exception=0x7f070029;
+        public static final int get_dir_popup=0x7f070039;
+        public static final int handle_view_name=0x7f07001e;
+        public static final int hybrid=0x7f07003c;
+        public static final int icon=0x7f070040;
+        public static final int message_is_too_big_for_tag=0x7f070023;
         /**  Menu Items 
          */
-        public static final int mode=0x7f070015;
-        public static final int nfcAvailableDisabled=0x7f070006;
-        public static final int nfcAvailableEnabled=0x7f070005;
-        public static final int noNfcMessage=0x7f070007;
-        public static final int password=0x7f070014;
-        public static final int personal=0x7f070016;
-        public static final int success=0x7f070009;
-        public static final int tag_does_not_support_ndef=0x7f07000b;
-        public static final int tag_in=0x7f070004;
-        public static final int tag_in_text=0x7f070013;
-        public static final int tag_is_read_only=0x7f07000c;
-        public static final int tag_refused_to_connect=0x7f07000a;
-        public static final int tag_refused_to_format=0x7f07000d;
+        public static final int mode=0x7f070030;
+        public static final int my_location=0x7f070037;
+        public static final int nfcAvailableDisabled=0x7f070021;
+        public static final int nfcAvailableEnabled=0x7f070020;
+        public static final int noNfcMessage=0x7f070022;
+        public static final int no_location_available=0x7f070038;
+        public static final int no_maps=0x7f07003a;
+        public static final int normal=0x7f07003d;
+        public static final int password=0x7f07002f;
+        public static final int personal=0x7f070031;
+        public static final int release_signature=0x7f07001a;
+        public static final int satellite=0x7f07003b;
+        public static final int search=0x7f070036;
+        public static final int sign_in_button=0x7f07003f;
+        public static final int success=0x7f070024;
+        public static final int tag_does_not_support_ndef=0x7f070026;
+        public static final int tag_in=0x7f07001f;
+        public static final int tag_in_text=0x7f07002e;
+        public static final int tag_is_read_only=0x7f070027;
+        public static final int tag_refused_to_connect=0x7f070025;
+        public static final int tag_refused_to_format=0x7f070028;
+        public static final int terrain=0x7f07003e;
+        public static final int username_edit_text=0x7f070034;
+        public static final int username_text_view=0x7f070033;
     }
     public static final class style {
         /** 
@@ -198,10 +595,471 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f090000;
+        public static final int AppBaseTheme=0x7f0b0000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f090001;
+        public static final int AppTheme=0x7f0b0001;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a AdsAttrs.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #AdsAttrs_adSize edu.berkeley.cs160.qUp:adSize}</code></td><td>
+    The size of the ad.</td></tr>
+           <tr><td><code>{@link #AdsAttrs_adUnitId edu.berkeley.cs160.qUp:adUnitId}</code></td><td> The ad unit ID.</td></tr>
+           </table>
+           @see #AdsAttrs_adSize
+           @see #AdsAttrs_adUnitId
+         */
+        public static final int[] AdsAttrs = {
+            0x7f010000, 0x7f010001
+        };
+        /**
+          <p>
+          @attr description
+          
+    The size of the ad. It must be one of BANNER, FULL_BANNER, LEADERBOARD,
+    MEDIUM_RECTANGLE, SMART_BANNER, WIDE_SKYSCRAPER, or
+    &lt;width&gt;x&lt;height&gt;.
+    
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name edu.berkeley.cs160.qUp:adSize
+        */
+        public static final int AdsAttrs_adSize = 0;
+        /**
+          <p>
+          @attr description
+           The ad unit ID. 
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name edu.berkeley.cs160.qUp:adUnitId
+        */
+        public static final int AdsAttrs_adUnitId = 1;
+        /** Attributes that can be used with a ChartView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #ChartView_bottomLabelHeight edu.berkeley.cs160.qUp:bottomLabelHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #ChartView_gridLineColor edu.berkeley.cs160.qUp:gridLineColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #ChartView_gridLineWidth edu.berkeley.cs160.qUp:gridLineWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #ChartView_gridLinesHorizontal edu.berkeley.cs160.qUp:gridLinesHorizontal}</code></td><td></td></tr>
+           <tr><td><code>{@link #ChartView_gridLinesVertical edu.berkeley.cs160.qUp:gridLinesVertical}</code></td><td></td></tr>
+           <tr><td><code>{@link #ChartView_leftLabelWidth edu.berkeley.cs160.qUp:leftLabelWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #ChartView_rightLabelWidth edu.berkeley.cs160.qUp:rightLabelWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #ChartView_topLabelHeight edu.berkeley.cs160.qUp:topLabelHeight}</code></td><td></td></tr>
+           </table>
+           @see #ChartView_bottomLabelHeight
+           @see #ChartView_gridLineColor
+           @see #ChartView_gridLineWidth
+           @see #ChartView_gridLinesHorizontal
+           @see #ChartView_gridLinesVertical
+           @see #ChartView_leftLabelWidth
+           @see #ChartView_rightLabelWidth
+           @see #ChartView_topLabelHeight
+         */
+        public static final int[] ChartView = {
+            0x7f010011, 0x7f010012, 0x7f010013, 0x7f010014,
+            0x7f010015, 0x7f010016, 0x7f010017, 0x7f010018
+        };
+        /**
+          <p>This symbol is the offset where the {@link edu.berkeley.cs160.qUp.R.attr#bottomLabelHeight}
+          attribute's value can be found in the {@link #ChartView} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+          @attr name edu.berkeley.cs160.qUp:bottomLabelHeight
+        */
+        public static final int ChartView_bottomLabelHeight = 7;
+        /**
+          <p>This symbol is the offset where the {@link edu.berkeley.cs160.qUp.R.attr#gridLineColor}
+          attribute's value can be found in the {@link #ChartView} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+          @attr name edu.berkeley.cs160.qUp:gridLineColor
+        */
+        public static final int ChartView_gridLineColor = 0;
+        /**
+          <p>This symbol is the offset where the {@link edu.berkeley.cs160.qUp.R.attr#gridLineWidth}
+          attribute's value can be found in the {@link #ChartView} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+          @attr name edu.berkeley.cs160.qUp:gridLineWidth
+        */
+        public static final int ChartView_gridLineWidth = 1;
+        /**
+          <p>This symbol is the offset where the {@link edu.berkeley.cs160.qUp.R.attr#gridLinesHorizontal}
+          attribute's value can be found in the {@link #ChartView} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be an integer value, such as "<code>100</code>".
+          @attr name edu.berkeley.cs160.qUp:gridLinesHorizontal
+        */
+        public static final int ChartView_gridLinesHorizontal = 2;
+        /**
+          <p>This symbol is the offset where the {@link edu.berkeley.cs160.qUp.R.attr#gridLinesVertical}
+          attribute's value can be found in the {@link #ChartView} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be an integer value, such as "<code>100</code>".
+          @attr name edu.berkeley.cs160.qUp:gridLinesVertical
+        */
+        public static final int ChartView_gridLinesVertical = 3;
+        /**
+          <p>This symbol is the offset where the {@link edu.berkeley.cs160.qUp.R.attr#leftLabelWidth}
+          attribute's value can be found in the {@link #ChartView} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+          @attr name edu.berkeley.cs160.qUp:leftLabelWidth
+        */
+        public static final int ChartView_leftLabelWidth = 4;
+        /**
+          <p>This symbol is the offset where the {@link edu.berkeley.cs160.qUp.R.attr#rightLabelWidth}
+          attribute's value can be found in the {@link #ChartView} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+          @attr name edu.berkeley.cs160.qUp:rightLabelWidth
+        */
+        public static final int ChartView_rightLabelWidth = 6;
+        /**
+          <p>This symbol is the offset where the {@link edu.berkeley.cs160.qUp.R.attr#topLabelHeight}
+          attribute's value can be found in the {@link #ChartView} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+          @attr name edu.berkeley.cs160.qUp:topLabelHeight
+        */
+        public static final int ChartView_topLabelHeight = 5;
+        /** Attributes that can be used with a MapAttrs.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #MapAttrs_cameraBearing edu.berkeley.cs160.qUp:cameraBearing}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraTargetLat edu.berkeley.cs160.qUp:cameraTargetLat}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraTargetLng edu.berkeley.cs160.qUp:cameraTargetLng}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraTilt edu.berkeley.cs160.qUp:cameraTilt}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraZoom edu.berkeley.cs160.qUp:cameraZoom}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_mapType edu.berkeley.cs160.qUp:mapType}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiCompass edu.berkeley.cs160.qUp:uiCompass}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiRotateGestures edu.berkeley.cs160.qUp:uiRotateGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiScrollGestures edu.berkeley.cs160.qUp:uiScrollGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiTiltGestures edu.berkeley.cs160.qUp:uiTiltGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiZoomControls edu.berkeley.cs160.qUp:uiZoomControls}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiZoomGestures edu.berkeley.cs160.qUp:uiZoomGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_useViewLifecycle edu.berkeley.cs160.qUp:useViewLifecycle}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_zOrderOnTop edu.berkeley.cs160.qUp:zOrderOnTop}</code></td><td></td></tr>
+           </table>
+           @see #MapAttrs_cameraBearing
+           @see #MapAttrs_cameraTargetLat
+           @see #MapAttrs_cameraTargetLng
+           @see #MapAttrs_cameraTilt
+           @see #MapAttrs_cameraZoom
+           @see #MapAttrs_mapType
+           @see #MapAttrs_uiCompass
+           @see #MapAttrs_uiRotateGestures
+           @see #MapAttrs_uiScrollGestures
+           @see #MapAttrs_uiTiltGestures
+           @see #MapAttrs_uiZoomControls
+           @see #MapAttrs_uiZoomGestures
+           @see #MapAttrs_useViewLifecycle
+           @see #MapAttrs_zOrderOnTop
+         */
+        public static final int[] MapAttrs = {
+            0x7f010002, 0x7f010003, 0x7f010004, 0x7f010005,
+            0x7f010006, 0x7f010007, 0x7f010008, 0x7f010009,
+            0x7f01000a, 0x7f01000b, 0x7f01000c, 0x7f01000d,
+            0x7f01000e, 0x7f01000f
+        };
+        /**
+          <p>This symbol is the offset where the {@link edu.berkeley.cs160.qUp.R.attr#cameraBearing}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name edu.berkeley.cs160.qUp:cameraBearing
+        */
+        public static final int MapAttrs_cameraBearing = 1;
+        /**
+          <p>This symbol is the offset where the {@link edu.berkeley.cs160.qUp.R.attr#cameraTargetLat}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name edu.berkeley.cs160.qUp:cameraTargetLat
+        */
+        public static final int MapAttrs_cameraTargetLat = 2;
+        /**
+          <p>This symbol is the offset where the {@link edu.berkeley.cs160.qUp.R.attr#cameraTargetLng}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name edu.berkeley.cs160.qUp:cameraTargetLng
+        */
+        public static final int MapAttrs_cameraTargetLng = 3;
+        /**
+          <p>This symbol is the offset where the {@link edu.berkeley.cs160.qUp.R.attr#cameraTilt}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name edu.berkeley.cs160.qUp:cameraTilt
+        */
+        public static final int MapAttrs_cameraTilt = 4;
+        /**
+          <p>This symbol is the offset where the {@link edu.berkeley.cs160.qUp.R.attr#cameraZoom}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name edu.berkeley.cs160.qUp:cameraZoom
+        */
+        public static final int MapAttrs_cameraZoom = 5;
+        /**
+          <p>This symbol is the offset where the {@link edu.berkeley.cs160.qUp.R.attr#mapType}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>none</code></td><td>0</td><td></td></tr>
+<tr><td><code>normal</code></td><td>1</td><td></td></tr>
+<tr><td><code>satellite</code></td><td>2</td><td></td></tr>
+<tr><td><code>terrain</code></td><td>3</td><td></td></tr>
+<tr><td><code>hybrid</code></td><td>4</td><td></td></tr>
+</table>
+          @attr name edu.berkeley.cs160.qUp:mapType
+        */
+        public static final int MapAttrs_mapType = 0;
+        /**
+          <p>This symbol is the offset where the {@link edu.berkeley.cs160.qUp.R.attr#uiCompass}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name edu.berkeley.cs160.qUp:uiCompass
+        */
+        public static final int MapAttrs_uiCompass = 6;
+        /**
+          <p>This symbol is the offset where the {@link edu.berkeley.cs160.qUp.R.attr#uiRotateGestures}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name edu.berkeley.cs160.qUp:uiRotateGestures
+        */
+        public static final int MapAttrs_uiRotateGestures = 7;
+        /**
+          <p>This symbol is the offset where the {@link edu.berkeley.cs160.qUp.R.attr#uiScrollGestures}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name edu.berkeley.cs160.qUp:uiScrollGestures
+        */
+        public static final int MapAttrs_uiScrollGestures = 8;
+        /**
+          <p>This symbol is the offset where the {@link edu.berkeley.cs160.qUp.R.attr#uiTiltGestures}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name edu.berkeley.cs160.qUp:uiTiltGestures
+        */
+        public static final int MapAttrs_uiTiltGestures = 9;
+        /**
+          <p>This symbol is the offset where the {@link edu.berkeley.cs160.qUp.R.attr#uiZoomControls}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name edu.berkeley.cs160.qUp:uiZoomControls
+        */
+        public static final int MapAttrs_uiZoomControls = 10;
+        /**
+          <p>This symbol is the offset where the {@link edu.berkeley.cs160.qUp.R.attr#uiZoomGestures}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name edu.berkeley.cs160.qUp:uiZoomGestures
+        */
+        public static final int MapAttrs_uiZoomGestures = 11;
+        /**
+          <p>This symbol is the offset where the {@link edu.berkeley.cs160.qUp.R.attr#useViewLifecycle}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name edu.berkeley.cs160.qUp:useViewLifecycle
+        */
+        public static final int MapAttrs_useViewLifecycle = 12;
+        /**
+          <p>This symbol is the offset where the {@link edu.berkeley.cs160.qUp.R.attr#zOrderOnTop}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name edu.berkeley.cs160.qUp:zOrderOnTop
+        */
+        public static final int MapAttrs_zOrderOnTop = 13;
+        /** Attributes that can be used with a TextView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #TextView_textStyle edu.berkeley.cs160.qUp:textStyle}</code></td><td></td></tr>
+           </table>
+           @see #TextView_textStyle
+         */
+        public static final int[] TextView = {
+            0x7f010010
+        };
+        /**
+          <p>This symbol is the offset where the {@link edu.berkeley.cs160.qUp.R.attr#textStyle}
+          attribute's value can be found in the {@link #TextView} array.
+
+
+          <p>Must be one or more (separated by '|') of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>normal</code></td><td>0</td><td></td></tr>
+<tr><td><code>bold</code></td><td>1</td><td></td></tr>
+<tr><td><code>italic</code></td><td>2</td><td></td></tr>
+<tr><td><code>black</code></td><td>8</td><td></td></tr>
+<tr><td><code>condensed</code></td><td>16</td><td></td></tr>
+<tr><td><code>light</code></td><td>32</td><td></td></tr>
+<tr><td><code>medium</code></td><td>64</td><td></td></tr>
+<tr><td><code>thin</code></td><td>128</td><td></td></tr>
+</table>
+          @attr name edu.berkeley.cs160.qUp:textStyle
+        */
+        public static final int TextView_textStyle = 0;
+    };
 }

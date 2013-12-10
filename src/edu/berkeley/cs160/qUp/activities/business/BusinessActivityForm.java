@@ -23,9 +23,15 @@ import edu.berkeley.cs160.qUp.activities.business.BusinessActivityMain;
 
 public class BusinessActivityForm extends Activity {
 	
+	protected static final int from = 0;
+	protected static final int to = 1 ;
+	protected static final int send = 2 ;
+
+	static int whichBtn;
 	Spinner location;
 	EditText title, description;	
-	Button sendBtn, dateFrom, dateTo;	
+	static Button sendBtn, dateFrom, dateTo;
+	
 	//TODO: Hook up the date picker
     
 	
@@ -50,6 +56,17 @@ public class BusinessActivityForm extends Activity {
 
 		public void onDateSet(DatePicker view, int year, int month, int day) {
 			// Do something with the date chosen by the user
+			switch (whichBtn) {
+				case from:
+					dateFrom.setText(month + "/" + day + "/" + year);
+					break;
+				case to:
+					dateTo.setText(month + "/" + day + "/" + year);
+					break;
+				case send:
+				default:
+					break;
+			}
 		}
 	}
 
@@ -70,14 +87,17 @@ public class BusinessActivityForm extends Activity {
         public void onClick(View arg0) {
         	//TODO: Add toast confirmation
         	if (this.type.equals("send")) {
+        		whichBtn = from;
         		Intent intent = new Intent(context,BusinessActivityMain.class);
         		startActivity(intent);
         	}
         	else if (this.type.equals("dateFrom")) {
+        		whichBtn = from;
         		showDatePickerDialog(arg0);
         		//TODO: display the chosen date
         	}
         	else if (this.type.equals("dateTo")) {
+        		whichBtn = to;
         		showDatePickerDialog(arg0);        		
         		//TODO: display the chosen date
         	}
