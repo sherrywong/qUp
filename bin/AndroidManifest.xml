@@ -28,6 +28,7 @@
     <application
         android:name=".qUpApplication"
         android:allowBackup="true"
+        android:label="Log-In"        
         android:icon="@drawable/newlogo"
         android:theme="@style/AppTheme">
         <meta-data
