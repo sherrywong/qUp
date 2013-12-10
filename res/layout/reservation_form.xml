@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:background="@drawable/background"
     android:layout_height="match_parent" >
-
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="61dp"
-        android:text="Sliver Pizzeria"
-        android:textSize="42sp" />
 
     <TextView
         android:id="@+id/reservation"
@@ -22,13 +13,46 @@
         android:text="Reservation"
         android:textSize="18sp" />
 
+    <Button
+        android:id="@+id/reserveButton"
+        android:layout_width="200dip"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="#3399ff"
+        android:text="Reserve"
+        android:textColor="#ffffff" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reservation"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp" >
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date:"
+            android:textSize="28sp" />
+
+        <Button
+            android:id="@+id/datePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="showDatePickerDialog"
+            android:text="Select Date" />
+    </LinearLayout>
+
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/linearLayout1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="14dp" >
+        android:layout_centerHorizontal="true" >
 
         <TextView
             android:id="@+id/time"
@@ -43,36 +67,14 @@
             android:layout_height="wrap_content" />
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/linearLayout1"
+    <TextView
+        android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/reservation"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp" >
-
-        <TextView
-            android:id="@+id/date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Date:"
-            android:textSize="28sp" />
-
-        <DatePicker
-            android:id="@+id/datePicker"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/reserveButton"
-        android:layout_width="200dip"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/linearLayout2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="36dp"
-        android:background="#3399ff"
-        android:text="Reserve"
-        android:textColor="#ffffff" />
+        android:layout_marginTop="17dp"
+        android:text="Sliver Pizzeria"
+        android:textSize="42sp" />
 
 </RelativeLayout>

@@ -1,31 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:background="@drawable/background" >
 
     <LinearLayout
         android:id="@+id/startLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/endLayout"
+        android:layout_alignRight="@+id/endLayout"
         android:layout_below="@+id/title"
         android:layout_marginTop="20dp"
         android:gravity="center_horizontal"
-        android:orientation="horizontal" android:layout_alignRight="@+id/endLayout"
-        android:layout_alignLeft="@+id/endLayout">
+        android:orientation="horizontal" >
 
         <TextView
             android:id="@+id/startTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="0.12"
             android:text="Start:"
-            android:textSize="24sp" android:layout_weight="0.12"/>
+            android:layout_marginLeft="10dp"
+            android:textSize="24sp" />
 
         <EditText
             android:id="@+id/startEditText"
             android:layout_width="162dp"
             android:layout_height="wrap_content"
-            android:ems="10" android:inputType="textPostalAddress"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPostalAddress" >
 
             <requestFocus />
         </EditText>
@@ -36,35 +41,52 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/title"
+        android:layout_alignRight="@+id/title"
         android:layout_below="@+id/title"
         android:layout_marginTop="64dp"
         android:gravity="center_horizontal"
-        android:orientation="horizontal" android:layout_alignRight="@+id/title">
+        android:orientation="horizontal" >
 
         <TextView
             android:id="@+id/endTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="0.13"
+            android:gravity="left"
+            android:layout_marginLeft="20dp"
             android:text="End:"
-            android:textSize="24sp" android:gravity="left" android:layout_weight="0.13"/>
+            android:textSize="24sp" />
 
         <EditText
             android:id="@+id/endEditText"
             android:layout_width="162dp"
             android:layout_height="wrap_content"
-            android:ems="10" android:inputType="textPostalAddress"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPostalAddress" />
     </LinearLayout>
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/radiusLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:layout_below="@+id/textView1"
-        android:layout_alignRight="@+id/textView1">
+        android:gravity="center_horizontal" >
 
-    </RelativeLayout>
+        <Spinner
+            android:id="@+id/unit"
+            android:layout_width="123dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.79" />
+
+        <Spinner
+            android:id="@+id/value"
+            android:layout_width="168dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="false" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/textView1"
@@ -72,40 +94,29 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/endLayout"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="57dp"
+        android:layout_marginTop="22dp"
         android:text="Stay within:"
-        android:textSize="28sp" android:layout_marginBottom="25sp"/>
-
-    <Spinner
-        android:id="@+id/value"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="false"
-        android:layout_below="@+id/unit" android:layout_alignParentLeft="true"/>
-    <Spinner
-        android:id="@+id/unit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_alignTop="@+id/radiusLayout" android:layout_centerHorizontal="true"/>
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="33dp"
-        android:text="Where are you headed?"
-        android:textSize="32sp" />
+        android:textSize="28sp" />
 
     <Button
         android:id="@+id/searchButton"
         android:layout_width="200dip"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/radiusLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
         android:background="#3399ff"
         android:text="Search"
-        android:textColor="#ffffff"
-        android:layout_below="@+id/value" android:layout_centerHorizontal="true" android:layout_marginTop="25sp"/>
-    
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal"
+        android:text="Where are you headed?"
+        android:textSize="32sp" />
 
 </RelativeLayout>
