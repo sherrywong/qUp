@@ -1,6 +1,11 @@
 package edu.berkeley.cs160.qUp.activities.premium;
 
+import java.util.Calendar;
+
 import android.app.Activity;
+import android.app.DatePickerDialog;
+import android.app.Dialog;
+import android.app.DialogFragment;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,36 +13,75 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.TextView;
 
 import edu.berkeley.cs160.qUp.R;
 import edu.berkeley.cs160.qUp.activities.MyQActivity;
 import edu.berkeley.cs160.qUp.activities.business.BusinessActivityMain;
+import edu.berkeley.cs160.qUp.activities.business.BusinessActivityForm.DatePickerFragment;
 
 public class ReservationForm extends Activity {
 	
 	TextView name;
 	//TODO: Get the time and stuff
 	//TODO: Get the date and stuff
-	Button reserveBtn;
-		
+	Button reserveBtn,datePickerBtn;
+
+	
+	/*
+	 * Date picker class
+	 * From android developer Picker tutorial
+	 */
+	public static class DatePickerFragment extends DialogFragment
+    implements DatePickerDialog.OnDateSetListener {
+
+		@Override
+		public Dialog onCreateDialog(Bundle savedInstanceState) {
+			// Use the current date as the default date in the picker
+			final Calendar c = Calendar.getInstance();
+			int year = c.get(Calendar.YEAR);
+			int month = c.get(Calendar.MONTH);
+			int day = c.get(Calendar.DAY_OF_MONTH);
+
+			// Create a new instance of DatePickerDialog and return it
+			return new DatePickerDialog(getActivity(), this, year, month, day);
+		}
+
+		public void onDateSet(DatePicker view, int year, int month, int day) {
+			// Do something with the date chosen by the user
+		}
+	}
+	
     /*
      * Private Listener Class
      */
     private class ButtonListener implements Button.OnClickListener {
 
         Context context;
+        String type;
         //Constructor
-        public ButtonListener(Context context) {
+        public ButtonListener(Context context,String type) {
             this.context = context;
+            this.type = type;
         }
 
         @Override
         public void onClick(View arg0) {
         	//TODO: add confirmation
-        	Intent intent = new Intent(context, MyQActivity.class);
-        	startActivity(intent);
+        	if (type.equals("reserve")) {
+        		Intent intent = new Intent(context, MyQActivity.class);
+        		startActivity(intent);
+        	}
+        	else if (type.equals("datePicker")) {
+        		showDatePickerDialog(arg0);
+        	}
         }
+        
+        public void showDatePickerDialog(View v) {
+            DialogFragment newFragment = new DatePickerFragment();
+            newFragment.show(getFragmentManager(), "datePicker");
+        }        
     }
     
 	
@@ -49,8 +93,9 @@ public class ReservationForm extends Activity {
     	name = (TextView) findViewById(R.id.name);
     	//TODO: get date and time values
     	reserveBtn = (Button) findViewById(R.id.reserveButton);
-    
-    	reserveBtn.setOnClickListener(new ButtonListener(this));
+    	datePickerBtn = (Button) findViewById(R.id.datePicker);
+    	reserveBtn.setOnClickListener(new ButtonListener(this,"reserve"));
+    	datePickerBtn.setOnClickListener(new ButtonListener(this,"datePicker"));
     }
     
 
