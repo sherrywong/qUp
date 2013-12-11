@@ -110,10 +110,10 @@ public class MyQActivity extends Activity implements QueueListUpdateListener {
         business_time_0.setText(mUserQueueTreeMap.firstKey().toString() + " Minutes Left.");
         business_name_0.setText(mUserQueueTreeMap.pollFirstEntry().getValue());
 
-        business_time_1.setText(mUserQueueTreeMap.firstKey().toString() + "Minutes Left"));
+        business_time_1.setText(mUserQueueTreeMap.firstKey().toString() + "Minutes Left");
         business_name_1.setText(mUserQueueTreeMap.pollFirstEntry().getValue() );
 
-        business_time_2.setText(mUserQueueTreeMap.firstKey().toString() + "Minutes Left"));
+        business_time_2.setText(mUserQueueTreeMap.firstKey().toString() + "Minutes Left");
         business_name_2.setText(mUserQueueTreeMap.pollFirstEntry().getValue() );
 
 
