@@ -76,7 +76,7 @@ public class QueueListActivity extends Activity implements QueueListUpdateListen
             Queue selectedQueue = queueList.get(position);
             Intent toQueueActivity = new Intent(QueueListActivity.this, ShortestWaitingMap.class);
 
-            toQueueActivity.putExtra("queueId", selectedQueue.getId());
+           // toQueueActivity.putExtra("queueId", selectedQueue.getId());
 //            startActivity(toQueueActivity);
 
             Double lat = selectedQueue.getBusiness().getLat();
@@ -180,4 +180,3 @@ public class QueueListActivity extends Activity implements QueueListUpdateListen
 }
 
 
-//~ Formatted by Jindent --- http://www.jindent.com

@@ -1,6 +1,7 @@
 package edu.berkeley.cs160.qUp.activities;
 
 import android.app.Activity;
+import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,18 +10,28 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import com.google.gson.Gson;
+import edu.berkeley.cs160.qUp.Model.Queue;
 import edu.berkeley.cs160.qUp.Model.User;
 import edu.berkeley.cs160.qUp.R;
 import edu.berkeley.cs160.qUp.activities.business.BusinessActivityMain;
 import edu.berkeley.cs160.qUp.activities.premium.ReservationSearch;
+import edu.berkeley.cs160.qUp.animlv.AnimatedListViewAdapter;
+import edu.berkeley.cs160.qUp.netio.QueueListUpdateListener;
 import edu.berkeley.cs160.qUp.netio.RESTController;
 import edu.berkeley.cs160.qUp.netio.UserListResponse;
+import edu.berkeley.cs160.qUp.qUpApplication;
+
+import java.util.List;
 
 public class MainActivity extends Activity {
 
     Button loginBtn;
     EditText username, password;
     User mUser;
+
+    Button registerBtn;
+
+
     /**
      * Handler for the User list being fetched remotely
      */
@@ -51,25 +62,26 @@ public class MainActivity extends Activity {
 
                     Intent intent;
 
+
                     if (mUser.isPremium) {
-                        intent = new Intent(MainActivity.this, ReservationSearch.class);
+                        intent = new Intent(MainActivity.this, MyQActivity.class);
                         intent.putExtra("User", userGson.toJson(mUser));
                         intent.putExtra("isPremium", true);
                         startActivity(intent);
                     }
+
                     else{
-                        intent = new Intent(MainActivity.this, QueueListActivity.class);
+                        intent = new Intent(MainActivity.this, MyQActivity.class);
                         intent.putExtra("User", userGson.toJson(mUser));
                         intent.putExtra("isPremium", false);
                         startActivity(intent);
                     }
                 }
             }
-
-
         }
 
     };
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,6 +100,8 @@ public class MainActivity extends Activity {
 
     }
 
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -100,6 +114,8 @@ public class MainActivity extends Activity {
 
         return null;
     }
+
+
 
     /*
      * Private Listener Class
@@ -116,7 +132,7 @@ public class MainActivity extends Activity {
 
         @Override
         public void onClick(View arg0) {
-//
+
             String un = username.getText().toString();
             String ps = password.getText().toString();
             String sr = "/users/";

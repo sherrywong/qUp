@@ -14,7 +14,6 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="24dp"
-        android:background="@android:color/background_light"
         android:enabled="false"
         android:focusable="false"
         android:focusableInTouchMode="false"
@@ -26,20 +25,18 @@
         android:textColor="#263e58"
         android:textIsSelectable="false"
         android:textSize="12pt"
-        android:typeface="normal" />
+        android:typeface="normal" android:textStyle="bold"/>
 
     <ImageButton
         android:id="@+id/toggle"
         style="@android:style/Widget.Holo.Light.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/title"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="48dp"
         android:background="@drawable/check"
         android:contentDescription="@string/tag_in"
         android:focusable="false"
-        android:focusableInTouchMode="false" />
+        android:focusableInTouchMode="false"
+        android:layout_centerVertical="true" android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>
 

@@ -7,6 +7,7 @@ import android.nfc.NdefMessage;
 import android.nfc.NfcAdapter;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 import org.ndeftools.Message;
@@ -68,12 +69,10 @@ public class TagInHandler extends Activity {
                 Intent intent = new Intent(getBaseContext(), MyQActivity.class);
 
 
-//                intent.putExtra(MainActivity.BUSINESS_TIME_0, "14 Minutes");
-//                intent.putExtra(MainActivity.BUSINESS_TIME_1, "10");
-//                intent.putExtra(MainActivity.BUSINESS_TIME_2, "00:08");
+                intent.putExtra("Thai Basil", "2 Minutes");
+                intent.putExtra("Mandarin House", "20 Minutes");
+                intent.putExtra("Gypsy's", "15 minutes");
 
-
-                intent.putExtra(NfcAdapter.EXTRA_NDEF_MESSAGES, mTagDescription0.msgs);
 
                 startActivity(intent);
             }

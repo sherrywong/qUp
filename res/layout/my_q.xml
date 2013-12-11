@@ -15,7 +15,7 @@
        android:layout_alignLeft="@+id/business_layout_1"
        android:layout_alignRight="@+id/business_layout_1"
        android:layout_below="@+id/business_layout_1"
-       android:background="@drawable/queue_list_item_background"
+       android:background="@android:color/transparent"
        android:gravity="center_horizontal"
        android:layout_marginTop="5sp"
        android:orientation="vertical" >
@@ -54,7 +54,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="14dp"
-        android:background="@drawable/queue_list_item_background"
+        android:background="@android:color/transparent"
         android:gravity="center_horizontal"
         android:orientation="vertical" >
 
@@ -64,7 +64,7 @@
             android:layout_height="wrap_content"
             android:text="Next Business"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#3399ff"
+            android:textColor="#00184c"
             android:textSize="36dp" />
 
         <LinearLayout
@@ -82,7 +82,7 @@
             android:layout_height="wrap_content"
             android:text="00:00"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textSize="30dp" />
+            android:textSize="30dp" android:textColor="@android:color/secondary_text_light"/>
     </LinearLayout>
 
     <LinearLayout
@@ -101,7 +101,7 @@
             android:layout_marginBottom="10dp"
             android:background="#0066CC"
             android:text="Tag-In"
-            android:textColor="#ffffff" />
+            android:textColor="#ffffff" android:layout_marginTop="46sp"/>
 
         <Button
             android:id="@+id/app_reservation"
@@ -109,7 +109,7 @@
             android:layout_height="wrap_content"
             android:background="#FF9933"
             android:text="Reserve"
-            android:textColor="#ffffff" />
+            android:textColor="#ffffff" android:layout_marginTop="12sp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -119,7 +119,7 @@
         android:layout_alignLeft="@+id/business_layout_0"
         android:layout_alignRight="@+id/business_layout_0"
         android:layout_below="@+id/business_layout_0"
-        android:background="@drawable/queue_list_item_background"
+        android:background="@android:color/transparent"
         android:gravity="center_horizontal"
         android:layout_marginTop="10sp"
         android:orientation="vertical" >

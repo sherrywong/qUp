@@ -44,6 +44,7 @@ public class QueueListResponse implements RESTResponse {
             Queue queue = gson.fromJson(queues.get(i), Queue.class);
             queueArray.add(queue);
 
+
         }
         queueList = queueArray;
 

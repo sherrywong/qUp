@@ -17,9 +17,12 @@ import android.os.Handler;
 import android.os.Parcelable;
 import android.os.Vibrator;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import edu.berkeley.cs160.qUp.activities.MyQActivity;
 import org.ndeftools.Message;
 import org.ndeftools.Record;
 import org.ndeftools.externaltype.AndroidApplicationRecord;
@@ -56,6 +59,7 @@ public class TagInHandler extends Activity implements NfcAdapter.CreateNdefMessa
         nfcAdapter = NfcAdapter.getDefaultAdapter(this);
         nfcPendingIntent = PendingIntent.getActivity(this, 0, new Intent(this, this.getClass()).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP), 0);
         nfcAdapter.setOnNdefPushCompleteCallback(this, this);
+
 
 
     }

@@ -58,6 +58,10 @@ public class Queue implements Comparable<Queue> {
     public User getUser() {
         return user;
     }
+    public int getUserId(){
+        return user.userID;
+    }
+
 
     public void setUser(User user) {
         this.user = user;
