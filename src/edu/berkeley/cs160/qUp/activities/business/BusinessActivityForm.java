@@ -12,16 +12,18 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 import edu.berkeley.cs160.qUp.R;
 import edu.berkeley.cs160.qUp.activities.MyQActivity;
-import edu.berkeley.cs160.qUp.activities.business.BusinessActivityMain;
 
-public class BusinessActivityForm extends Activity {
+public class BusinessActivityForm extends Activity implements OnItemSelectedListener {
 	
 	protected static final int from = 0;
 	protected static final int to = 1 ;
@@ -64,6 +66,7 @@ public class BusinessActivityForm extends Activity {
 					dateTo.setText(month + "/" + day + "/" + year);
 					break;
 				case send:
+					break;
 				default:
 					break;
 			}
@@ -88,7 +91,8 @@ public class BusinessActivityForm extends Activity {
         	//TODO: Add toast confirmation
         	if (this.type.equals("send")) {
         		whichBtn = from;
-        		Intent intent = new Intent(context,BusinessActivityMain.class);
+	        	Toast.makeText(context, "qPon sent!", Toast.LENGTH_SHORT).show(); 
+        		Intent intent = new Intent(context,QPonList.class);
         		startActivity(intent);
         	}
         	else if (this.type.equals("dateFrom")) {
@@ -124,6 +128,14 @@ public class BusinessActivityForm extends Activity {
     	sendBtn.setOnClickListener(new ButtonListener(this,"send"));
     	dateFrom.setOnClickListener(new ButtonListener(this,"dateFrom"));
     	dateTo.setOnClickListener(new ButtonListener(this,"dateTo"));
+
+        location.setOnItemSelectedListener(this);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+        		R.array.location_array, android.R.layout.simple_spinner_item);
+        		
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        
+        location.setAdapter(adapter);
     }
     
     /*
@@ -183,6 +195,19 @@ public class BusinessActivityForm extends Activity {
             return super.onOptionsItemSelected(item);
       }
     }
+
+	@Override
+	public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2,
+			long arg3) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onNothingSelected(AdapterView<?> arg0) {
+		// TODO Auto-generated method stub
+		
+	}
     
 }
 

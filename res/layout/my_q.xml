@@ -36,6 +36,7 @@
             android:background="#3399ff"
             android:orientation="horizontal" >
         </LinearLayout>
+
         <TextView
             android:id="@+id/business_time_2"
             android:layout_width="wrap_content"
@@ -45,7 +46,6 @@
             android:textColor="#686868"
             android:textSize="15dp" />
 
-
     </LinearLayout>
     <LinearLayout
         android:id="@+id/business_layout_0"
@@ -53,7 +53,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="10dp"
         android:background="@android:color/transparent"
         android:gravity="center_horizontal"
         android:orientation="vertical" >
@@ -91,7 +92,6 @@
         android:layout_alignLeft="@+id/business_layout_2"
         android:layout_alignRight="@+id/business_layout_2"
         android:layout_below="@+id/business_layout_2"
-        android:layout_marginTop="18dp"
         android:orientation="vertical" >
 
         <Button
@@ -99,9 +99,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
+            android:layout_marginTop="46sp"
             android:background="#0066CC"
             android:text="Tag-In"
-            android:textColor="#ffffff" android:layout_marginTop="46sp"/>
+            android:textColor="#ffffff" />
 
         <Button
             android:id="@+id/app_reservation"
@@ -109,7 +110,8 @@
             android:layout_height="wrap_content"
             android:background="#FF9933"
             android:text="Reserve"
-            android:textColor="#ffffff" android:layout_marginTop="12sp"/>
+            android:textColor="#ffffff" />
+
     </LinearLayout>
 
     <LinearLayout

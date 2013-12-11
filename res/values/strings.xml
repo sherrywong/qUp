@@ -46,12 +46,9 @@
     <string name="icon">Icon</string>
 
 
-    <string-array name="duration_array">
-        <item>Minutes</item>
-        <item>Hours</item>
-        <item>Days</item>
-        <item>Weeks</item>
-        <item>Months</item>
-        <item>Years</item>
+    <string-array name="location_array">
+        <item>San Francisco</item>
+        <item>Los Angeles</item>
+        <item>Seattle</item>
     </string-array>
 </resources>

@@ -1,11 +1,15 @@
 package edu.berkeley.cs160.qUp.activities.business;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
+
 import com.fima.chartview.ChartView;
 import com.fima.chartview.LinearSeries;
 import edu.berkeley.cs160.qUp.R;
+import edu.berkeley.cs160.qUp.activities.MyQActivity;
 
 /**
  * Purpose of Class:
@@ -42,11 +46,29 @@ public class BusinessAnalytics extends Activity {
 
     }
 
+    /*
+	 * Menu
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.business_main, menu);
+        getMenuInflater().inflate(R.menu.main, menu);
         return true;
+    }
+   
+    public boolean onOptionsItemSelected(MenuItem item) {
+    	switch (item.getItemId()) {
+    	case R.id.personal:
+            Intent intent = new Intent(this, MyQActivity.class);
+            startActivity(intent);
+    		return true;
+    	case R.id.business:
+            intent = new Intent(this, BusinessActivityMain.class);
+            startActivity(intent);
+            return true;
+    	default:
+            return super.onOptionsItemSelected(item);
+      }
     }
 
 }
