@@ -23,10 +23,14 @@ import edu.berkeley.cs160.qUp.activities.business.BusinessActivityForm.DatePicke
 
 public class ReservationForm extends Activity {
 	
+	protected static final int reserve = 0;
+	protected static final int date = 1;
+	
+	static int whichBtn;
 	TextView name;
 	//TODO: Get the time and stuff
 	//TODO: Get the date and stuff
-	Button reserveBtn,datePickerBtn;
+	static Button reserveBtn,datePickerBtn;
 
 	
 	/*
@@ -50,6 +54,14 @@ public class ReservationForm extends Activity {
 
 		public void onDateSet(DatePicker view, int year, int month, int day) {
 			// Do something with the date chosen by the user
+			switch(whichBtn) {
+				case date:
+					datePickerBtn.setText(month + "/" + day + "/" + year);
+					break;
+				case reserve:
+				default:
+					break;
+			}
 		}
 	}
 	
@@ -70,10 +82,12 @@ public class ReservationForm extends Activity {
         public void onClick(View arg0) {
         	//TODO: add confirmation
         	if (type.equals("reserve")) {
+        		whichBtn = reserve;
         		Intent intent = new Intent(context, MyQActivity.class);
         		startActivity(intent);
         	}
         	else if (type.equals("datePicker")) {
+        		whichBtn = date;
         		showDatePickerDialog(arg0);
         	}
         }
