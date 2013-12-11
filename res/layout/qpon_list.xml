@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <Button
+        android:id="@+id/newQponBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3399ff"
+		android:textColor="#ffffff"
+		android:layout_marginTop="10sp"
+		android:layout_marginBottom="15sp"
+        android:text="+ New qPon" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My qPons"
+        android:gravity="center_horizontal"
+        android:textSize="25sp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#111111"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5sp" 
+        android:layout_marginBottom="5sp"
+        android:id="@+id/linearLayout"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:background="@drawable/queue_list_item_background"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/LinearLayout03"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="36sp"
+            android:background="#3399ff"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/TextView07"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="6dp"
+            android:maxLines="999"
+            android:text="2 meals dessert free"
+            android:textColor="@android:color/secondary_text_light"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/TextView05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/TextView07"
+            android:layout_below="@+id/LinearLayout03"
+            android:text="San Fransico" />
+
+        <TextView
+            android:id="@+id/TextView08"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/TextView05"
+            android:layout_alignBottom="@+id/TextView05"
+            android:layout_alignParentRight="true"
+            android:text="01/02/13-12/26/13" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="78dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/queue_list_item_background"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/LinearLayout02"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="36sp"
+                android:background="#3399ff"
+                android:orientation="horizontal" >
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/TextView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="6dp"
+                android:maxLines="999"
+                android:text="2 meals dessert free"
+                android:textColor="@android:color/secondary_text_light"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/TextView06"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/TextView10"
+                android:layout_below="@+id/LinearLayout02"
+                android:text="San Fransico" />
+
+            <TextView
+                android:id="@+id/TextView09"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/TextView06"
+                android:layout_alignBottom="@+id/TextView06"
+                android:layout_alignParentRight="true"
+                android:text="01/02/13-12/26/13" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:background="@drawable/queue_list_item_background"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/LinearLayout01"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="36sp"
+            android:background="#3399ff"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/TextView03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="6dp"
+            android:maxLines="999"
+            android:text="Bring a friend, get a drink"
+            android:textColor="@android:color/secondary_text_light"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/TextView02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/TextView03"
+            android:layout_below="@+id/LinearLayout01"
+            android:text="Los Angeles" />
+
+        <TextView
+            android:id="@+id/TextView04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/TextView02"
+            android:layout_alignBottom="@+id/TextView02"
+            android:layout_alignParentRight="true"
+            android:text="05/02/13-06/6/13" />
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:layout_marginBottom="3dp"
+        android:background="@drawable/queue_list_item_background">
+
+        <LinearLayout
+                android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3399ff"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="36sp" android:id="@+id/linearLayout"/>
+
+        <TextView
+            android:id="@+id/average_wait_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="999"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="6dp"            
+            android:text="Free smoothie with any order"
+            android:textColor="@android:color/secondary_text_light"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/average_wait_time_tv"
+            android:layout_below="@+id/linearLayout"
+            android:text="San Fransico" />
+
+        <TextView
+            android:id="@+id/TextView01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView2"
+            android:layout_alignBottom="@+id/textView2"
+            android:layout_alignParentRight="true"
+            android:text="07/02/13-07/02/13" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,6 +1,14 @@
 package edu.berkeley.cs160.qUp.activities.business;
 
+import java.util.Calendar;
+
+import edu.berkeley.cs160.qUp.R;
+import edu.berkeley.cs160.qUp.activities.MyQActivity;
+import edu.berkeley.cs160.qUp.activities.premium.ReservationForm.DatePickerFragment;
 import android.app.Activity;
+import android.app.DatePickerDialog;
+import android.app.Dialog;
+import android.app.DialogFragment;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,69 +16,42 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.TextView;
 
-import edu.berkeley.cs160.qUp.R;
-import edu.berkeley.cs160.qUp.activities.MyQActivity;
-
-public class BusinessActivityMain extends Activity {
-
-	protected static final String analyitcs = "analytics";
-	protected static final String qpon = "qpon";
+public class QPonList extends Activity {
 	
-	TextView length;
-	Button analyticsBtn, qPonBtn;
-		
+	Button newQponBtn;
+	
     /*
      * Private Listener Class
      */
     private class ButtonListener implements Button.OnClickListener {
 
         Context context;
-        String type; //Analytics or Offer qPon
         //Constructor
-        public ButtonListener(Context context, String type) {
+        public ButtonListener(Context context) {
             this.context = context;
-            this.type = type;
         }
 
         @Override
         public void onClick(View arg0) {
-        	if (type.equals("analytics")) {
-                Intent intent = new Intent(context, BusinessAnalytics.class);
-                startActivity(intent);
-        	}
-        	else if (type.equals("qpon")) {
-                Intent intent = new Intent(context, QPonList.class);
-                startActivity(intent);
-        	}
-        }
+        	//TODO: add confirmation
+        	Intent intent = new Intent(context, BusinessActivityForm.class);
+        	startActivity(intent);
+        }        
     }
     
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
     	super.onCreate(savedInstanceState);
-    	setContentView(R.layout.business_activity_main);
- 
-    	length       = (TextView) findViewById(R.id.length);
-    	analyticsBtn = (Button) findViewById(R.id.analytics);
-    	qPonBtn      = (Button) findViewById(R.id.qpon);	
+    	setContentView(R.layout.qpon_list);
     	
-    	 //Set up the listeners for Analytics, offer qPon buttons
-    	analyticsBtn.setOnClickListener(new ButtonListener(this, analyitcs));
-    	qPonBtn.setOnClickListener(new ButtonListener(this,qpon));
+    	newQponBtn = (Button) findViewById(R.id.newQponBtn);
+    	newQponBtn.setOnClickListener(new ButtonListener(this));
     }
     
-    /*
-     * Once we get the data, we need to sent the length
-     * for the owner to view.
-     */
-    public void setLength(int newLength) {
-    	length.setText(newLength + "");
-    }
-    
-   
     /*
 	 * Menu
      */

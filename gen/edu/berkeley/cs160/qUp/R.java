@@ -17,7 +17,7 @@ public final class R {
         public static final int up_from_bottom=0x7f040005;
     }
     public static final class array {
-        public static final int duration_array=0x7f0a0000;
+        public static final int location_array=0x7f0a0000;
     }
     public static final class attr {
         /** 
@@ -296,19 +296,32 @@ containing a value of this type.
         public static final int queue_list_item_background=0x7f020025;
     }
     public static final class id {
+        public static final int LinearLayout01=0x7f06005c;
+        public static final int LinearLayout02=0x7f060058;
+        public static final int LinearLayout03=0x7f060054;
         public static final int RelativeLayout1=0x7f06000f;
+        public static final int TextView01=0x7f060061;
+        public static final int TextView02=0x7f06005e;
+        public static final int TextView03=0x7f06005d;
+        public static final int TextView04=0x7f06005f;
+        public static final int TextView05=0x7f060056;
+        public static final int TextView06=0x7f06005a;
+        public static final int TextView07=0x7f060055;
+        public static final int TextView08=0x7f060057;
+        public static final int TextView09=0x7f06005b;
+        public static final int TextView10=0x7f060059;
         public static final int View1=0x7f06001f;
-        public static final int action_settings=0x7f060069;
+        public static final int action_settings=0x7f060077;
         public static final int analytics=0x7f060022;
         public static final int app_layout=0x7f060028;
         public static final int app_map=0x7f06002b;
         public static final int app_reservation=0x7f06004c;
         public static final int app_tag=0x7f060029;
-        public static final int average_wait_time_tv=0x7f060055;
+        public static final int average_wait_time_tv=0x7f060060;
         public static final int black=0x7f060007;
         public static final int bold=0x7f060005;
-        public static final int business=0x7f06006c;
-        public static final int businessName=0x7f060060;
+        public static final int business=0x7f06007a;
+        public static final int businessName=0x7f06006e;
         public static final int business_charting=0x7f060032;
         public static final int business_layout_0=0x7f060023;
         public static final int business_layout_1=0x7f060049;
@@ -321,16 +334,16 @@ containing a value of this type.
         public static final int business_time_2=0x7f06004b;
         public static final int button=0x7f06003d;
         public static final int condensed=0x7f060008;
-        public static final int confirmPasswordEditText=0x7f060066;
+        public static final int confirmPasswordEditText=0x7f060074;
         public static final int confirmPasswordTextView=0x7f060038;
-        public static final int date=0x7f06005d;
+        public static final int date=0x7f06006b;
         public static final int dateFrom=0x7f060030;
         public static final int datePicker=0x7f060019;
         public static final int dateTo=0x7f06002f;
         public static final int description=0x7f060015;
         public static final int descriptionText=0x7f060016;
         public static final int duration=0x7f06001b;
-        public static final int editText=0x7f060067;
+        public static final int editText=0x7f060075;
         public static final int endEditText=0x7f060043;
         public static final int endLayout=0x7f060041;
         public static final int endTextView=0x7f060042;
@@ -353,37 +366,38 @@ containing a value of this type.
         public static final int locationTextView=0x7f06001c;
         public static final int loginButton=0x7f06003c;
         public static final int main_frame_layout=0x7f06000d;
-        public static final int map=0x7f060068;
+        public static final int map=0x7f060076;
         public static final int medium=0x7f06000a;
-        public static final int mode=0x7f06006a;
+        public static final int mode=0x7f060078;
         public static final int myLocResultTextView=0x7f06004f;
         public static final int myLocTextButton=0x7f06004e;
-        public static final int name=0x7f060058;
+        public static final int name=0x7f060066;
+        public static final int newQponBtn=0x7f060053;
         public static final int none=0x7f060000;
         public static final int normal=0x7f060001;
-        public static final int passwordConfirmLayout=0x7f060062;
+        public static final int passwordConfirmLayout=0x7f060070;
         public static final int passwordEditText=0x7f06000e;
         public static final int passwordLayout=0x7f060036;
-        public static final int passwordTextView=0x7f060065;
-        public static final int personal=0x7f06006b;
+        public static final int passwordTextView=0x7f060073;
+        public static final int personal=0x7f060079;
         public static final int popup_title=0x7f060051;
         public static final int qpon=0x7f060021;
-        public static final int queue_avg_wait_time=0x7f060056;
-        public static final int queue_item_business_name=0x7f060053;
-        public static final int queue_item_category=0x7f060054;
+        public static final int queue_avg_wait_time=0x7f060064;
+        public static final int queue_item_business_name=0x7f060062;
+        public static final int queue_item_category=0x7f060063;
         public static final int queue_list=0x7f06002e;
         public static final int radiusLayout=0x7f060044;
-        public static final int relativeLayout=0x7f060064;
-        public static final int reservation=0x7f060057;
-        public static final int reserveButton=0x7f060059;
+        public static final int relativeLayout=0x7f060072;
+        public static final int reservation=0x7f060065;
+        public static final int reserveButton=0x7f060067;
         public static final int satellite=0x7f060002;
-        public static final int searchButton=0x7f060061;
+        public static final int searchButton=0x7f06006f;
         public static final int sendButton=0x7f06001e;
-        public static final int signupButton=0x7f060063;
+        public static final int signupButton=0x7f060071;
         public static final int snippet=0x7f060052;
-        public static final int space=0x7f06005b;
-        public static final int space2=0x7f06005a;
-        public static final int space3=0x7f06005c;
+        public static final int space=0x7f060069;
+        public static final int space2=0x7f060068;
+        public static final int space3=0x7f06006a;
         public static final int startDate=0x7f060018;
         public static final int startEditText=0x7f060040;
         public static final int startLayout=0x7f06003e;
@@ -395,8 +409,8 @@ containing a value of this type.
         public static final int textView2=0x7f06002c;
         public static final int textView3=0x7f06002a;
         public static final int thin=0x7f06000b;
-        public static final int time=0x7f06005e;
-        public static final int timePicker=0x7f06005f;
+        public static final int time=0x7f06006c;
+        public static final int timePicker=0x7f06006d;
         public static final int title=0x7f060012;
         public static final int titleText=0x7f060013;
         public static final int toggle=0x7f060034;
@@ -425,13 +439,15 @@ containing a value of this type.
         public static final int my_q=0x7f03000c;
         public static final int nav_activity=0x7f03000d;
         public static final int popup=0x7f03000e;
-        public static final int queue_list_item=0x7f03000f;
-        public static final int reservation_form=0x7f030010;
-        public static final int reservation_search=0x7f030011;
-        public static final int shortest_line_form=0x7f030012;
-        public static final int shortest_waiting_map_form=0x7f030013;
-        public static final int signup=0x7f030014;
-        public static final int support_map_fragment=0x7f030015;
+        public static final int qpon_list=0x7f03000f;
+        public static final int queue_list_item=0x7f030010;
+        public static final int reservation_form=0x7f030011;
+        public static final int reservation_search=0x7f030012;
+        public static final int restaurant_map_search_results=0x7f030013;
+        public static final int shortest_line_form=0x7f030014;
+        public static final int shortest_waiting_map_form=0x7f030015;
+        public static final int signup=0x7f030016;
+        public static final int support_map_fragment=0x7f030017;
     }
     public static final class menu {
         public static final int business_main=0x7f0c0000;
