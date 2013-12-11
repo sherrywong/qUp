@@ -19,6 +19,10 @@ public class Queue implements Comparable<Queue> {
     public Date timeEnteredInQueue;
     public User user;
 
+
+
+    public transient int waiting = 0;
+
     public Queue() {
     }
 
@@ -28,6 +32,10 @@ public class Queue implements Comparable<Queue> {
         this.id = id;
         this.timeEnteredInQueue = timeEnteredInQueue;
         this.user = user;
+    }
+
+    public boolean isAtFront(){
+       return waiting> 0;
     }
 
     public Business getBusiness() {
@@ -45,7 +53,6 @@ public class Queue implements Comparable<Queue> {
     public void setId(int id) {
         this.id = id;
     }
-
 
     public Date getTimeEnteredInQueue() {
         return timeEnteredInQueue;
@@ -90,7 +97,7 @@ public class Queue implements Comparable<Queue> {
      */
     @Override
     public int compareTo(Queue another) {
-        return another.getTimeEnteredInQueue().compareTo(timeEnteredInQueue);
+        return another.getTimeEnteredInQueue().compareTo(this.timeEnteredInQueue);
     }
 
 

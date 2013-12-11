@@ -84,7 +84,7 @@ public class qUpApplication extends Application {
      * Fetches the list of Posts from the remove server
      */
     private void loadQueueList() {
-        Log.i(TAG, "Loading Post List....");
+        Log.i(TAG, "Loading Queue List....");
 
         RESTController.retrieveQueueList(queueListResponse, new long[0]);
     }
