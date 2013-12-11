@@ -59,10 +59,10 @@ public class ShortestWaitingMap extends AbstractMapActivity implements
             mLat = i.getDoubleExtra(QueueListActivity.LAT, -122.28);
             mLon = i.getDoubleExtra(QueueListActivity.LON, 37.871);
 
-
-            start = (EditText) findViewById(R.id.startEditText);
-            end = (EditText) findViewById(R.id.endEditText);
-            searchBtn = (Button) findViewById(R.id.searchButton);
+//
+//            start = (EditText) findViewById(R.id.startEditText);
+//            end = (EditText) findViewById(R.id.endEditText);
+//            searchBtn = (Button) findViewById(R.id.searchButton);
 
              initListNav();
             map = mapFragment.getMap();

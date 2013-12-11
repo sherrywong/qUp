@@ -11,24 +11,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/linearLayout3"
-        android:layout_alignRight="@+id/linearLayout3"
         android:layout_below="@+id/linearLayout3"
-        android:layout_marginTop="5dp">
+        android:layout_marginTop="5dp" android:layout_alignRight="@+id/linearLayout3">
 
         <TextView
             android:id="@+id/startDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
             android:text="Start Date:"
-            android:textSize="24sp" />
+            android:textSize="24sp" android:layout_marginTop="8sp"/>
 
         <Button 
             android:id="@+id/dateTo"
             android:text="Select Date"
 	    	android:layout_width="wrap_content" 
     		android:layout_height="wrap_content"
-    		android:onClick="showDatePickerDialog" />
+    		android:onClick="showDatePickerDialog" android:background="#3399ff"
+            android:padding="8sp" android:layout_marginLeft="10sp" android:layout_marginTop="5sp"
+            android:layout_marginRight="0dp" android:layout_marginBottom="5sp" android:layout_weight="0.14"/>
     </LinearLayout>
 
     <LinearLayout
@@ -44,16 +44,15 @@
             android:id="@+id/locationTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
             android:layout_weight="0.01"
             android:text="Location:"
-            android:textSize="24sp" />
+            android:textSize="24sp" android:layout_marginTop="15sp"/>
 
         <Spinner
             android:id="@+id/locationSpinner"
             android:layout_width="65dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.26" />
+            android:layout_weight="0.26"/>
     </LinearLayout>
 
     <LinearLayout
@@ -68,7 +67,6 @@
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
             android:text="Title:"
             android:textSize="24sp" />
 
@@ -95,14 +93,13 @@
             android:id="@+id/description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="Description:"
+            android:text="Message:"
             android:textSize="24sp" />
 
         <EditText
             android:id="@+id/descriptionText"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textMultiLine" />
     </LinearLayout>
@@ -120,15 +117,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="End Date:"
-            android:layout_marginLeft="19sp"
-            android:textSize="24sp" />
+            android:textSize="24sp" android:layout_marginTop="7sp"/>
 
         <Button
             android:id="@+id/dateFrom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="showDatePickerDialog"
-            android:text="Select Date" />
+            android:text="Select Date" android:background="#3399ff" android:padding="8sp"
+            android:layout_marginTop="5sp" android:layout_marginRight="0dp"
+            android:layout_marginBottom="5sp" android:layout_weight="0.17" android:layout_marginLeft="20sp"/>
     </LinearLayout>
 
     <Button
@@ -136,10 +134,10 @@
         android:layout_width="200dip"
         android:layout_height="wrap_content"
         android:layout_below="@+id/linearLayout4"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="18dp"
-        android:background="#3399ff"
+        android:background="#006633"
         android:text="Send qPon"
-        android:textColor="#ffffff" />
+        android:textColor="#ffffff" android:layout_alignRight="@+id/linearLayout4"
+        android:layout_alignLeft="@+id/linearLayout4"/>
 
 </RelativeLayout>

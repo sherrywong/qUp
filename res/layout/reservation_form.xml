@@ -24,7 +24,7 @@
 
     <Space
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="24dp"
             android:layout_alignParentRight="false" android:id="@+id/space" android:layout_below="@+id/linearLayout1"/>
     <LinearLayout
         android:id="@+id/linearLayout1"
@@ -77,10 +77,10 @@
         android:layout_marginTop="17dp"
         android:text="Sliver Pizzeria"
         android:textSize="42sp" />
-    <Space android:layout_width="match_parent" android:layout_height="48dp"
+    <Space android:layout_width="match_parent" android:layout_height="24dp"
            android:id="@+id/space2"
            android:layout_below="@+id/linearLayout2" android:layout_alignParentLeft="true"/>
-    <Space android:layout_width="match_parent" android:layout_height="48sp"
+    <Space android:layout_width="match_parent" android:layout_height="24sp"
            android:id="@+id/space3"
            android:layout_below="@+id/reservation" android:layout_alignLeft="@+id/linearLayout1"
            android:layout_alignRight="@+id/linearLayout2"/>

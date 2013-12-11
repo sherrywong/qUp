@@ -1,15 +1,23 @@
 package edu.berkeley.cs160.qUp.activities.business;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import android.view.View;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 import com.fima.chartview.ChartView;
 import com.fima.chartview.LinearSeries;
 import edu.berkeley.cs160.qUp.R;
 import edu.berkeley.cs160.qUp.activities.MyQActivity;
+import org.joda.time.Period;
+
 
 /**
  * Purpose of Class:
@@ -30,17 +38,32 @@ public class BusinessAnalytics extends Activity {
         // Find the chart view
         ChartView chartView = (ChartView) findViewById(R.id.business_charting);
 
-        // Create the data points
-        LinearSeries series = new LinearSeries();
-        series.setLineColor(0xFF0099CC);
-        series.setLineWidth(2);
+        // Create the arriving queue points (Blue)
+        LinearSeries series_arriving = new LinearSeries();
+        series_arriving.setLineColor(0xff0000ff);
+        series_arriving.setLineWidth(6);
 
-        for (double i = 0d; i <= (2d * Math.PI); i += 0.1d) {
-            series.addPoint(new LinearSeries.LinearPoint(i, Math.sin(i)));
+
+
+        for (double i = 0d; i <= (2d); i += 0.1d) {
+            series_arriving.addPoint(new LinearSeries.LinearPoint(i, 3 * i));
+        }
+
+        // Create the departures queue points (Yellow)
+        LinearSeries series_departures = new LinearSeries();
+        series_departures.setLineColor(0xffffff00);
+        series_departures.setLineWidth(6);
+
+
+
+        for (double i = 0d; i <= (2d); i += 0.1d) {
+            series_departures.addPoint(new LinearSeries.LinearPoint(i, 1.5 * i ));
         }
 
         // Add chart view data
-        chartView.addSeries(series);
+        chartView.addSeries(series_arriving);
+        chartView.addSeries(series_departures);
+
         chartView.setLeftLabelAdapter(new ValueLabelAdapter(this, ValueLabelAdapter.LabelOrientation.VERTICAL));
         chartView.setBottomLabelAdapter(new ValueLabelAdapter(this, ValueLabelAdapter.LabelOrientation.HORIZONTAL));
 
@@ -70,6 +93,8 @@ public class BusinessAnalytics extends Activity {
             return super.onOptionsItemSelected(item);
       }
     }
+
+
 
 }
 

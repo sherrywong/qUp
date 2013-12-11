@@ -99,7 +99,7 @@ public class QueueListActivity extends Activity implements QueueListUpdateListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.d(TAG, "On created");
-        setContentView(R.layout.restaurant_map_search_results);
+        setContentView(R.layout.biz_list);
 
         // Customize the action bar
         ActionBar actionBar = getActionBar();

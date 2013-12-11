@@ -82,6 +82,20 @@ public class Queue implements Comparable<Queue> {
         return user.toString();
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if(o == null)
+            return false;
+
+        if (o == this)
+            return true;
+        if(!(o instanceof Queue))
+            return false;
+
+        Queue other = (Queue) o;
+        return other.business == this.business;
+
+    }
 
     /**
      * Compares this object to the specified object to determine their relative

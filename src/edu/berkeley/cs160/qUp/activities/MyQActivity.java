@@ -107,14 +107,14 @@ public class MyQActivity extends Activity implements QueueListUpdateListener {
      */
     public void updateWaitTimes(){
 
-        business_time_0.setText(mUserQueueTreeMap.firstKey().toString());
+        business_time_0.setText(mUserQueueTreeMap.firstKey().toString() + " Minutes Left.");
         business_name_0.setText(mUserQueueTreeMap.pollFirstEntry().getValue());
 
         business_time_1.setText(mUserQueueTreeMap.firstKey().toString());
-        business_name_1.setText(mUserQueueTreeMap.pollFirstEntry().getValue());
+        business_name_1.setText(mUserQueueTreeMap.pollFirstEntry().getValue() + "Minutes Left");
 
         business_time_2.setText(mUserQueueTreeMap.firstKey().toString());
-        business_name_2.setText(mUserQueueTreeMap.pollFirstEntry().getValue());
+        business_name_2.setText(mUserQueueTreeMap.pollFirstEntry().getValue() + "Minutes Left");
 
 
     }
@@ -168,7 +168,7 @@ public class MyQActivity extends Activity implements QueueListUpdateListener {
         if (extras != null) {
 
 
-            Toast.makeText(getBaseContext(), "Times Updated!", Toast.LENGTH_LONG).show();
+
 
 
         }

@@ -3,20 +3,92 @@
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                tools:context=".BusinessAnalytics" >
+                tools:context=".BusinessAnalytics" android:clickable="false" android:background="@drawable/background_dimmed">
 
+    <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="4sp"
+            android:layout_centerHorizontal="true"
+            android:background="#6f6d75" android:layout_below="@+id/linearLayout"
+            android:id="@+id/frameLayout3">
+    </FrameLayout>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_alignParentTop="true"
+            android:layout_alignParentRight="false"
+            android:gravity="center" android:id="@+id/linearLayout" android:layout_centerHorizontal="true"
+            android:background="@android:drawable/title_bar">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="qUp Business Analytics"
+                android:id="@+id/textView"
+                android:textSize="15pt"
+                android:textColor="#dfd419" android:textStyle="bold" android:shadowColor="@android:color/darker_gray"
+                android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"/>
+    </LinearLayout>
     <com.fima.chartview.ChartView
             android:id="@+id/business_charting"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:layout_margin="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             chartview:bottomLabelHeight="20dp"
             chartview:gridLineColor="#E5E5E5"
             chartview:gridLineWidth="1dp"
             chartview:gridLinesHorizontal="5"
             chartview:gridLinesVertical="5"
-            chartview:leftLabelWidth="56dp" />
+            chartview:leftLabelWidth="56dp"
+            android:background="#004cff"
+            android:layout_centerHorizontal="true"
+            style="@android:style/Widget.Holo.GridView"
+            android:layout_below="@+id/frameLayout3" android:layout_above="@+id/frameLayout4"/>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="4sp"
+                 android:background="#989694"
+                 android:id="@+id/frameLayout4" android:layout_alignParentBottom="false"
+                 android:layout_centerHorizontal="true" android:layout_above="@+id/relativeLayout"/>
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40sp"
+            android:layout_alignParentRight="false" android:layout_alignParentBottom="true"
+            android:background="@android:drawable/title_bar" android:id="@+id/relativeLayout">
+        <FrameLayout
+                android:layout_width="40sp"
+                android:layout_height="match_parent"
+                android:id="@+id/frameLayout" android:background="#00184c"
+                android:layout_gravity="left"
+                android:layout_alignParentBottom="true" android:layout_toLeftOf="@+id/textView2"
+                android:layout_marginRight="12sp" android:layout_marginBottom="2sp">
+        </FrameLayout>
+        <FrameLayout android:layout_width="40sp" android:layout_height="wrap_content"
+                     android:id="@+id/frameLayout2" android:background="#e0c81a"
+                     android:layout_toLeftOf="@+id/textView3"
+                     android:layout_below="@+id/business_charting" android:layout_marginRight="10sp"
+                     android:layout_alignParentLeft="true" android:layout_marginLeft="12sp"
+                     android:layout_alignParentTop="true" android:layout_marginTop="0dp"
+                     android:layout_alignParentBottom="true" android:layout_marginBottom="2sp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:textAppearance="?android:attr/textAppearanceMedium" android:text="Departures"
+                  android:id="@+id/textView3" android:textStyle="bold|italic" android:typeface="serif"
+                  android:textSize="10pt" android:textColor="@android:color/primary_text_dark"
+                  android:layout_alignParentStart="false"
+                  android:layout_gravity="right|center_vertical"
+                  android:layout_marginLeft="60sp"
+                  android:layout_centerVertical="true" android:layout_alignParentLeft="true"
+                  android:layout_toRightOf="@+id/frameLayout"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Arrivals"
+                android:id="@+id/textView2"
+                android:textStyle="bold|italic" android:typeface="serif"
+                android:textSize="10pt"
+                android:textColor="@android:color/primary_text_dark" android:layout_alignParentStart="false"
+                android:layout_gravity="center"
+                android:layout_alignTop="@+id/textView3" android:layout_alignParentRight="true"
+                android:layout_marginRight="12sp"/>
+    </RelativeLayout>
 
 </RelativeLayout>
