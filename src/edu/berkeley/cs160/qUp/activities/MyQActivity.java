@@ -87,7 +87,6 @@ public class MyQActivity extends Activity  implements QueueListUpdateListener {
     @Override
     public void onNewIntent(Intent intent) {
 
-
         business_name_0.setText("Thai Basil");
         business_name_1.setText("Mandarin House");
         business_name_2.setText("Gypsy's");
