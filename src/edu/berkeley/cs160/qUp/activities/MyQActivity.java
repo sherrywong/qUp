@@ -3,6 +3,7 @@ package edu.berkeley.cs160.qUp.activities;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -12,6 +13,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.google.gson.Gson;
+import com.google.gson.JsonElement;
 import edu.berkeley.cs160.qUp.Model.Queue;
 import edu.berkeley.cs160.qUp.Model.User;
 import edu.berkeley.cs160.qUp.R;
@@ -40,6 +42,7 @@ public class MyQActivity extends Activity implements QueueListUpdateListener {
     public ArrayList<Queue> queueList;
     public Runnable reloadQueueList;
     public ArrayList<Queue> mUserQueueList;
+    public User mUser;
 
     {
         reloadQueueList = new Runnable() {
@@ -48,12 +51,7 @@ public class MyQActivity extends Activity implements QueueListUpdateListener {
 
             @Override
             public void run() {
-                mUserQueueList = new ArrayList<Queue>();
-                mUserQueueTreeMap = new TreeMap<Integer, String>();
 
-                Intent intent = getIntent();
-                Gson gson = new Gson();
-                User mUser = gson.fromJson(intent.getStringExtra("User"), User.class);
                 int userId = mUser.getUserID();
                 Date now = getAsTime(new Date());
 
@@ -116,7 +114,6 @@ public class MyQActivity extends Activity implements QueueListUpdateListener {
         business_time_2.setText(mUserQueueTreeMap.firstKey().toString() + " Minutes Left");
         business_name_2.setText(mUserQueueTreeMap.pollFirstEntry().getValue() );
 
-
     }
 
     /**
@@ -162,15 +159,16 @@ public class MyQActivity extends Activity implements QueueListUpdateListener {
         business_time_1 = (TextView) findViewById(R.id.business_time_1);
         business_time_2 = (TextView) findViewById(R.id.business_time_2);
 
+        mUserQueueList = new ArrayList<Queue>();
+        mUserQueueTreeMap = new TreeMap<Integer, String>();
 
+        Gson gson = new Gson();
+        SharedPreferences jsonUser = getSharedPreferences(MainActivity.PREFS_NAME, 0);
+
+        mUser = gson.fromJson(jsonUser.getString("user", ""), User.class);
 
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
-
-
-
-
-
         }
 
         tagBtn = (Button) findViewById(R.id.app_tag);
