@@ -92,7 +92,7 @@ public class BusinessActivityForm extends Activity implements OnItemSelectedList
         	if (this.type.equals("send")) {
         		whichBtn = from;
 	        	Toast.makeText(context, "qPon sent!", Toast.LENGTH_SHORT).show(); 
-        		Intent intent = new Intent(context,QPonList.class);
+        		Intent intent = new Intent(context,QPonListExample.class);
         		startActivity(intent);
         	}
         	else if (this.type.equals("dateFrom")) {

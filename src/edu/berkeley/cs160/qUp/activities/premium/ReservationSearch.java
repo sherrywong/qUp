@@ -128,6 +128,7 @@ public class ReservationSearch extends Activity  implements QueueListUpdateListe
         @Override
         public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
             Queue selectedQueue = queueList.get(position);
+            System.out.println(selectedQueue.business.getAvgWaitTime());
             Intent toRerservationForm = new Intent(ReservationSearch.this, ReservationForm.class);
 
             toRerservationForm.putExtra("Business", selectedQueue.business.getName());

@@ -450,12 +450,13 @@ containing a value of this type.
         public static final int my_q=0x7f03000c;
         public static final int nav_activity=0x7f03000d;
         public static final int popup=0x7f03000e;
-        public static final int qpon_list=0x7f03000f;
-        public static final int queue_list_item=0x7f030010;
-        public static final int reservation_form=0x7f030011;
-        public static final int reservation_search_activity_list=0x7f030012;
-        public static final int signup=0x7f030013;
-        public static final int support_map_fragment=0x7f030014;
+        public static final int qpn_list_example=0x7f03000f;
+        public static final int qpon_list=0x7f030010;
+        public static final int queue_list_item=0x7f030011;
+        public static final int reservation_form=0x7f030012;
+        public static final int reservation_search_activity_list=0x7f030013;
+        public static final int signup=0x7f030014;
+        public static final int support_map_fragment=0x7f030015;
     }
     public static final class menu {
         public static final int business_main=0x7f0c0000;
