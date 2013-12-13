@@ -120,36 +120,31 @@
             android:textColor="#686868"
             android:textSize="15dp" />
     </LinearLayout>
-    <RelativeLayout
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_below="@+id/business_layout_2"
-            android:layout_alignRight="@+id/business_layout_2" android:layout_alignLeft="@+id/business_layout_2"
-            >
-        <Button android:id="@+id/search_map_activity_button" android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:layout_marginTop="48dp" android:background="#cda21e"
-                android:text="@string/search_text" android:textColor="#ffffff"
-                android:layout_alignParentLeft="true" android:layout_marginLeft="0dp"
-                android:layout_alignParentTop="false"
-                android:layout_alignParentStart="false" android:paddingRight="25sp" android:paddingLeft="25sp"/>
-        <Button
-            android:id="@+id/button_tagin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#0565c5"
-            android:text="@string/tagin_text"
-            android:textColor="#ffffff" android:layout_gravity="center_horizontal"
-            android:layout_alignTop="@+id/search_map_activity_button" android:layout_alignParentRight="true" android:paddingLeft="25sp"
-            android:paddingRight="25sp"/>
-        <Button
-            android:id="@+id/app_reservation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#FF9933"
-            android:text="@string/reserve_button_text"
-            android:textColor="#ffffff" android:layout_below="@+id/search_map_activity_button" android:layout_alignParentLeft="true"
-            android:layout_marginTop="12sp"/>
-    </RelativeLayout>
+    <Button android:id="@+id/search_map_activity_button" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:background="#cda21e"
+            android:text="@string/search_text" android:textColor="#ffffff"
+            android:layout_alignParentStart="false" android:paddingRight="25sp" android:paddingLeft="25sp"
+            android:layout_alignTop="@+id/button_tagin" android:layout_alignLeft="@+id/business_layout_2"/>
+    <Button
+        android:id="@+id/button_tagin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#0565c5"
+        android:text="@string/tagin_text"
+        android:textColor="#ffffff" android:layout_gravity="center_horizontal"
+        android:paddingLeft="25sp"
+        android:paddingRight="25sp"
+        android:layout_marginTop="60dp" android:layout_below="@+id/business_layout_2"
+        android:layout_alignRight="@+id/business_layout_2"/>
+    <Button
+        android:id="@+id/app_reservation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF9933"
+        android:text="@string/reserve_button_text"
+        android:textColor="#ffffff" android:layout_below="@+id/search_map_activity_button"
+        android:layout_marginTop="12sp" android:layout_alignRight="@+id/button_tagin"
+        android:layout_alignLeft="@+id/search_map_activity_button"/>
 
     <ProgressBar
             android:layout_width="wrap_content"

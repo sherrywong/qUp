@@ -176,7 +176,7 @@ public class MyQActivity extends Activity implements QueueListUpdateListener {
         });
 
         searchBtn = (Button) findViewById(R.id.search_map_activity_button);
-        tagBtn.setOnClickListener(new View.OnClickListener() {
+        searchBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MyQActivity.this, ShortestWaitingMap.class);

@@ -84,7 +84,7 @@
             android:layout_height="wrap_content"
             android:background="#3399ff"
             android:text="@string/sign_in_button"
-            android:textColor="#ffffff" />
+            android:textColor="#ffffff" android:onClick="@string/tag_in"/>
 
         <Button
             android:id="@+id/button"

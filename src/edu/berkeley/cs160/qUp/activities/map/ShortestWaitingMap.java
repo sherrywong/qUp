@@ -57,8 +57,9 @@ public class ShortestWaitingMap extends AbstractMapActivity implements
 
             MapFragment mapFragment = (com.google.android.gms.maps.MapFragment) getFragmentManager().findFragmentById(R.id.map);
             //Loc defaults to center of Berkeley campus:
-            mLat = i.getDoubleExtra(QueueListActivity.LAT, 37.871);
-            mLon = i.getDoubleExtra(QueueListActivity.LON, -122.87);
+            mLat = i.getDoubleExtra(QueueListActivity.LAT, 37.87021);
+            mLon = i.getDoubleExtra(QueueListActivity.LON, -122.268423);
+
 
 //
 //            start = (EditText) findViewById(R.id.startEditText);
@@ -79,7 +80,7 @@ public class ShortestWaitingMap extends AbstractMapActivity implements
                 map.animateCamera(zoom);
 
                 addMarker(map, mLat, mLon,
-                        R.string.business_subtype_title, R.string.business_name);
+                        R.string.starbucks, R.string.coffee);
 
 
 
@@ -146,11 +147,14 @@ public class ShortestWaitingMap extends AbstractMapActivity implements
 
     @Override
     public void onInfoWindowClick(Marker marker) {
-        Toast.makeText(this, marker.getTitle(), Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Showing directions to "+ marker.getTitle(), Toast.LENGTH_LONG).show();
         LatLng iLoc= new LatLng(mLat,mLon);
-        LatLng fLoc = new LatLng(37.781, -122.281);
-        Navigator nav = new Navigator(map, iLoc, fLoc);
+        LatLng fLoc = new LatLng(37.870193,  -122.277607);
+        Navigator nav = new Navigator(map, fLoc, iLoc);
         nav.findDirections(true, false);
+        addMarker(map, 37.870193, -122.277607,
+                R.string.starbucks, R.string.coffee);
+        map.setInfoWindowAdapter(new PopUpAdapter(getLayoutInflater()));
 
     }
     private void addMarker(GoogleMap map, double lat, double lon,

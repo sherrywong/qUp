@@ -17,9 +17,9 @@
     <string name="tag_is_read_only">Tag is read only</string>
     <string name="tag_refused_to_format">Tag refused to format!</string>
     <string name="general_exception">General NDEF Exception</string>
-    <string name="business_name">Business Name</string>
+    <string name="coffee">Coffee</string>
     <string name="dummy_time">00:00</string>
-    <string name="business_subtype_title">\"subtitle\"</string>
+    <string name="starbucks">Starbucks</string>
     <string name="back_to_map_text">Go back to map</string>
     <string name="tag_in_text">Tag In</string>
     <string name="password">Password</string>
