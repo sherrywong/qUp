@@ -44,6 +44,12 @@
     <string name="terrain">Terrain</string>
     <string name="sign_in_button">Submit</string>
     <string name="icon">Icon</string>
+    <string name="search_text">Search</string>
+    <string name="tagin_text">Tag-In</string>
+    <string name="Business">Business</string>
+    <string name="dummy_clock">00:00</string>
+    <string name="next_biz">Next Business</string>
+    <string name="reserve_button_text">Reserve</string>
 
 
     <string-array name="location_array">

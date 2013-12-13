@@ -22,15 +22,14 @@
             android:id="@+id/business_name_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Business"
+            android:text="@string/Business"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="#404040"
             android:textSize="20dp" />
         <LinearLayout
-            android:id="@+id/linearLayout"
+            android:id="@+id/linearLayout_1"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_centerHorizontal="true"
             android:background="#3399ff"
             android:orientation="horizontal" >
         </LinearLayout>
@@ -39,7 +38,7 @@
             android:id="@+id/business_time_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="00:00"
+            android:text="@string/dummy_clock"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textColor="#686868"
             android:textSize="15dp" />
@@ -61,16 +60,15 @@
             android:id="@+id/business_name_0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Next Business"
+            android:text="@string/next_biz"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="#00184c"
             android:textSize="36dp" />
 
         <LinearLayout
-            android:id="@+id/linearLayout"
+            android:id="@+id/linearLayout_2"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_centerHorizontal="true"
             android:background="#3399ff"
             android:orientation="horizontal" >
         </LinearLayout>
@@ -79,7 +77,7 @@
             android:id="@+id/business_time_0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="00:00"
+            android:text="@string/dummy_clock"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textSize="30dp" android:textColor="@android:color/secondary_text_light"/>
     </LinearLayout>
@@ -100,7 +98,7 @@
             android:id="@+id/business_name_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Business"
+            android:text="@string/business"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="#404040"
             android:textSize="20dp" />
@@ -109,7 +107,6 @@
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_centerHorizontal="true"
             android:background="#3399ff"
             android:orientation="horizontal" >
         </LinearLayout>
@@ -118,7 +115,7 @@
             android:id="@+id/business_time_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="00:00"
+            android:text="@string/dummy_clock"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textColor="#686868"
             android:textSize="15dp" />
@@ -129,28 +126,28 @@
             android:layout_height="wrap_content" android:layout_below="@+id/business_layout_2"
             android:layout_alignRight="@+id/business_layout_2" android:layout_alignLeft="@+id/business_layout_2"
             >
-        <Button android:id="@+id/button" android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:layout_marginTop="48dp" android:background="#0066CC"
-                android:text="Search" android:textColor="#ffffff" android:layout_weight="1"
+        <Button android:id="@+id/search_map_activity_button" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="48dp" android:background="#cda21e"
+                android:text="@string/search_text" android:textColor="#ffffff"
                 android:layout_alignParentLeft="true" android:layout_marginLeft="0dp"
-                android:layout_alignParentTop="false" android:layout_alignParentRight="false"
+                android:layout_alignParentTop="false"
                 android:layout_alignParentStart="false" android:paddingRight="25sp" android:paddingLeft="25sp"/>
         <Button
-            android:id="@+id/app_tag"
+            android:id="@+id/button_tagin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#0066CC"
-            android:text="Tag-In"
-            android:textColor="#ffffff" android:layout_weight="1" android:layout_gravity="center_horizontal"
-            android:layout_alignTop="@+id/button" android:layout_alignParentRight="true" android:paddingLeft="25sp"
+            android:background="#0565c5"
+            android:text="@string/tagin_text"
+            android:textColor="#ffffff" android:layout_gravity="center_horizontal"
+            android:layout_alignTop="@+id/search_map_activity_button" android:layout_alignParentRight="true" android:paddingLeft="25sp"
             android:paddingRight="25sp"/>
         <Button
             android:id="@+id/app_reservation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#FF9933"
-            android:text="Reserve"
-            android:textColor="#ffffff" android:layout_below="@+id/button" android:layout_alignParentLeft="true"
+            android:text="@string/reserve_button_text"
+            android:textColor="#ffffff" android:layout_below="@+id/search_map_activity_button" android:layout_alignParentLeft="true"
             android:layout_marginTop="12sp"/>
     </RelativeLayout>
 

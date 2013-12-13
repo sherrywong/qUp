@@ -39,7 +39,8 @@ public class ShortestWaitingMap extends AbstractMapActivity implements
             GoogleMap.MAP_TYPE_TERRAIN};
     EditText start, end;
     Button searchBtn;
-    private GoogleMap map=null;
+
+    private GoogleMap map;
 
     private Double mLat, mLon;
 
@@ -52,12 +53,12 @@ public class ShortestWaitingMap extends AbstractMapActivity implements
 
         if (readyToGo()) {
             setContentView(R.layout.nav_activity);
-            MapFragment mapFragment = (com.google.android.gms.maps.MapFragment) getFragmentManager().findFragmentById(R.id.map);
             Intent i = getIntent();
 
+            MapFragment mapFragment = (com.google.android.gms.maps.MapFragment) getFragmentManager().findFragmentById(R.id.map);
             //Loc defaults to center of Berkeley campus:
-            mLat = i.getDoubleExtra(QueueListActivity.LAT, -122.28);
-            mLon = i.getDoubleExtra(QueueListActivity.LON, 37.871);
+            mLat = i.getDoubleExtra(QueueListActivity.LAT, 37.871);
+            mLon = i.getDoubleExtra(QueueListActivity.LON, -122.87);
 
 //
 //            start = (EditText) findViewById(R.id.startEditText);

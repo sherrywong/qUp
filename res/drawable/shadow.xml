@@ -1,0 +1,7 @@
+<shape android:shape="rectangle"
+       xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <solid android:color="@color/common_signin_btn_text_dark"/>
+    <corners android:radius="20dip"/>
+
+</shape>

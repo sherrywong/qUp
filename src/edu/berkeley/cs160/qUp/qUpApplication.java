@@ -54,7 +54,6 @@ public class qUpApplication extends Application {
 
         Log.d(TAG, "In onCreate");
 
-
     }
 
     @Override
