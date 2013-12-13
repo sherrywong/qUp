@@ -60,10 +60,10 @@ public class BusinessActivityForm extends Activity implements OnItemSelectedList
 			// Do something with the date chosen by the user
 			switch (whichBtn) {
 				case from:
-					dateFrom.setText(month + "/" + day + "/" + year);
+					dateFrom.setText(month+1 + "/" + day + "/" + year);
 					break;
 				case to:
-					dateTo.setText(month + "/" + day + "/" + year);
+					dateTo.setText(month+1 + "/" + day + "/" + year);
 					break;
 				case send:
 					break;
