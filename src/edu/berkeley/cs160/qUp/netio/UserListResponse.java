@@ -12,7 +12,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-import edu.berkeley.cs160.qUp.Model.User;
+import edu.berkeley.cs160.qUp.model.User;
 
 /**
  * Purpose of Class:

@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import edu.berkeley.cs160.qUp.Model.Queue;
+import edu.berkeley.cs160.qUp.model.Queue;
 
 /**
  * Part of the qUp codebase.

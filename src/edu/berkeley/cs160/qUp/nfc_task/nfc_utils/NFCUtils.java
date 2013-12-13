@@ -1,4 +1,4 @@
-package edu.berkeley.cs160.qUp.NFCTask.nfcUtils;
+package edu.berkeley.cs160.qUp.nfc_task.nfc_utils;
 
 import org.json.JSONArray;
 import org.json.JSONException;

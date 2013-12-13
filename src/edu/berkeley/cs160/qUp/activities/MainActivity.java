@@ -1,7 +1,6 @@
 package edu.berkeley.cs160.qUp.activities;
 
 import android.app.Activity;
-import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -12,18 +11,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import com.google.gson.Gson;
-import edu.berkeley.cs160.qUp.Model.Queue;
-import edu.berkeley.cs160.qUp.Model.User;
+import edu.berkeley.cs160.qUp.model.User;
 import edu.berkeley.cs160.qUp.R;
 import edu.berkeley.cs160.qUp.activities.business.BusinessActivityMain;
-import edu.berkeley.cs160.qUp.activities.premium.ReservationSearch;
-import edu.berkeley.cs160.qUp.animlv.AnimatedListViewAdapter;
-import edu.berkeley.cs160.qUp.netio.QueueListUpdateListener;
 import edu.berkeley.cs160.qUp.netio.RESTController;
 import edu.berkeley.cs160.qUp.netio.UserListResponse;
-import edu.berkeley.cs160.qUp.qUpApplication;
-
-import java.util.List;
 
 public class MainActivity extends Activity {
 

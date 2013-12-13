@@ -2,8 +2,6 @@ package edu.berkeley.cs160.qUp;
 
 import android.app.Application;
 import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.util.Log;
 
@@ -11,10 +9,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
 
-import com.google.gson.Gson;
-import edu.berkeley.cs160.qUp.Model.Queue;
-import edu.berkeley.cs160.qUp.activities.MainActivity;
-import edu.berkeley.cs160.qUp.activities.MyQActivity;
+import edu.berkeley.cs160.qUp.model.Queue;
 import edu.berkeley.cs160.qUp.netio.QueueListResponse;
 import edu.berkeley.cs160.qUp.netio.QueueListUpdateListener;
 import edu.berkeley.cs160.qUp.netio.RESTController;

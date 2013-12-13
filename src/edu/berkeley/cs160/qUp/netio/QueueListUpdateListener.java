@@ -7,7 +7,7 @@ package edu.berkeley.cs160.qUp.netio;
 
 import java.util.List;
 
-import edu.berkeley.cs160.qUp.Model.Queue;
+import edu.berkeley.cs160.qUp.model.Queue;
 
 /**
  * Created by kylewbanks on 2013-10-09.

@@ -1,4 +1,4 @@
-package edu.berkeley.cs160.qUp.NFCTask;
+package edu.berkeley.cs160.qUp.nfc_task;
 
 
 import android.annotation.TargetApi;
@@ -17,12 +17,9 @@ import android.os.Handler;
 import android.os.Parcelable;
 import android.os.Vibrator;
 import android.util.Log;
-import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import edu.berkeley.cs160.qUp.activities.MyQActivity;
 import org.ndeftools.Message;
 import org.ndeftools.Record;
 import org.ndeftools.externaltype.AndroidApplicationRecord;

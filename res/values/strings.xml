@@ -13,13 +13,16 @@
     <string name="message_is_too_big_for_tag">Tag is too big for Message</string>
     <string name="success">Success</string>
     <string name="tag_refused_to_connect">Tag refuses to connect</string>
-    <string name="tag_does_not_support_ndef">Tage does not support NDEF</string>
+    <string name="tag_does_not_support_ndef">Tag does not support NDEF</string>
     <string name="tag_is_read_only">Tag is read only</string>
     <string name="tag_refused_to_format">Tag refused to format!</string>
     <string name="general_exception">General NDEF Exception</string>
     <string name="coffee">Coffee</string>
+    <string name="yalis">Yali\'s on Oxford:\n (8 minutes)</string>
     <string name="dummy_time">00:00</string>
-    <string name="starbucks">Starbucks</string>
+    <string name="starbucks">Starbucks:\n (24 minutes)</string>
+    <string name="brewed_awakening">Brewed Awakening:\n (12 minutes)</string>
+    <string name="northside">Northside Cafe:\n (10 minutes)</string>
     <string name="back_to_map_text">Go back to map</string>
     <string name="tag_in_text">Tag In</string>
     <string name="password">Password</string>
@@ -32,7 +35,7 @@
     <string name="username_text_view">Username:</string>
     <string name="username_edit_text">Please enter your qUp e-mail address</string>
     <string name="avg_wait_time">Average wait time:</string>
-    <string name="search">Search Again</string>
+    <string name="search">Search for q\'s</string>
     <string name="my_location">Get My Location</string>
     <string name="no_location_available">No Location Available Yet</string>
     <string name="get_dir_popup">Get Directions to Here</string>
@@ -50,8 +53,60 @@
     <string name="dummy_clock">00:00</string>
     <string name="next_biz">Next Business</string>
     <string name="reserve_button_text">Reserve</string>
+    <string name="go_string">Go!</string>
+    <string name="Search_again">Search again…</string>
+    <string name="search_icon">search_icon</string>
 
+    <!--Map Stuff-->
+    <string name="action_settings">Settings</string>
 
+    <!-- Labels -->
+    <string name="latlng">Lat/Long:</string>
+    <string name="address">Address:</string>
+
+    <!-- Messages -->
+    <string name="connected">Client connected</string>
+    <string name="connection_error_code_unknown">Unknown connection error code:  %1$d</string>
+    <string name="connection_failed">Connection failed</string>
+    <string name="disconnected">Client disconnected</string>
+    <string name="get_address">Get Address</string>
+    <string name="get_location">Get Location</string>
+    <string name="here">You are here</string>
+    <string name="berkeley">Search for qUp participants in Berkeley, CA</string>
+    <string name="illegal_argument_exception">
+        Illegal arguments: Latitude %1$.8f Longitude %2$.8f
+    </string>
+    <string name="invalid_action">Invalid intent action %1$s</string>
+    <string name="invalid_integer_id">Invalid integer request ID: %1$s</string>
+    <string name="IO_Exception_getFromLocation">IO Exception in Geocoder.getFromLocation()</string>
+    <string name="location_requested">Periodic updates requested</string>
+    <string name="location_updated">Location updated</string>
+    <string name="location_update_error">Location update failed</string>
+    <string name="location_update_error_detail">
+        Location update error. code %1$d message %2$s
+    </string>
+    <string name="location_update_missing_update">
+        Location update error. No incoming location.
+    </string>
+    <string name="location_updates_stopped">Periodic updates stopped</string>
+    <string name="log_new_location">New location: %1$s</string>
+    <string name="no_address_found">No address found for location</string>
+    <string name="no_connection">No connection: Cannot request location</string>
+    <string name="no_geocoder_available">Cannot get address. No geocoder available.</string>
+    <string name="no_location_available">Location not available</string>
+    <string name="resolved">Error resolved. Please re-try operation.</string>
+    <string name="no_resolution">Google Play services: unable to resolve connection error.</string>
+    <string name="periodic_update_stop">Stopping periodic updates</string>
+    <string name="play_services_available">Google Play services is available</string>
+    <string name="request_location_updates_in_progress">
+        Can\'t request location updates, previous request hasn\'t finished
+    </string>
+    <string name="start_updates">Start Updates</string>
+    <string name="stop_updates">Stop Updates</string>
+    <string name="unknown">--Unknown--</string>
+    <string name="unknown_activity_request_code">
+        Received an unknown activity request code %1$d in onActivityResult.
+    </string>
     <string-array name="location_array">
         <item>San Francisco</item>
         <item>Los Angeles</item>

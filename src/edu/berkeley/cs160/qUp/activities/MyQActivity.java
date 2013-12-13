@@ -11,8 +11,8 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import com.google.gson.Gson;
-import edu.berkeley.cs160.qUp.Model.Queue;
-import edu.berkeley.cs160.qUp.Model.User;
+import edu.berkeley.cs160.qUp.model.Queue;
+import edu.berkeley.cs160.qUp.model.User;
 import edu.berkeley.cs160.qUp.R;
 import edu.berkeley.cs160.qUp.activities.business.BusinessActivityMain;
 import edu.berkeley.cs160.qUp.activities.map.ShortestWaitingMap;
@@ -79,7 +79,9 @@ public class MyQActivity extends Activity implements QueueListUpdateListener {
 
                 }
 
+                if(mUserQueueTreeMap.size()>0){
                 updateWaitTimes();
+                }
                 mProgressBar.setVisibility(View.GONE);
 
             }
@@ -98,19 +100,24 @@ public class MyQActivity extends Activity implements QueueListUpdateListener {
     ProgressBar mProgressBar;
 
     /**
-     * Updates the three next wait times (sorts the full collection of businesses)
+     * Updates the three next wait times (sorts the full collection of businesses). This is a hideous function.
+     * Need to figure out how to address collections of view objects (outside of putting them in arrays, which seems too
+     * heavy-duty).
      */
     public void updateWaitTimes() {
 
+        if(mUserQueueTreeMap.size()>0){
         business_time_0.setText(mUserQueueTreeMap.firstKey().toString() + " Minutes Left.");
         business_name_0.setText(mUserQueueTreeMap.pollFirstEntry().getValue());
-
+        }
+        if(mUserQueueTreeMap.size()>0){
         business_time_1.setText(mUserQueueTreeMap.firstKey().toString() + " Minutes Left");
         business_name_1.setText(mUserQueueTreeMap.pollFirstEntry().getValue());
-
+        }
+        if(mUserQueueTreeMap.size()>0){
         business_time_2.setText(mUserQueueTreeMap.firstKey().toString() + " Minutes Left");
         business_name_2.setText(mUserQueueTreeMap.pollFirstEntry().getValue());
-
+        }
     }
 
     /**

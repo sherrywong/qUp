@@ -1,4 +1,4 @@
-package edu.berkeley.cs160.qUp.NFCTask;
+package edu.berkeley.cs160.qUp.nfc_task;
 
 import android.nfc.NdefMessage;
 import android.nfc.Tag;
