@@ -87,7 +87,7 @@
             android:textColor="#ffffff" android:onClick="@string/tag_in"/>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/register_button"
             android:layout_width="225dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"

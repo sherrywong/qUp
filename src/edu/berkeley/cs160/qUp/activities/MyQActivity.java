@@ -107,7 +107,7 @@ public class MyQActivity extends Activity implements QueueListUpdateListener {
     public void updateWaitTimes() {
 
         if(mUserQueueTreeMap.size()>0){
-        business_time_0.setText(mUserQueueTreeMap.firstKey().toString() + " Minutes Left.");
+        business_time_0.setText(mUserQueueTreeMap.firstKey().toString() + " Minutes Left");
         business_name_0.setText(mUserQueueTreeMap.pollFirstEntry().getValue());
         }
         if(mUserQueueTreeMap.size()>0){

@@ -91,6 +91,15 @@ public class MainActivity extends Activity {
         username = (EditText) findViewById(R.id.usernameEditText);
         password = (EditText) findViewById(R.id.passwordEditText);
 
+        registerBtn = (Button) findViewById(R.id.register_button);
+        registerBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, RegisterActivity.class);
+                startActivity(i);
+            }
+        });
+
 
     }
 
