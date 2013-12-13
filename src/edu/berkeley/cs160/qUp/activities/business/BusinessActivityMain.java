@@ -8,9 +8,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import edu.berkeley.cs160.qUp.R;
+
 import android.widget.TextView;
 
-import edu.berkeley.cs160.qUp.R;
 import edu.berkeley.cs160.qUp.activities.MyQActivity;
 
 public class BusinessActivityMain extends Activity {

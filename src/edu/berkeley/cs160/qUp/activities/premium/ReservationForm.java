@@ -110,6 +110,10 @@ public class ReservationForm extends Activity {
     	datePickerBtn = (Button) findViewById(R.id.datePicker);
     	reserveBtn.setOnClickListener(new ButtonListener(this,"reserve"));
     	datePickerBtn.setOnClickListener(new ButtonListener(this,"datePicker"));
+    	
+    	Intent intent = getIntent();
+    	String businessName = intent.getStringExtra("Business");
+    	name.setText(businessName);
     }
     
 

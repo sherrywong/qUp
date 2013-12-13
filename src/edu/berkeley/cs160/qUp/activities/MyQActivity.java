@@ -13,12 +13,12 @@ import android.widget.TextView;
 import com.google.gson.Gson;
 import edu.berkeley.cs160.qUp.model.Queue;
 import edu.berkeley.cs160.qUp.model.User;
-import edu.berkeley.cs160.qUp.R;
 import edu.berkeley.cs160.qUp.activities.business.BusinessActivityMain;
 import edu.berkeley.cs160.qUp.activities.map.ShortestWaitingMap;
 import edu.berkeley.cs160.qUp.activities.premium.ReservationSearch;
 import edu.berkeley.cs160.qUp.netio.QueueListUpdateListener;
 import edu.berkeley.cs160.qUp.qUpApplication;
+import edu.berkeley.cs160.qUp.R;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

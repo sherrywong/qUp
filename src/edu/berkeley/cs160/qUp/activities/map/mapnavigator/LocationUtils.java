@@ -15,10 +15,11 @@
  */
 
 package edu.berkeley.cs160.qUp.activities.map.mapnavigator;
+import edu.berkeley.cs160.qUp.R;
+
 
 import android.content.Context;
 import android.location.Location;
-import edu.berkeley.cs160.qUp.R;
 
 
 /**
