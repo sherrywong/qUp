@@ -76,7 +76,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="31dp"
         android:gravity="center_horizontal"
-        android:orientation="vertical" >
+        android:orientation="vertical" android:id="@+id/linearLayout">
 
         <Button
             android:id="@+id/loginButton"
@@ -84,7 +84,7 @@
             android:layout_height="wrap_content"
             android:background="#3399ff"
             android:text="@string/sign_in_button"
-            android:textColor="#ffffff" />
+            android:textColor="#ffffff" android:onClick="@string/tag_in"/>
 
         <Button
             android:id="@+id/button"
@@ -96,5 +96,15 @@
             android:text="Registration"
             android:textColor="#0b2cff" />
     </LinearLayout>
+    <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+        <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBar" android:layout_gravity="center"
+                android:visibility="invisible"
+                android:layout_centerHorizontal="true"/>
+    </FrameLayout>
 
 </RelativeLayout>

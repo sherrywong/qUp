@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package edu.berkeley.cs160.qUp.NFCTask.nfcUtils;
+package edu.berkeley.cs160.qUp.nfc_task.nfc_utils;
 
 import org.ndeftools.wellknown.TextRecord;
 

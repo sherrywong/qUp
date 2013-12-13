@@ -483,8 +483,8 @@ containing a value of this type.
         public static final int avg_wait_time=0x7f070035;
         public static final int back_to_map_text=0x7f07002d;
         public static final int business=0x7f070032;
-        public static final int business_name=0x7f07002a;
-        public static final int business_subtype_title=0x7f07002c;
+        public static final int coffee =0x7f07002a;
+        public static final int starbucks =0x7f07002c;
         /**  Button in confirmation dialog to enable Google Play services.  Clicking it
         will direct user to application settings of Google Play services where they
         can enable it [CHAR LIMIT=40] 

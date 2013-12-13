@@ -1,37 +1,30 @@
 package edu.berkeley.cs160.qUp.activities;
 
 import android.app.Activity;
-import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import com.google.gson.Gson;
-import edu.berkeley.cs160.qUp.Model.Queue;
-import edu.berkeley.cs160.qUp.Model.User;
+import edu.berkeley.cs160.qUp.model.User;
 import edu.berkeley.cs160.qUp.R;
 import edu.berkeley.cs160.qUp.activities.business.BusinessActivityMain;
-import edu.berkeley.cs160.qUp.activities.premium.ReservationSearch;
-import edu.berkeley.cs160.qUp.animlv.AnimatedListViewAdapter;
-import edu.berkeley.cs160.qUp.netio.QueueListUpdateListener;
 import edu.berkeley.cs160.qUp.netio.RESTController;
 import edu.berkeley.cs160.qUp.netio.UserListResponse;
-import edu.berkeley.cs160.qUp.qUpApplication;
-
-import java.util.List;
 
 public class MainActivity extends Activity {
 
+    public static final String PREFS_NAME = "userInfo";
     Button loginBtn;
     EditText username, password;
     User mUser;
-
     Button registerBtn;
-
-
+    ProgressBar progressBar;
     /**
      * Handler for the User list being fetched remotely
      */
@@ -46,6 +39,8 @@ public class MainActivity extends Activity {
         @Override
         public void success(String json) {
             super.success(json);
+
+            // Commit the ed
             for (int i = 0; i < userList.size(); i++) {
                 User user = userList.get(i);
                 if (user.getUsername().equals(username.getText().toString())) {
@@ -53,10 +48,13 @@ public class MainActivity extends Activity {
                     mUser = user;
                     Gson userGson = new Gson();
 
+                    SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+                    SharedPreferences.Editor editor = settings.edit();
+                    editor.putString("user", userGson.toJson(mUser));
+                    editor.commit();
+
                     if (mUser.isBusiness) {
                         Intent bizIntent = new Intent(MainActivity.this, BusinessActivityMain.class);
-                        bizIntent.putExtra("User", userGson.toJson(mUser));
-                        bizIntent.putExtra("isBusiness", true);
                         startActivity(bizIntent);
                     }
 
@@ -65,29 +63,25 @@ public class MainActivity extends Activity {
 
                     if (mUser.isPremium) {
                         intent = new Intent(MainActivity.this, MyQActivity.class);
-                        intent.putExtra("User", userGson.toJson(mUser));
-                        intent.putExtra("isPremium", true);
                         startActivity(intent);
                     }
 
                     else{
                         intent = new Intent(MainActivity.this, MyQActivity.class);
-                        intent.putExtra("User", userGson.toJson(mUser));
-                        intent.putExtra("isPremium", false);
                         startActivity(intent);
                     }
+                    progressBar.setVisibility(View.GONE);
                 }
             }
         }
 
     };
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
-
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
         /*
          * Initialize the UI form elements
          */
@@ -99,8 +93,6 @@ public class MainActivity extends Activity {
 
 
     }
-
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -114,8 +106,6 @@ public class MainActivity extends Activity {
 
         return null;
     }
-
-
 
     /*
      * Private Listener Class
@@ -136,6 +126,7 @@ public class MainActivity extends Activity {
             String un = username.getText().toString();
             String ps = password.getText().toString();
             String sr = "/users/";
+            progressBar.setVisibility(View.VISIBLE);
             RESTController.retrieveUserList(userListResponse, un, ps, sr);
 
         }

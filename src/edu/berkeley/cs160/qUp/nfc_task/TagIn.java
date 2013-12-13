@@ -1,4 +1,4 @@
-package edu.berkeley.cs160.qUp.NFCTask;
+package edu.berkeley.cs160.qUp.nfc_task;
 
 import android.app.Activity;
 import android.app.PendingIntent;

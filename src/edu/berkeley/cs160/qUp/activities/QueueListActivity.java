@@ -16,7 +16,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import edu.berkeley.cs160.qUp.Model.Queue;
+import edu.berkeley.cs160.qUp.model.Queue;
 import edu.berkeley.cs160.qUp.R;
 import edu.berkeley.cs160.qUp.activities.business.BusinessActivityMain;
 import edu.berkeley.cs160.qUp.activities.map.ShortestWaitingMap;

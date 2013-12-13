@@ -10,49 +10,50 @@
             android:id="@id/main_frame_layout"
             android:layout_width="fill_parent" android:layout_height="fill_parent"
             android:layout_alignParentLeft="false"
-            android:layout_alignParentBottom="true" android:layout_alignParentTop="true">
+            android:layout_alignParentBottom="true" android:layout_alignParentTop="true"
+            android:background="@android:drawable/editbox_dropdown_light_frame">
 
-<!--         <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+         <fragment xmlns:android="http://schemas.android.com/apk/res/android"
                   android:id="@+id/map"
                   android:layout_width="match_parent"
-                  android:layout_height="match_parent"
+                  android:layout_height="fill_parent"
                   class="com.google.android.gms.maps.MapFragment" tools:layout="@layout/support_map_fragment"/>
- -->
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:baselineAligned="false"
+                android:layout_alignParentTop="true" android:layout_marginTop="0dp"
+                android:id="@+id/linearLayout" android:background="@android:drawable/dialog_holo_dark_frame"
+                android:layout_gravity="center_horizontal|top">
+            <ImageButton
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/my_location"
+                    android:background="@android:drawable/ic_menu_search"
+                    android:baselineAlignBottom="false" android:cropToPadding="false" android:focusable="false"
+                    android:layout_gravity="center_vertical"
+                    android:layout_alignParentLeft="true" android:contentDescription="@string/search_icon"/>
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/Search_again"
+                    android:id="@+id/myLocResultTextView"
+                    android:textColor="#225d8b"
+                    android:layout_gravity="center_horizontal|right" android:textAlignment="viewEnd"
+                    android:singleLine="true" android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" android:inputType="textPostalAddress"/>
+            <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/go_string"
+                    android:background="@android:drawable/btn_default_small"
+                    android:layout_alignParentTop="true" android:layout_alignParentRight="true"
+                    android:id="@+id/search_button" android:layout_marginTop="2sp"/>
+        </RelativeLayout>
+
     </FrameLayout>
-    <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:baselineAligned="false"
-            android:layout_alignParentTop="true" android:layout_marginTop="0dp"
-            android:id="@+id/linearLayout" android:background="@android:drawable/dialog_holo_dark_frame">
-        <ImageButton
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/my_location"
-                android:id="@+id/myLocTextButton"
-                android:onClick="showMyLocation" android:background="@android:drawable/ic_menu_search"
-                android:baselineAlignBottom="false" android:cropToPadding="false" android:focusable="false"
-                android:layout_gravity="center_vertical"
-                android:layout_alignParentLeft="true"/>
-        <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/search"
-                android:id="@+id/myLocResultTextView"
-                android:layout_weight="0.27" android:textColor="#225d8b"
-                android:layout_gravity="center_horizontal|right" android:textAlignment="viewEnd"
-                android:singleLine="true"
-                android:layout_centerInParent="true" android:layout_alignBaseline="@+id/myLocTextButton"/>
-        <Button
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Go!"
-                android:id="@id/myLocTextButton"
-                android:background="@android:drawable/btn_default_small"
-                android:layout_alignParentTop="true" android:layout_alignParentRight="true"/>
-    </RelativeLayout>
 
 
 </RelativeLayout>

@@ -1,4 +1,4 @@
-package edu.berkeley.cs160.qUp.Model;
+package edu.berkeley.cs160.qUp.model;
 
 import com.google.gson.annotations.SerializedName;
 

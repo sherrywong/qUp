@@ -15,7 +15,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="51dp"
-        android:background="@drawable/queue_list_item_background"
+        android:background="@android:color/transparent"
         android:orientation="vertical"
         android:padding="20dp" >
 
@@ -24,9 +24,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:text="Current qLength"
-            android:textColor="#3399ff"
-            android:textSize="30sp" />
+            android:text="Your Current\n qLength"
+            android:textColor="#00184c"
+            android:textSize="30sp"/>
 
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -64,7 +64,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:background="#006633"
-            android:text="qPon"
+            android:text="qPon Menu"
             android:textColor="#ffffff" />
 
         <Button

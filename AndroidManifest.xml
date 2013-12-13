@@ -105,7 +105,7 @@
             </intent-filter>
                 </activity>
         <activity
-            android:name=".NFCTask.TagInHandler"
+            android:name=".nfc_task.TagInHandler"
             android:label="@string/personal">
 
         </activity>

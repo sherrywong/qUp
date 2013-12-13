@@ -14,9 +14,9 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Locale;
 
-import edu.berkeley.cs160.qUp.Model.Business;
-import edu.berkeley.cs160.qUp.Model.Queue;
-import edu.berkeley.cs160.qUp.Model.User;
+import edu.berkeley.cs160.qUp.model.Business;
+import edu.berkeley.cs160.qUp.model.Queue;
+import edu.berkeley.cs160.qUp.model.User;
 
 /**
  * Part of the qUp codebase.
