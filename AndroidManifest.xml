@@ -68,6 +68,10 @@
                 android:label="@string/business">
         </activity>        
         
+       	<activity
+                android:name=".activities.business.QPonListExample"
+                android:label="@string/business">
+        </activity>   
         <activity
                 android:name=".activities.premium.ReservationForm"
                 android:label="@string/personal">

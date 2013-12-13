@@ -46,7 +46,7 @@ public class QPonListExample extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
     	super.onCreate(savedInstanceState);
-    	setContentView(R.layout.qpon_list);
+    	setContentView(R.layout.qpn_list_example);
     	
     	newQponBtn = (Button) findViewById(R.id.newQponBtn);
     	newQponBtn.setOnClickListener(new ButtonListener(this));
